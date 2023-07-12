@@ -1,6 +1,7 @@
 import { FC } from "react";
 import logo from "../../../Assets/Landing_page_Asset/Brand Logo.png";
 import "./Nav.css";
+import {Link} from "react-router-dom"
 
 export const Nav: FC = () => {
   return (
@@ -20,7 +21,7 @@ export const Nav: FC = () => {
         </nav>
         <div style={{ fontFamily: "Poppins" }}>
           <button className="flex bg-[#EBEBF0] text-[#0C1618] font-[600] leading-[150%] text-[20px] rounded-[8px] h-[64px] px-[24px] py-[16px] items-center gap-[8px]">
-            Choose Location
+            <Link to='/location'>Choose Location</Link>
             <svg
               width="34"
               height="36"

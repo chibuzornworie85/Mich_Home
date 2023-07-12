@@ -5,7 +5,7 @@ export const Box3: FC = () => {
   return (
     <>
       {/* BOX3 */}
-      <div className="px-[100px] py-[150px] flex justify-between items-center">
+      <div className="px-[100px] pb-[100px] flex justify-between items-center">
         <div className="flex flex-col gap-[20px]">
           <p
             style={{ fontFamily: "Satoshi" }}

@@ -6,7 +6,7 @@ export const Box2: FC = () => {
   return (
     <>
       {/* BOX2 */}
-      <div className="bg-[#FAFAFC] h-[1528px flex flex-col py-[100px] gap-[200px]">
+      <div className="bg-[#FAFAFC] flex flex-col py-[100px] gap-[100px]">
         <div className="flex justify-center items-center gap-[90px]">
           <div className="flex flex-col gap-[20px]">
             <p
@@ -54,7 +54,7 @@ export const Box2: FC = () => {
       </div>
 
       {/* BOX2 */}
-      <div className="px-[100px] flex flex-col gap-[20px]">
+      <div className="px-[100px] flex flex-col gap-[20px] pb-[100px]">
         <div className="flex justify-between items-center py-[50px]">
           <p
             style={{ fontFamily: "Satoshi" }}

@@ -7,7 +7,7 @@ export const Box1: FC = () => {
     <>
       {/* BOX */}
 
-      <div className="bg-[#FFF] flex items-center gap-[40px] px-[100px] py-[20px] justify-between">
+      <div className="bg-[#FFF] flex items-center gap-[40px] px-[100px] pb-[100px] justify-between">
         <div className="flex flex-col gap-[50px]">
           <h1
             style={{ fontFamily: "Millik" }}
