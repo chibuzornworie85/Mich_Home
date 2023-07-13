@@ -1,6 +1,7 @@
 import { FC } from "react";
 import img from "../../../Assets/Location_Asset/Rectangle 4.png";
 import imgs from "../../../Assets/Location_Asset/Rectangle 4 (1).png";
+import { Link } from "react-router-dom";
 
 export const Box3: FC = () => {
   return (
@@ -51,7 +52,9 @@ export const Box3: FC = () => {
               style={{ fontFamily: "Poppins" }}
               className="text-[#FFF] text-[25px] font-[500] leading-[150%] bg-[#0C1618] h-[72px] py-[16px] px-[48px] flex items-center gap-[8px] w-[50%] rounded-[8px]"
             >
-              <button>View Latest Deals</button>
+              <button>
+                <Link to="/apartment">View Latest Deals</Link>
+              </button>
               <svg
                 width="24"
                 height="25"

@@ -2,6 +2,7 @@ import { FC } from "react";
 import img from "../../../Assets/Location_Asset/author-avatar.png";
 import frame from "../../../Assets/Location_Asset/Frame 48.png";
 import "./Box.css";
+import {Link} from "react-router-dom"
 
 export const Box4: FC = () => {
   return (
@@ -79,7 +80,7 @@ export const Box4: FC = () => {
         <div className="bg-[#004643] rounded-t-[4px] w-[799.5px] h-[664px] flex flex-col gap-[20px] p-[100px]">
           <p style={{fontFamily: "Satoshi"}} className="font-[900] w-[578px] leading-[130%] text-[61.04px] text-[#FFF]">Improve your tenancy skills</p>
           <p style={{fontFamily: "Poppins"}} className="w-[578px] text-[#FFF] text-[31.25px] font-[400] leading-[170%]">Let Mich Homes assist you in finding your next rental.</p>
-          <button className="mt-[30px] text-[#FFF] text-[25px] font-[500] leading-[150%] w-[258px] rounded-[8px] h-[72px] py-[16px] px-[32px] bg-[#0C1618]">Get Started</button>
+          <button className="mt-[30px] text-[#FFF] text-[25px] font-[500] leading-[150%] w-[258px] rounded-[8px] h-[72px] py-[16px] px-[32px] bg-[#0C1618]"><Link to="/form">Get Started</Link></button>
         </div>
         <div>
           <img src={frame} alt="img" />

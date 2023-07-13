@@ -1,5 +1,6 @@
 import { FC } from "react";
 import box from "../../../Assets/Location_Asset/Rectangle 3.png";
+import { Link } from "react-router-dom";
 
 export const Box: FC = () => {
   return (
@@ -26,7 +27,9 @@ export const Box: FC = () => {
             style={{ fontFamily: "Poppins" }}
             className="flex text-[32px] gap-[8px] bg-[#0C1618] justify-center w-[50%] text-[#FFF] rounded-[8px] py-[16px] px-[48px] font-[500] leading-[140%] h-[96px] items-center"
           >
-            <button>View Listings</button>
+            <button>
+              <Link to="/apartment">View Listings</Link>
+            </button>
             <svg
               width="24"
               height="24"

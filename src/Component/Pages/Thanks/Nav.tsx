@@ -1,6 +1,6 @@
 import { FC } from "react";
-import logo from "../../../Assets/Location_Asset/Brand Logo.png";
-import "../../Landing/Nav/Nav.css";
+import logo from "../../Assets/Location_Asset/Brand Logo.png";
+import "../Landing/Nav/Nav.css";
 import { Link } from "react-router-dom";
 
 export const Nav: FC = () => {
@@ -11,6 +11,7 @@ export const Nav: FC = () => {
       <header className="custom-shadow flex justify-between px-[100px] py-[20px] text-center rounded-[8px] bg-[#FFF] items-center sticky top-0">
         <div className="flex items-center">
           <Link to="/">
+            {" "}
             <img src={logo} alt="logo" />
           </Link>
         </div>
@@ -77,7 +78,7 @@ export const Nav: FC = () => {
           </div>
           <button
             style={{ fontFamily: "Poppins" }}
-            className="text-[20px] font-[600] leading-[150%] rounded-[8px] border-[2px] py-[16px] px-[32px] border-[#0C1618] text-[#0C1618]"
+            className="text-[20px] font-[600] leading-[150%] rounded-[8px] py-[16px] px-[32px] bg-[#000] text-[#fff]"
           >
             <Link to="/form">Start Now</Link>
           </button>
