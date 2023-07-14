@@ -1,12 +1,33 @@
 import { FC } from "react";
 import { useState } from "react";
 import "../Form/Form.css";
+import { Link } from "react-router-dom";
 
 export const Formf: FC = () => {
   const [InputClicked, setInputClicked] = useState(false);
 
+  const [form, setForm] = useState({
+    firstName: "",
+    lastName: "",
+    number: "",
+    email: "",
+    hear: "",
+    special: "",
+  });
+
   const handdleInputChange = () => {
     setInputClicked(true);
+  };
+
+  const clearForm = () => {
+    setForm({
+      firstName: "",
+      lastName: "",
+      number: "",
+      email: "",
+      hear: "",
+      special: "",
+    });
   };
   return (
     <>
@@ -49,6 +70,10 @@ export const Formf: FC = () => {
                 type="text"
                 className="w-[701px] h-[70px] pl-[10px] bg-[#fff] rounded-[8px]"
                 placeholder="First Name"
+                value={form.firstName}
+                onChange={(e) =>
+                  setForm({ ...form, firstName: e.target.value })
+                }
               />
             </div>
           </div>
@@ -65,6 +90,8 @@ export const Formf: FC = () => {
                 type="text"
                 className="w-[701px] h-[70px] pl-[10px] bg-[#fff] rounded-[8px]"
                 placeholder="Last Name"
+                value={form.lastName}
+                onChange={(e) => setForm({ ...form, lastName: e.target.value })}
               />
             </div>
           </div>
@@ -81,6 +108,8 @@ export const Formf: FC = () => {
                 type="text"
                 className="w-[701px] h-[70px] pl-[10px] bg-[#fff] rounded-[8px]"
                 placeholder="(123) 456 7890"
+                value={form.number}
+                onChange={(e) => setForm({ ...form, number: e.target.value })}
               />
             </div>
           </div>
@@ -97,6 +126,8 @@ export const Formf: FC = () => {
                 type="text"
                 className="w-[701px] h-[70px] pl-[10px] bg-[#fff] rounded-[8px]"
                 placeholder="Hello@email.com"
+                value={form.email}
+                onChange={(e) => setForm({ ...form, email: e.target.value })}
               />
             </div>
           </div>
@@ -114,6 +145,8 @@ export const Formf: FC = () => {
                   type="text"
                   className="w-[701px] h-[70px] pl-[10px] bg-[#fff] rounded-[8px]"
                   placeholder="-"
+                  value={form.hear}
+                  onChange={(e) => setForm({ ...form, hear: e.target.value })}
                 />
                 <div className="hello flex justify-center items-center h-[68.67px] w-[80px] bg-[#0C1618]">
                   <svg
@@ -144,12 +177,15 @@ export const Formf: FC = () => {
                 className="w-[701px] p-[10px] bg-[#fff] rounded-[8px] h-[179.261px]"
                 placeholder="Type something"
                 onClick={handdleInputChange}
+                value={form.special}
+                onChange={(e) => setForm({ ...form, special: e.target.value })}
               ></textarea>
             </div>
           </div>
           <div className="flex items-center gap-[20px]">
             <div className="w-[135px] h-[88px] py-[28px] rounded-[8px] border-[2px] border-[#fff] flex justify-center">
               <svg
+                onClick={clearForm}
                 width="32"
                 height="32"
                 viewBox="0 0 32 32"
@@ -170,7 +206,7 @@ export const Formf: FC = () => {
               }}
               className="flex w-[701px] bg-[#C7C9D9 h-[88px] py-[16px] rounded-[8px] text-[25px] font-[500] leading-[150%] px-[48px] gap-[10px] justify-center items-center"
             >
-              Submit
+              <Link to="/thanks"> Submit</Link>
               <svg
                 width="25"
                 height="24"

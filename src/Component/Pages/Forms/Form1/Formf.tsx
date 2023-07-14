@@ -1,12 +1,27 @@
 import { FC } from "react";
 import { useState } from "react";
 import "../Form/Form.css";
+import { Link } from "react-router-dom";
 
 export const Formf: FC = () => {
   const [InputClicked, setInputClicked] = useState(false);
+  const [form, setForm] = useState({
+    bedrooms: "",
+    bedrooms1: "",
+    budget: "",
+  });
+
 
   const handdleInputChange = () => {
     setInputClicked(true);
+  };
+
+  const clearForm = () => {
+    setForm({
+      bedrooms: "",
+      bedrooms1: "",
+      budget: "",
+    });
   };
   return (
     <>
@@ -49,6 +64,10 @@ export const Formf: FC = () => {
                     type="text"
                     className="pl-[10px] bg-[#fff] rounded-[8px] h-[72px] w-[295px]"
                     placeholder="-"
+                    value={form.bedrooms}
+                    onChange={(e) =>
+                      setForm({ ...form, bedrooms: e.target.value })
+                    }
                   />
                   <div className="hello w-[80px] h-[72px] bg-[black] flex justify-center items-center">
                     <svg
@@ -76,6 +95,10 @@ export const Formf: FC = () => {
                     type="text"
                     className="pl-[10px] bg-[#fff] rounded-[8px] h-[72px] w-[295px]"
                     placeholder="-"
+                    value={form.bedrooms1}
+                    onChange={(e) =>
+                      setForm({ ...form, bedrooms1: e.target.value })
+                    }
                   />
                   <div className="hello w-[80px] h-[72px] bg-[black] flex justify-center items-center">
                     <svg
@@ -95,31 +118,47 @@ export const Formf: FC = () => {
               </div>
             </div>
           </div>
-          <div className="flex items-center">
-            <input
-              type="text"
-              onClick={handdleInputChange}
-              placeholder="-"
-              className="w-[701px] rounded-[8px] pl-[10px] h-[72px]"
-            />
-            <div className="w-[80px] h-[72px] flex items-center bg-[#000] justify-center rounded-[8px]">
-              <svg
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M12 16.6024C11.8218 16.6024 11.6513 16.5727 11.4885 16.5133C11.3246 16.4539 11.1832 16.35 11.0644 16.2015L3.26733 8.44898C3.08911 8.27076 3 8.07769 3 7.86977C3 7.66185 3.10396 7.46878 3.31188 7.29056C3.4901 7.11234 3.68317 7.02323 3.89109 7.02323C4.09901 7.02323 4.29208 7.09749 4.4703 7.24601L12 14.8203L19.5297 7.24601C19.7079 7.06779 19.901 6.9864 20.1089 7.00185C20.3168 7.01611 20.5248 7.11234 20.7327 7.29056C20.9109 7.46878 21 7.66185 21 7.86977C21 8.07769 20.9109 8.27076 20.7327 8.44898L12.9356 16.2015C12.8168 16.35 12.676 16.4539 12.5133 16.5133C12.3493 16.5727 12.1782 16.6024 12 16.6024V16.6024Z"
-                  fill="white"
+          <div className="fle items-center">
+            <div
+              style={{ fontFamily: "Poppins" }}
+              className="flex flex-col gap-[10px]"
+            >
+              <label className="text-[18px] font-[500] leading-[150%] text-[#fff]">
+                Budget
+              </label>
+              <div className="flex items-center">
+                <input
+                  type="text"
+                  onClick={handdleInputChange}
+                  placeholder="-"
+                  className="w-[600px] text-[#000] text-[18px] font-[500] leading-[150%] rounded-[8px] pl-[10px] h-[72px]"
+                  value={form.budget}
+                  onChange={(e) => setForm({ ...form, budget: e.target.value })}
                 />
-              </svg>
+                <div className="w-[80px] h-[72px] flex items-center bg-[#000] justify-center rounded-[8px]">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M12 16.6024C11.8218 16.6024 11.6513 16.5727 11.4885 16.5133C11.3246 16.4539 11.1832 16.35 11.0644 16.2015L3.26733 8.44898C3.08911 8.27076 3 8.07769 3 7.86977C3 7.66185 3.10396 7.46878 3.31188 7.29056C3.4901 7.11234 3.68317 7.02323 3.89109 7.02323C4.09901 7.02323 4.29208 7.09749 4.4703 7.24601L12 14.8203L19.5297 7.24601C19.7079 7.06779 19.901 6.9864 20.1089 7.00185C20.3168 7.01611 20.5248 7.11234 20.7327 7.29056C20.9109 7.46878 21 7.66185 21 7.86977C21 8.07769 20.9109 8.27076 20.7327 8.44898L12.9356 16.2015C12.8168 16.35 12.676 16.4539 12.5133 16.5133C12.3493 16.5727 12.1782 16.6024 12 16.6024V16.6024Z"
+                      fill="white"
+                    />
+                  </svg>
+                </div>
+              </div>
             </div>
           </div>
           <div className="flex items-center gap-[20px]">
-            <div className="w-[135px] h-[88px] py-[28px] rounded-[8px] border-[2px] border-[#fff] flex justify-center">
+            <div
+              onClick={handdleInputChange}
+              className="w-[135px] h-[88px] py-[28px] rounded-[8px] border-[2px] border-[#fff] flex justify-center"
+            >
               <svg
+                onClick={clearForm}
                 width="32"
                 height="32"
                 viewBox="0 0 32 32"
@@ -140,7 +179,7 @@ export const Formf: FC = () => {
               }}
               className="flex w-[701px] bg-[#C7C9D9] h-[88px] py-[16px] rounded-[8px] text-[25px] font-[500] leading-[150%] px-[48px] gap-[10px] justify-center items-center"
             >
-              Next
+             <Link to="/form2">Next</Link>
               <svg
                 width="25"
                 height="24"
