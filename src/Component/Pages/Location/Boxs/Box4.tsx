@@ -8,14 +8,14 @@ export const Box4: FC = () => {
   return (
     <>
       {/* Customer */}
-      <div className="flex flex-col px-[100px] items-center">
+      <div className="flex flex-col px-[50px] items-center">
         <p
           style={{ fontFamily: "Satoshi" }}
-          className="flex justify-center text-[61.04px] font-[900] leading-[130%]"
+          className="flex justify-center text-[30px] font-[900] leading-[130%]"
         >
           What our customers are saying
         </p>
-        <div className="flex items-center py-[100px] gap-[50px]">
+        <div className="flex items-center py-[50px] gap-[50px]">
           <div>
             <svg
               width="64"
@@ -30,12 +30,12 @@ export const Box4: FC = () => {
               />
             </svg>
           </div>
-          <div className="w-[1112px] bg-[#FFF] shadow pt-[62px] pl-[142px] pb-[58px] flex flex-col gap-[50px] pr-[142px] rounded-[4px]">
+          <div className="bg-[#FFF] shadow pt-[62px] px-[50px] pb-[58px] flex flex-col gap-[50px] rounded-[4px]">
             <div className="flex flex-col items-center gap-[50px]">
               <img src={img} alt="img" />
               <p
                 style={{ fontFamily: "Poppins" }}
-                className="w-[824px] text-[#004643] font-[400] leading-[170%] text-[31.25px] flex text-center"
+                className="w-[600px] text-[#004643] font-[400] leading-[170%] text-[20px] flex text-center"
               >
                 “Lorem ipsum dolor sit amet, consectetur adipiscing elit. Semper
                 tristique suspendisse semper vestibulum pharetra ut nec. Amet
@@ -46,13 +46,13 @@ export const Box4: FC = () => {
             <div className="flex justify-between items-center">
               <p
                 style={{ fontFamily: "Poppins" }}
-                className="text-[#0C1618] leading-[150%] font-[600] text-[31.25px]"
+                className="text-[#0C1618] leading-[150%] font-[600] text-[20px]"
               >
                 John Doe
               </p>
               <p
                 style={{ fontFamily: "Poppins" }}
-                className="text-[#0C1618] text-[25px] font-[400] leading-[170%]"
+                className="text-[#0C1618] text-[20px] font-[400] leading-[170%]"
               >
                 Via facebook
               </p>
@@ -76,14 +76,14 @@ export const Box4: FC = () => {
       </div>
 
       {/* Skill */}
-      <div className="flex justify-center px-[100px] pb-[100px] items-center">
-        <div className="bg-[#004643] rounded-t-[4px] w-[799.5px] h-[664px] flex flex-col gap-[20px] p-[100px]">
-          <p style={{fontFamily: "Satoshi"}} className="font-[900] w-[578px] leading-[130%] text-[61.04px] text-[#FFF]">Improve your tenancy skills</p>
-          <p style={{fontFamily: "Poppins"}} className="w-[578px] text-[#FFF] text-[31.25px] font-[400] leading-[170%]">Let Mich Homes assist you in finding your next rental.</p>
-          <button className="mt-[30px] text-[#FFF] text-[25px] font-[500] leading-[150%] w-[258px] rounded-[8px] h-[72px] py-[16px] px-[32px] bg-[#0C1618]"><Link to="/form">Get Started</Link></button>
+      <div className="flex justify-center px-[50px] pb-[100px] items-center">
+        <div className="bg-[#004643] rounded-t-[4px] w-[600px] h-[450px] flex flex-col gap-[20px] p-[50px]">
+          <p style={{fontFamily: "Satoshi"}} className="font-[900] w-[200px] leading-[130%] text-[30px] text-[#FFF]">Improve your tenancy skills</p>
+          <p style={{fontFamily: "Poppins"}} className="w-[400px] text-[#FFF] text-[25px] font-[400] leading-[170%]">Let Mich Homes assist you in finding your next rental.</p>
+          <button className="mt-[30px] text-[#FFF] text-[20px] font-[500] leading-[150%] w-[200px] rounded-[8px] h-[72px] py-[16px] px-[32px] bg-[#0C1618]"><Link to="/form">Get Started</Link></button>
         </div>
         <div>
-          <img src={frame} alt="img" />
+          <img src={frame} alt="img" className="h-[450px] w-[600px]" />
         </div>
       </div>
     </>

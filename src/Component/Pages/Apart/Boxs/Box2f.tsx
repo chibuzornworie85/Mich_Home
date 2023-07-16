@@ -11,8 +11,8 @@ export const Box2f: FC = () => {
   const [drop, sideDrop] = useState<boolean>(true);
   return (
     <>
-      <div className="px-[100px] flex flex-col gap-[20px]">
-        <div className="flex justify-between">
+     <div className="px-[50px] flex flex-col gap-[20px]">
+        <div className="flex justify-between gap-[10px]">
           <div className="bg-[url('/src/Component/Assets/Apart_Asset/bg.png')] bg-no-repeat bg-cover bg-center h-[544px] w-[788px]">
             <div
               className="flex justify-between items-center pt-[250px]"
@@ -51,7 +51,7 @@ export const Box2f: FC = () => {
                     </svg>
                   </div>
 
-                  <div className="top-0 right-0 fixed w-[900px]">
+                  <div className="top-0 right-0 fixed w-[50%]">
                     <div className="bg-[url('/src/Component/Assets/Apart_Asset/Rect.png')] bg-no-repeat bg-cover bg-center px-[50px] h-[50vh]">
                       <div className="py-[30px]">
                         <svg
@@ -169,7 +169,7 @@ export const Box2f: FC = () => {
               <div className="flex gap-[10px] items-center">
                 <div
                   style={{ fontFamily: "Poppins" }}
-                  className="flex text-[18px] font-[500] leading-[150%] rounded-[4px] py-[5px] px-[8px] text-[#000] bg-[#FFF] items-center"
+                  className="flex text-[10px] font-[500] leading-[150%] rounded-[4px] py-[5px] px-[8px] text-[#000] bg-[#FFF] items-center"
                 >
                   <svg
                     width="33"
@@ -188,14 +188,14 @@ export const Box2f: FC = () => {
                 </div>
                 <div
                   style={{ fontFamily: "Poppins" }}
-                  className="text-[#FFF] text-[32px] font-[500] leading-[140%]"
+                  className="text-[#FFF] text-[20px] font-[500] leading-[140%]"
                 >
                   <p>N240,000</p>
                 </div>
               </div>
               <div
                 style={{ fontFamily: "Poppins" }}
-                className="flex items-center text-[18px] font-[500] leading-[150%] text-[#FFF] gap-[10px]"
+                className="flex items-center text-[15px] font-[500] leading-[150%] text-[#FFF] gap-[10px]"
               >
                 <div className="flex items-center">
                   <svg
@@ -245,7 +245,7 @@ export const Box2f: FC = () => {
               </div>
               <div
                 style={{ fontFamily: "Poppins" }}
-                className="flex items-center text-[18px] font-[500] leading-[150%] text-[#FFF] gap-[10px]"
+                className="flex items-center text-[15px] font-[500] leading-[150%] text-[#FFF] gap-[10px]"
               >
                 <svg
                   width="32"
@@ -300,7 +300,7 @@ export const Box2f: FC = () => {
                     </svg>
                   </div>
 
-                  <div className="top-0 right-0 fixed w-[900px]">
+                  <div className="top-0 right-0 fixed w-[50%]">
                     <div className="bg-[url('/src/Component/Assets/Apart_Asset/Rect.png')] bg-no-repeat bg-cover bg-center px-[50px] h-[50vh]">
                       <div className="py-[30px]">
                         <svg
@@ -419,7 +419,7 @@ export const Box2f: FC = () => {
               <div className="flex gap-[10px] items-center">
                 <div
                   style={{ fontFamily: "Poppins" }}
-                  className="flex text-[18px] font-[500] leading-[150%] rounded-[4px] py-[5px] px-[8px] text-[#000] bg-[#FFF] items-center"
+                  className="flex text-[10px] font-[500] leading-[150%] rounded-[4px] py-[5px] px-[8px] text-[#000] bg-[#FFF] items-center"
                 >
                   <svg
                     width="33"
@@ -438,14 +438,14 @@ export const Box2f: FC = () => {
                 </div>
                 <div
                   style={{ fontFamily: "Poppins" }}
-                  className="text-[#FFF] text-[32px] font-[500] leading-[140%]"
+                  className="text-[#FFF] text-[20px] font-[500] leading-[140%]"
                 >
                   <p>N240,000</p>
                 </div>
               </div>
               <div
                 style={{ fontFamily: "Poppins" }}
-                className="flex items-center text-[18px] font-[500] leading-[150%] text-[#FFF] gap-[10px]"
+                className="flex items-center text-[15px] font-[500] leading-[150%] text-[#FFF] gap-[10px]"
               >
                 <div className="flex items-center">
                   <svg
@@ -495,7 +495,7 @@ export const Box2f: FC = () => {
               </div>
               <div
                 style={{ fontFamily: "Poppins" }}
-                className="flex items-center text-[18px] font-[500] leading-[150%] text-[#FFF] gap-[10px]"
+                className="flex items-center text-[15px] font-[500] leading-[150%] text-[#FFF] gap-[10px]"
               >
                 <svg
                   width="32"

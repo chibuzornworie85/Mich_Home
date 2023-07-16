@@ -7,17 +7,17 @@ export const Box: FC = () => {
     <>
       {/* BOX */}
 
-      <div className="bg-[#FFF] flex items-center gap-[40px] px-[100px] pb-[100px] justify-between">
+      <div className="bg-[#FFF] flex items-center gap-[40px] px-[50px] pb-[100px] justify-between">
         <div className="flex flex-col gap-[50px]">
           <h1
             style={{ fontFamily: "Millik" }}
-            className="text-[104px] w-[733px] font-[400] leading-[95%]"
+            className="text-[70px] w-[500px] font-[400] leading-[100%]"
           >
             <span className="text-[#004643]">Find the right apartment</span>
           </h1>
           <p
             style={{ fontFamily: "Poppins" }}
-            className="text-[#414647] text-[25px] font-[500] leading-[170%] w-[700px]"
+            className="text-[#414647] text-[20px] font-[500] leading-[170%] w-[550px]"
           >
             In Awka, there are over 190,000 housing units. With no cost to you,
             we help you find your one.
@@ -25,7 +25,7 @@ export const Box: FC = () => {
 
           <div
             style={{ fontFamily: "Poppins" }}
-            className="flex text-[32px] gap-[8px] bg-[#0C1618] justify-center w-[50%] text-[#FFF] rounded-[8px] py-[16px] px-[48px] font-[500] leading-[140%] h-[96px] items-center"
+            className="flex text-[20px] gap-[8px] bg-[#0C1618] justify-center w-[40%] text-[#FFF] rounded-[8px] py-[16px] px-[20px] font-[500] leading-[140%] h-[60px] items-center"
           >
             <button>
               <Link to="/apartment">View Listings</Link>

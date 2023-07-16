@@ -7,32 +7,32 @@ export const Box1: FC = () => {
     <>
       {/* BOX */}
 
-      <div className="bg-[#FFF] flex items-center gap-[40px] px-[100px] pb-[100px] justify-between">
-        <div className="flex flex-col gap-[50px]">
+      <div className="bg-[#FFF] flex items-center gap-[40px] px-[50px] pb-[50px] justify-between">
+        <div className="flex flex-col gap-[30px]">
           <h1
             style={{ fontFamily: "Millik" }}
-            className="text-[96px] w-[788px] font-[400] leading-[95%]"
+            className="text-[70px] w-[600px] font-[400] leading-[100%]"
           >
             <span className="text-[#004643]">The best place to</span>{" "}
             <span className="text-[#D1AC00]">find an Apartment in Awka.</span>
           </h1>
           <p
             style={{ fontFamily: "Poppins" }}
-            className="text-[#414647] text-[25px] font-[500] leading-[170%] w-[753px]"
+            className="text-[#414647] text-[20px] font-[500] leading-[170%] w-[600px]"
           >
             In a number of Awka Capital City locations, Mich Homes offers the
             greatest local apartment locators ready to find you a rad place to
             live for the lowest possible price.
           </p>
 
-          <div className="flex items-center">
+          <div className="flex items-center h-[60px]">
             <input
               style={{ fontFamily: "Poppins" }}
               type="text"
               placeholder="Search by Location or Type"
-              className="shadow text-[25px] w-[100%] pl-[20px] h-[96px] text-[#818181] py-[15px] bg-[FFF] font-[500] rounded-l-[8px] border-2 border-[#0C1618] leading-[150%]"
+              className="shadow text-[20px] w-[100%] pl-[20px] h-[60px] text-[#818181] py-[15px] bg-[FFF] font-[500] rounded-l-[8px] border-2 border-[#0C1618] leading-[150%]"
             />
-            <div className="bg-[#000] flex rounded-r-[8px] justify-center items-center py-[32px] h-[96px] w-[111px]">
+            <div className="bg-[#000] flex rounded-r-[8px] justify-center items-center py-[30px] h-[60px] w-[111px]">
               <svg
                 width="32"
                 height="32"
@@ -49,7 +49,7 @@ export const Box1: FC = () => {
           </div>
         </div>
         <div>
-          <img src={box} alt="" />
+          <img src={box} alt="" className="h-[50%] w-[100%]" />
         </div>
       </div>
     </>

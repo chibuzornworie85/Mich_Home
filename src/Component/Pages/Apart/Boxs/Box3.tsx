@@ -4,17 +4,17 @@ import {Link} from "react-router-dom"
 export const Box3: FC = () => {
   return (
     <>
-      <div className="bg-[url('/src/Component/Assets/Apart_Asset/Rectangle.png')] bg-no-repeat bg-cover bg-center h-[552px] w-[100%]">
-        <div className="px-[100px] flex flex-col gap-[100px] pt-[100px]">
+      <div className="bg-[url('/src/Component/Assets/Apart_Asset/Rectangle.png')] bg-no-repeat bg-cover bg-center w-[100%] h-[552px]">
+        <div className="px-[50px] flex flex-col gap-[100px] pt-[100px]">
           <div
             style={{ fontFamily: "Satoshi" }}
-            className="text-[#0C1618] w-[509px] text-[61.04px] font-[900] leading-[130%]"
+            className="text-[#0C1618] w-[509px] text-[40px] font-[900] leading-[130%]"
           >
             <p>Discover your ideal apartment</p>
           </div>
           <div
             style={{ fontFamily: "Poppins" }}
-            className="flex gap-[8px] font-[500] leading-[150%] text-[25px] items-center h-[88px] py-[16px] px-[48px] rounded-[8px] text-[#FFF] w-[17%] bg-[#0C1618]"
+            className="flex gap-[8px] font-[500] leading-[150%] text-[20px] items-center h-[70px] py-[16px] px-[30px] rounded-[8px] text-[#FFF] w-[17%] bg-[#0C1618]"
           >
             <button>
               <Link to="/form">Get Started</Link>

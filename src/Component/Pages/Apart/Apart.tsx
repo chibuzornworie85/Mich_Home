@@ -12,7 +12,7 @@ export const Apart: FC = () => {
     <>
       <Nav />
       <Box1 />
-      <div className="flex flex-col gap-[25px] py-[100px]">
+      <div className="flex flex-col gap-[10px] py-[50px]">
         <Box2 />
         <Box2f />
         <Box2f1 />

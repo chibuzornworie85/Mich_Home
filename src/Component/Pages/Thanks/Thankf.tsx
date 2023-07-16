@@ -1,19 +1,19 @@
 import { FC } from "react";
-import {Link} from "react-router-dom"
+import { Link } from "react-router-dom";
 
 export const Thankf: FC = () => {
   return (
     <>
-      <div className="flex flex-col gap-[30px] py-[100px] items-center text-center px-[100px]">
+      <div className="flex flex-col gap-[30px] py-[50px] items-center text-center px-[50px]">
         <p
           style={{ fontFamily: "Satoshi" }}
-          className="text-[48.83px] font-[900] leading-[130%]"
+          className="text-[30px] font-[900] leading-[130%]"
         >
           Thank You!
         </p>
         <div
           style={{ fontFamily: "Poppins" }}
-          className="w-[977px] text-[#414647] text-[25px] font-[400] leading-[170%] gap-[50px] flex flex-col"
+          className="w-[800px] text-[#414647] text-[20px] font-[400] leading-[170%] gap-[25px] flex flex-col"
         >
           <p> An agent will be in touch with you within one business day.</p>
           <p>
@@ -21,7 +21,10 @@ export const Thankf: FC = () => {
             deals are happening in Awka right now!
           </p>
         </div>
-        <button style={{fontFamily: "Poppins"}} className="flex items-center w-[518px] h-[72px] text-[25px] font-[500] leading-[150%] text-[#fff] gap-[8px] justify-center rounded-[8px] bg-[#D1AC00] mt-[50px]">
+        <button
+          style={{ fontFamily: "Poppins" }}
+          className="flex items-center w-[300px] h-[72px] text-[20px] font-[500] leading-[150%] text-[#fff] gap-[8px] justify-center rounded-[8px] bg-[#D1AC00] mt-[50px]"
+        >
           <svg
             width="33"
             height="32"
@@ -42,7 +45,7 @@ export const Thankf: FC = () => {
               mask="url(#path-1-inside-1_2974_256)"
             />
           </svg>
-         <Link to="/"> Back Home</Link>
+          <Link to="/"> Back Home</Link>
         </button>
       </div>
     </>

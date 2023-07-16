@@ -7,59 +7,57 @@ export const Nav: FC = () => {
   return (
     <>
       {/* Nav */}
-
-      <header className="custom-shadow flex justify-between px-[100px] py-[20px] text-center rounded-[8px] bg-[#FFF] items-center sticky top-0">
-        <div className="flex items-center">
+      <header className="custom-shadow flex justify-between px-[50px] py-[20px] text-center rounded-[8px] bg-[#FFF] items-center sticky top-0">
+        <div className="flex items-center gap-[20px]">
           <Link to="/">
-            {" "}
             <img src={logo} alt="logo" />
           </Link>
-        </div>
-        <nav style={{ fontFamily: "Poppins" }}>
-          <ul className="flex gap-[30px] items-center text-[#0C1618] text-center text-[20px] font-[500] leading-[170%]">
-            <Link to="/apartment">
-              <li>Latest Apartment Listings</li>
-            </Link>
-            <li>Our Process</li>
-            <div className="flex items-center gap-[5px]">
-              <li>More</li>
-              <svg
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path d="M12 16L4 8H20L12 16Z" fill="#0C1618" />
-              </svg>
-            </div>
-            <div
-              style={{ fontFamily: "Poppins" }}
-              className="flex border border-[#0C1618] text-[#0C1618] font-[600] leading-[150%] text-[20px] rounded-[8px] h-[64px] px-[24px] py-[16px] items-center gap-[8px]"
-            >
-              <Link to="/location">
-                <button>Location</button>
+          <nav style={{ fontFamily: "Poppins" }}>
+            <ul className="flex gap-[20px] items-center text-[#0C1618] text-center text-[15px] font-[500] leading-[170%]">
+              <Link to="/apartment">
+                <li>Latest Apartment Listings</li>
               </Link>
-              <svg
-                width="34"
-                height="36"
-                viewBox="0 0 34 36"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
+              <li>Our Process</li>
+              <div className="flex items-center gap-[5px">
+                <li>More</li>
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path d="M12 16L4 8H20L12 16Z" fill="#0C1618" />
+                </svg>
+              </div>
+              <div
+                style={{ fontFamily: "Poppins" }}
+                className="flex border border-[#0C1618] text-[#0C1618] font-[600] leading-[150%] text-[15px] rounded-[8px] h-[64px px-[10px] py-[10px] items-center gap-[8px]"
               >
-                <path
-                  d="M17.0003 23.8334L5.66699 12.1667H28.3337L17.0003 23.8334Z"
-                  fill="#0C1618"
-                />
-              </svg>
-            </div>
-          </ul>
-        </nav>
+                <Link to="/location">
+                  <button>Location</button>
+                </Link>
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 34 36"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M17.0003 23.8334L5.66699 12.1667H28.3337L17.0003 23.8334Z"
+                    fill="#0C1618"
+                  />
+                </svg>
+              </div>
+            </ul>
+          </nav>
+        </div>
         <div
           style={{ fontFamily: "Poppins" }}
           className="flex gap-[10px] items-center"
         >
-          <div className="flex items-center gap-[10px]">
+          <div className="flex items-center gap-[8px]">
             <svg
               width="48"
               height="48"
@@ -72,18 +70,18 @@ export const Nav: FC = () => {
                 fill="#0C1618"
               />
             </svg>
-            <p className="flex gap-[50px] items-center text-[#0C1618] text-center text-[20px] font-[500] leading-[170%]">
+            <p className="flex items-center text-[#0C1618] text-center text-[15px] font-[500] leading-[170%]">
               Call / Text (234) 456 7890
             </p>
           </div>
           <button
             style={{ fontFamily: "Poppins" }}
-            className="text-[20px] font-[600] leading-[150%] rounded-[8px] py-[16px] px-[32px] bg-[#000] text-[#fff]"
+            className="text-[15px] font-[600] leading-[150%] rounded-[8px] border-[2px] py-[10px] px-[20px] bg-[#000] border-[#0C1618] text-[#fff]"
           >
             <Link to="/form">Start Now</Link>
           </button>
         </div>
-      </header>
+      </header>{" "}
     </>
   );
 };

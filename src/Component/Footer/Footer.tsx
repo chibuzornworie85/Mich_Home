@@ -4,13 +4,13 @@ import logo from "../Assets/Footer/BrandLogoLarge.png";
 export const Footer: FC = () => {
   return (
     <>
-      <footer className="bg-[#0C1618] h-[568px] px-[100px] py-[60px] w-[100%] flex flex-col gap-[50px]">
+      <footer className="bg-[#0C1618] px-[50px] py-[60px] w-[100%] flex flex-col gap-[50px]">
         <div className="justify-between flex">
           <div className="flex flex-col items-start gap-[20px]">
-            <img src={logo} alt="img" />
+            <img src={logo} alt="img" className="flex items-center w-[200px]" />
             <p
               style={{ fontFamily: "Poppins" }}
-              className="w-[403px] text-[#FFF] text-[20px] font-[400] leading-[170%]"
+              className="w-[300px] text-[#FFF] text-[15px] font-[400] leading-[170%]"
             >
               Mich Homes is a website for listing homes for rent that features
               houses, apartments, and lodges that are available within Awka
@@ -20,13 +20,13 @@ export const Footer: FC = () => {
           <div className="flex flex-col gap-[20px]">
             <p
               style={{ fontFamily: "Satoshi" }}
-              className="text-[31.25px] font-[900] leading-[130%] text-[#FFF]"
+              className="text-[20px] font-[900] leading-[130%] text-[#FFF]"
             >
               LEARN MORE
             </p>
             <ul
               style={{ fontFamily: "Poppins" }}
-              className="text-[20px] font-[400] leading-[170%] text-[#FFF]"
+              className="text-[15px] font-[400] leading-[170%] text-[#FFF]"
             >
               <li>About Us</li>
               <li>Blog</li>
@@ -36,13 +36,13 @@ export const Footer: FC = () => {
           <div className="flex flex-col gap-[20px]">
             <p
               style={{ fontFamily: "Satoshi" }}
-              className="text-[31.25px] font-[900] leading-[130%] text-[#FFF]"
+              className="text-[20px] font-[900] leading-[130%] text-[#FFF]"
             >
               CONTACT
             </p>
             <div
               style={{ fontFamily: "Poppins" }}
-              className="text-[20px] font-[400] leading-[170%] text-[#FFF]"
+              className="text-[15px] font-[400] leading-[170%] text-[#FFF]"
             >
               <div className="pb-[20px]">
                 <p>3, court road Amawbia,</p>
@@ -55,14 +55,14 @@ export const Footer: FC = () => {
           <div className="flex flex-col gap-[20px]">
             <p
               style={{ fontFamily: "Satoshi" }}
-              className="text-[31.25px] font-[900] leading-[130%] text-[#FFF]"
+              className="text-[20px] font-[900] leading-[130%] text-[#FFF]"
             >
               SOCIAL
             </p>
             <div className="flex items-center gap-[20px]">
               <svg
-                width="76"
-                height="76"
+                width="60"
+                height="60"
                 viewBox="0 0 76 76"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -74,8 +74,8 @@ export const Footer: FC = () => {
                 />
               </svg>
               <svg
-                width="76"
-                height="76"
+                width="60"
+                height="60"
                 viewBox="0 0 76 76"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -101,8 +101,8 @@ export const Footer: FC = () => {
                 </defs>
               </svg>
               <svg
-                width="76"
-                height="76"
+                width="60"
+                height="60"
                 viewBox="0 0 76 76"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -120,13 +120,13 @@ export const Footer: FC = () => {
         <div className="flex justify-between text-[#FFF]">
           <p
             style={{ fontFamily: "Poppins" }}
-            className="text-[20px] font-[400] leading-[170%]"
+            className="text-[15px] font-[400] leading-[170%]"
           >
             Copyright 2022, All rights reserved!
           </p>
           <ul
             style={{ fontFamily: "Poppins" }}
-            className="flex text-[20px] font-[400] leading-[170%] gap-[50px]"
+            className="flex text-[15px] font-[400] leading-[170%] gap-[50px]"
           >
             <li>Privacy Policy</li>
             <li>Terms</li>

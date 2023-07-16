@@ -3,18 +3,18 @@ import { FC } from "react";
 export const Box2: FC = () => {
   return (
     <>
-      <div className="bg-[#FAFAFC] w-[100%] px-[100px] pb-[50px] flex flex-col">
+      <div className="bg-[#FAFAFC] w-[100%] px-[50px] pb-[50px] flex flex-col">
         <p
           style={{ fontFamily: "Satoshi" }}
-          className="text-[61.04px] font-[900] leading-[130%] flex justify-center py-[50px]"
+          className="text-[40px] font-[900] leading-[130%] flex justify-center py-[50px]"
         >
           How it works
         </p>
-        <div className="flex justify-between py-[60px]">
+        <div className="flex justify-between gap-[40px py-[50px]">
           <div className="flex flex-col gap-[10px]">
             <svg
-              width="120"
-              height="120"
+              width="80"
+              height="80"
               viewBox="0 0 120 120"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -48,13 +48,13 @@ export const Box2: FC = () => {
 
             <p
               style={{ fontFamily: "Poppins" }}
-              className="w-[464px] font-[600] leading-[150%] text-[31.25px]"
+              className="w-[360px] font-[600] leading-[150%] text-[25px]"
             >
               Tell us a bit about yourself
             </p>
             <p
               style={{ fontFamily: "Poppins" }}
-              className="w-[464px] text-[#3A3A3C] font-[400] leading-[170%] text-[22px]"
+              className="w-[360px] text-[#3A3A3C] font-[400] leading-[170%] text-[20px]"
             >
               Our team of industry professionals can do the rest if you just
               give them a little information about yourself and what you're
@@ -63,8 +63,8 @@ export const Box2: FC = () => {
           </div>
           <div className="flex flex-col gap-[10px]">
             <svg
-              width="120"
-              height="120"
+              width="80"
+              height="80"
               viewBox="0 0 120 120"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -80,13 +80,13 @@ export const Box2: FC = () => {
 
             <p
               style={{ fontFamily: "Poppins" }}
-              className="w-[464px] font-[600] leading-[150%] text-[31.25px]"
+              className="w-[360px] font-[600] leading-[150%] text-[25px]"
             >
               A match for you
             </p>
             <p
               style={{ fontFamily: "Poppins" }}
-              className="w-[464px] text-[#3A3A3C] font-[400] leading-[170%] text-[22px]"
+              className="w-[360px] text-[#3A3A3C] font-[400] leading-[170%] text-[20px]"
             >
               Your realtor will compile a hand-selected, unique list of flats
               that fit your needs and way of life.
@@ -94,8 +94,8 @@ export const Box2: FC = () => {
           </div>
           <div className="flex flex-col gap-[10px]">
             <svg
-              width="120"
-              height="120"
+              width="80"
+              height="80"
               viewBox="0 0 120 120"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -109,13 +109,13 @@ export const Box2: FC = () => {
 
             <p
               style={{ fontFamily: "Poppins" }}
-              className="w-[464px] font-[600] leading-[150%] text-[31.25px]"
+              className="w-[360px] font-[600] leading-[150%] text-[25px]"
             >
               Celebrate! You've just located the ideal residence.
             </p>
             <p
               style={{ fontFamily: "Poppins" }}
-              className="w-[464px] text-[#3A3A3C] font-[400] leading-[170%] text-[22px]"
+              className="w-[360px] text-[#3A3A3C] font-[400] leading-[170%] text-[20px]"
             >
               Our team of industry professionals can do the rest if you just
               give them a little information about yourself and what you're
@@ -125,7 +125,7 @@ export const Box2: FC = () => {
         </div>
         <div
           style={{ fontFamily: "Poppins" }}
-          className="flex text-[25px] font-[500] leading-[150%] text-[#0C1618] w-[20%] m-auto rounded-[8px] border-[2px] h-[72px] px-[48px] py-[16px] border-[#0C1618] items-center gap-[10px] justify-center"
+          className="flex text-[20px] font-[500] leading-[150%] text-[#0C1618] w-[20%] m-auto rounded-[8px] border-[2px] h-[60px] px-[40px] py-[16px] border-[#0C1618] items-center gap-[10px] justify-center"
         >
           <button>Learn More</button>
           <svg
