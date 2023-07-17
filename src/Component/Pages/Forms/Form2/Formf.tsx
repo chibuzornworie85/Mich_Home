@@ -31,19 +31,19 @@ export const Formf: FC = () => {
   };
   return (
     <>
-      <div className="px-[100px] flex justify-between py-[100px]">
-        <div className="flex flex-col gap-[100px]">
+      <div className="px-[50px] flex justify-between py-[50px]">
+        <div className="flex flex-col gap-[50px]">
           <p
             style={{ fontFamily: "Satoshi" }}
-            className="w-[548px] text-[48.83px] font-[900] leading-[130%]"
+            className="w-[500px] text-[30px] font-[900] leading-[130%]"
           >
             Start your search!
           </p>
-          <div className="flex items-center h-[72px] gap-[264px bg-[#DCDFE0] rounded-[8px]">
+          <div className="flex items-center h-[72px] bg-[#DCDFE0] rounded-[8px] pr-[10px]">
             <input
               type="text"
               placeholder="Disclaimer?"
-              className="py-[21px] w-[517px] px-[24px] bg-[#DCDFE0] border-none"
+              className="py-[21px] w-[100%] px-[24px] bg-[#DCDFE0] border-none"
             />
             <svg
               width="24"
@@ -56,9 +56,9 @@ export const Formf: FC = () => {
             </svg>
           </div>
         </div>
-        <div className="w-[923px] h-[1232px] flex flex-col gap-[50px] px-[100px] pt-[50px] rounded-[8px] bg-[#004643]">
-          <div className="flex h-[70px] items-center w-[701px]">
-            <div>
+        <div className="w-[600px] h-[1150px] flex flex-col gap-[50px] px-[50px] pt-[50px] rounded-[8px] bg-[#004643]">
+          <div className="flex h-[70px] items-center w-[100%]">
+            <div className="flex flex-col">
               <label
                 style={{ fontFamily: "Poppins" }}
                 className="text-[18px] font-[500] leading-[150%] text-[#fff]"
@@ -68,7 +68,7 @@ export const Formf: FC = () => {
               <input
                 onClick={handdleInputChange}
                 type="text"
-                className="w-[701px] h-[70px] pl-[10px] bg-[#fff] rounded-[8px]"
+                className="w-[500px] h-[70px] pl-[10px] bg-[#fff] rounded-[8px]"
                 placeholder="First Name"
                 value={form.firstName}
                 onChange={(e) =>
@@ -77,8 +77,8 @@ export const Formf: FC = () => {
               />
             </div>
           </div>
-          <div className="flex h-[70px] items-center w-[701px]">
-            <div>
+          <div className="flex h-[70px] items-center w-[100%]">
+            <div className="flex flex-col">
               <label
                 style={{ fontFamily: "Poppins" }}
                 className="text-[18px] font-[500] leading-[150%] text-[#fff]"
@@ -88,15 +88,15 @@ export const Formf: FC = () => {
               <input
                 onClick={handdleInputChange}
                 type="text"
-                className="w-[701px] h-[70px] pl-[10px] bg-[#fff] rounded-[8px]"
+                className="w-[500px] h-[70px] pl-[10px] bg-[#fff] rounded-[8px]"
                 placeholder="Last Name"
                 value={form.lastName}
                 onChange={(e) => setForm({ ...form, lastName: e.target.value })}
               />
             </div>
           </div>
-          <div className="flex h-[70px] items-center w-[701px]">
-            <div>
+          <div className="flex h-[70px] items-center w-[100%]">
+            <div className="flex flex-col">
               <label
                 style={{ fontFamily: "Poppins" }}
                 className="text-[18px] font-[500] leading-[150%] text-[#fff]"
@@ -106,15 +106,15 @@ export const Formf: FC = () => {
               <input
                 onClick={handdleInputChange}
                 type="text"
-                className="w-[701px] h-[70px] pl-[10px] bg-[#fff] rounded-[8px]"
+                className="w-[500px] h-[70px] pl-[10px] bg-[#fff] rounded-[8px]"
                 placeholder="(123) 456 7890"
                 value={form.number}
                 onChange={(e) => setForm({ ...form, number: e.target.value })}
               />
             </div>
           </div>
-          <div className="flex h-[70px] items-center w-[701px]">
-            <div>
+          <div className="flex h-[70px] items-center w-[100%]">
+            <div className="flex flex-col">
               <label
                 style={{ fontFamily: "Poppins" }}
                 className="text-[18px] font-[500] leading-[150%] text-[#fff]"
@@ -124,15 +124,15 @@ export const Formf: FC = () => {
               <input
                 onClick={handdleInputChange}
                 type="text"
-                className="w-[701px] h-[70px] pl-[10px] bg-[#fff] rounded-[8px]"
+                className="w-[500px] h-[70px] pl-[10px] bg-[#fff] rounded-[8px]"
                 placeholder="Hello@email.com"
                 value={form.email}
                 onChange={(e) => setForm({ ...form, email: e.target.value })}
               />
             </div>
           </div>
-          <div className="flex h-[70px] items-center w-[701px]">
-            <div className="w-[701px]">
+          <div className="flex h-[70px] items-center w-[100%]">
+            <div className="flex flex-col">
               <label
                 style={{ fontFamily: "Poppins" }}
                 className="text-[18px] font-[500] leading-[150%] text-[#fff]"
@@ -143,12 +143,12 @@ export const Formf: FC = () => {
                 <input
                   onClick={handdleInputChange}
                   type="text"
-                  className="w-[701px] h-[70px] pl-[10px] bg-[#fff] rounded-[8px]"
+                  className="w-[430px] h-[70px] pl-[10px] bg-[#fff] rounded-[8px]"
                   placeholder="-"
                   value={form.hear}
                   onChange={(e) => setForm({ ...form, hear: e.target.value })}
                 />
-                <div className="hello flex justify-center items-center h-[68.67px] w-[80px] bg-[#0C1618]">
+                <div className="hello flex justify-center items-center h-[68.67px] w-[70px] bg-[#0C1618]">
                   <svg
                     width="24"
                     height="25"
@@ -165,8 +165,8 @@ export const Formf: FC = () => {
               </div>
             </div>
           </div>
-          <div className="flex items-center w-[701px]">
-            <div>
+          <div className="flex items-center w-[100%]">
+            <div className="flex flex-col">
               <label
                 style={{ fontFamily: "Poppins" }}
                 className="text-[18px] font-[500] leading-[150%] text-[#fff]"
@@ -174,7 +174,7 @@ export const Formf: FC = () => {
                 Any special requests?
               </label>
               <textarea
-                className="w-[701px] p-[10px] bg-[#fff] rounded-[8px] h-[179.261px]"
+                className="w-[500px] p-[10px] bg-[#fff] rounded-[8px] h-[179.261px]"
                 placeholder="Type something"
                 onClick={handdleInputChange}
                 value={form.special}
@@ -183,8 +183,9 @@ export const Formf: FC = () => {
             </div>
           </div>
           <div className="flex items-center gap-[20px]">
-            <div className="w-[135px] h-[88px] py-[28px] rounded-[8px] border-[2px] border-[#fff] flex justify-center">
-              <svg
+            <div className="w-[135px] h-[70px] items-center py-[28px] rounded-[8px] border-[2px] border-[#fff] flex justify-center">
+           <Link to="/form1f">
+           <svg
                 onClick={clearForm}
                 width="32"
                 height="32"
@@ -197,6 +198,7 @@ export const Formf: FC = () => {
                   stroke="white"
                 />
               </svg>
+           </Link>
             </div>
             <button
               style={{
@@ -204,7 +206,7 @@ export const Formf: FC = () => {
                 backgroundColor: InputClicked ? "#000" : "#C7C9D9",
                 color: InputClicked ? "#fff" : "#000",
               }}
-              className="flex w-[701px] bg-[#C7C9D9 h-[88px] py-[16px] rounded-[8px] text-[25px] font-[500] leading-[150%] px-[48px] gap-[10px] justify-center items-center"
+              className="flex w-[701px] bg-[#C7C9D9 h-[70px] py-[16px] rounded-[8px] text-[25px] font-[500] leading-[150%] px-[48px] gap-[10px] justify-center items-center"
             >
               <Link to="/thanks"> Submit</Link>
               <svg

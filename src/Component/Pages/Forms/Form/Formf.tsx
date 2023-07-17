@@ -32,7 +32,7 @@ export const Formf: FC = () => {
       </form>
       </div> */}
 
-      <div className="px-[50px] flex justify-between py-[100px]">
+      <div className="px-[50px] flex justify-between py-[50px] gap-[40px">
         <div className="flex flex-col gap-[50px]">
           <p
             style={{ fontFamily: "Satoshi" }}
@@ -40,7 +40,7 @@ export const Formf: FC = () => {
           >
             When are you looking to move to Awka?
           </p>
-          <div className="flex items-center h-[72px] gap-[264px bg-[#DCDFE0] rounded-[8px]">
+          <div className="flex items-center h-[72px] bg-[#DCDFE0] rounded-[8px] pr-[20px]">
             <input
               type="text"
               placeholder="Find out the ‘why’?"
@@ -58,18 +58,18 @@ export const Formf: FC = () => {
           </div>
         </div>
         <form action="">
-          <div className="h-[500px] flex flex-col gap-[25px] px-[50px] pt-[50px] rounded-[8px] bg-[#004643]">
+          <div className="h-[500px] flex flex-col w-[600px] gap-[25px] px-[50px] pt-[50px] rounded-[8px] bg-[#004643]">
             <p
               style={{ fontFamily: "Poppins" }}
               className="text-[#FFF] text-[18px] font-[500] leading-[150%]"
             >
               Ideal Move-in-date
             </p>
-            <div className="flex h-[60px] items-center w-[701px]">
+            <div className="flex h-[60px] items-center w-[100%]">
               <input
                 onClick={handdleInputChange}
                 type="text"
-                className="w-[500px] h-[60px] pl-[10px] bg-[#fff] rounded-[8px]"
+                className="w-[100%] h-[60px] pl-[10px] bg-[#fff] rounded-[8px]"
                 placeholder="Input date"
               />
               <div className="hello bg-[#0C1618] py-[11px ] px-[16px] h-[60px] flex items-center w-[80px]">
@@ -93,7 +93,7 @@ export const Formf: FC = () => {
                 backgroundColor: InputClicked ? "#000" : "#C7C9D9",
                 color: InputClicked ? "#fff" : "#000",
               }}
-              className="flex w-[580px] h-[60px] py-[16px] text-[25px] rounded-[8px] font-[500] leading-[150%] px-[48px] gap-[10px] justify-center items-center"
+              className="flex w-[100%] h-[60px] py-[16px] text-[25px] rounded-[8px] font-[500] leading-[150%] px-[48px] gap-[10px] justify-center items-center"
             >
               <Link to="/form1f">Next</Link>
               <svg

@@ -11,7 +11,6 @@ export const Formf: FC = () => {
     budget: "",
   });
 
-
   const handdleInputChange = () => {
     setInputClicked(true);
   };
@@ -25,19 +24,19 @@ export const Formf: FC = () => {
   };
   return (
     <>
-      <div className="px-[100px] flex justify-between py-[100px]">
+      <div className="px-[50px] flex justify-between py-[50px]">
         <div className="flex flex-col gap-[50px]">
           <p
             style={{ fontFamily: "Satoshi" }}
-            className="w-[548px] text-[48.83px] font-[900] leading-[130%]"
+            className="w-[350px] text-[30px] font-[900] leading-[130%]"
           >
             Which apartment size and what is your budget?
           </p>
-          <div className="flex items-center h-[72px] gap-[264px bg-[#DCDFE0] rounded-[8px]">
+          <div className="flex items-center h-[72px] bg-[#DCDFE0] rounded-[8px] pr-[10px]">
             <input
               type="text"
               placeholder="Find out the ‘why’?"
-              className="py-[21px] w-[517px] px-[24px] bg-[#DCDFE0] border-none"
+              className="py-[21px] w-[350px] px-[24px] bg-[#DCDFE0] border-none"
             />
             <svg
               width="24"
@@ -50,26 +49,26 @@ export const Formf: FC = () => {
             </svg>
           </div>
         </div>
-        <div className="w-[923px] h-[808px] flex flex-col gap-[70px] px-[100px] pt-[60px] rounded-[8px] bg-[#004643]">
+        <div className="w-[700px] h-[550px] flex flex-col gap-[50px] px-[100px pt-[60px] rounded-[8px] px-[50px] bg-[#004643]">
           <div
             style={{ fontFamily: "Poppins" }}
-            className="flex h-[70px] text-[18px] font-[500] leading-[150%] justify-between items-center"
+            className="flex h-[50px] text-[18px] font-[500] leading-[150%] justify-between items-center gap-[40px]"
           >
-            <div className="w-[295px]">
+            <div className="w-[50%]">
               <div className="flex flex-col gap-[10px]">
                 <label className="text-[#fff]">Bedrooms</label>
                 <div className="flex items-center">
                   <input
                     onClick={handdleInputChange}
                     type="text"
-                    className="pl-[10px] bg-[#fff] rounded-[8px] h-[72px] w-[295px]"
+                    className="pl-[10px] bg-[#fff] rounded-[8px] h-[60px] w-[70%]"
                     placeholder="-"
                     value={form.bedrooms}
                     onChange={(e) =>
                       setForm({ ...form, bedrooms: e.target.value })
                     }
                   />
-                  <div className="hello w-[80px] h-[72px] bg-[black] flex justify-center items-center">
+                  <div className="hello w-[80px] h-[60px] bg-[black] flex justify-center items-center">
                     <svg
                       width="24"
                       height="24"
@@ -86,21 +85,21 @@ export const Formf: FC = () => {
                 </div>
               </div>
             </div>
-            <div className="w-[295px]">
+            <div className="w-[50%]">
               <div className="flex flex-col gap-[10px]">
                 <label className="text-[#fff]">Bedrooms</label>
                 <div className="flex items-center">
                   <input
                     onClick={handdleInputChange}
                     type="text"
-                    className="pl-[10px] bg-[#fff] rounded-[8px] h-[72px] w-[295px]"
+                    className="pl-[10px] bg-[#fff] rounded-[8px] h-[60px] w-[70%]"
                     placeholder="-"
                     value={form.bedrooms1}
                     onChange={(e) =>
                       setForm({ ...form, bedrooms1: e.target.value })
                     }
                   />
-                  <div className="hello w-[80px] h-[72px] bg-[black] flex justify-center items-center">
+                  <div className="hello w-[80px] h-[60px] bg-[black] flex justify-center items-center">
                     <svg
                       width="24"
                       height="24"
@@ -118,7 +117,7 @@ export const Formf: FC = () => {
               </div>
             </div>
           </div>
-          <div className="fle items-center">
+          <div>
             <div
               style={{ fontFamily: "Poppins" }}
               className="flex flex-col gap-[10px]"
@@ -131,11 +130,11 @@ export const Formf: FC = () => {
                   type="text"
                   onClick={handdleInputChange}
                   placeholder="-"
-                  className="w-[600px] text-[#000] text-[18px] font-[500] leading-[150%] rounded-[8px] pl-[10px] h-[72px]"
+                  className="w-[100%] text-[#000] text-[18px] font-[500] leading-[150%] rounded-[8px] pl-[10px] h-[60px]"
                   value={form.budget}
                   onChange={(e) => setForm({ ...form, budget: e.target.value })}
                 />
-                <div className="w-[80px] h-[72px] flex items-center bg-[#000] justify-center rounded-[8px]">
+                <div className="w-[80px] h-[60px] flex items-center bg-[#000] justify-center rounded-[8px]">
                   <svg
                     width="24"
                     height="24"
@@ -152,10 +151,10 @@ export const Formf: FC = () => {
               </div>
             </div>
           </div>
-          <div className="flex items-center gap-[20px]">
+          <div className="flex items-center gap-[20px] w-[100%]">
             <div
               onClick={handdleInputChange}
-              className="w-[135px] h-[88px] py-[28px] rounded-[8px] border-[2px] border-[#fff] flex justify-center"
+              className="w-[135px] items-center h-[70px] py-[28px] rounded-[8px] border-[2px] border-[#fff] flex justify-center"
             >
               <svg
                 onClick={clearForm}
@@ -177,9 +176,9 @@ export const Formf: FC = () => {
                 backgroundColor: InputClicked ? "#000" : "#C7C9D9",
                 color: InputClicked ? "#fff" : "#000",
               }}
-              className="flex w-[701px] bg-[#C7C9D9] h-[88px] py-[16px] rounded-[8px] text-[25px] font-[500] leading-[150%] px-[48px] gap-[10px] justify-center items-center"
+              className="flex w-[701px] bg-[#C7C9D9] h-[70px] py-[16px] rounded-[8px] text-[25px] font-[500] leading-[150%] px-[48px] gap-[10px] justify-center items-center"
             >
-             <Link to="/form2">Next</Link>
+              <Link to="/form2">Next</Link>
               <svg
                 width="25"
                 height="24"

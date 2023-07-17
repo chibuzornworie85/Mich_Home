@@ -29,7 +29,7 @@ export const Box3: FC = () => {
             <img src={img} alt="img" className="h-[450px]" />
           </div>
         </div>
-        <div className="flex justify-between items-center">
+        <div className="flex justify-between items-center gap-[30px]">
           <div>
             <img src={imgs} alt="img" className="h-[450px]" />
           </div>
