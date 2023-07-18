@@ -1,5 +1,6 @@
 import { FC } from "react";
 import box from "../../../Assets/Landing_page_Asset/Rectangle 54.png";
+import box1 from "../../../Assets/Landing_page_Asset/Rectangle 12.png";
 import "./Box1.css";
 
 export const Box1: FC = () => {
@@ -7,32 +8,32 @@ export const Box1: FC = () => {
     <>
       {/* BOX */}
 
-      <div className="bg-[#FFF] flex items-center gap-[40px] px-[50px] pb-[50px] justify-between">
-        <div className="flex flex-col gap-[30px]">
+      <div className="bg-[#FFF] flex flex-col px-[15px] pt-[30px] xl:pt-0 gap-[20px] xl:flex-row xl:flex xl:items-center xl:gap-[40px] xl:px-[50px] xl:pb-[50px] xl:justify-between">
+        <div className="flex flex-col gap-[20px] xl:gap-[30px]">
           <h1
             style={{ fontFamily: "Millik" }}
-            className="text-[70px] w-[600px] font-[400] leading-[100%]"
+            className="xl:text-[70px] text-[40px] w-[200px] xl:w-[600px] font-[400] leading-[100%]"
           >
             <span className="text-[#004643]">The best place to</span>{" "}
             <span className="text-[#D1AC00]">find an Apartment in Awka.</span>
           </h1>
           <p
             style={{ fontFamily: "Poppins" }}
-            className="text-[#414647] text-[20px] font-[500] leading-[170%] w-[600px]"
+            className="text-[#414647] xl:text-[20px] xl:font-[500] xl:leading-[170%] xl:w-[600px]"
           >
             In a number of Awka Capital City locations, Mich Homes offers the
             greatest local apartment locators ready to find you a rad place to
             live for the lowest possible price.
           </p>
 
-          <div className="flex items-center h-[60px]">
+          <div className="flex items-center xl:h-[60px]">
             <input
               style={{ fontFamily: "Poppins" }}
               type="text"
               placeholder="Search by Location or Type"
-              className="shadow text-[20px] w-[100%] pl-[20px] h-[60px] text-[#818181] py-[15px] bg-[FFF] font-[500] rounded-l-[8px] border-2 border-[#0C1618] leading-[150%]"
+              className="shadow xl:text-[20px] text-[10px] w-[100%] pl-[10px] xl:pl-[20px] h-[30px] xl:h-[60px] text-[#818181] py-[15px] font-[500] rounded-l-[8px] border-2 border-[#0C1618] leading-[150%]"
             />
-            <div className="bg-[#000] flex rounded-r-[8px] justify-center items-center py-[30px] h-[60px] w-[111px]">
+            <div className="bg-[#000] flex rounded-r-[8px] justify-center items-center py-[18px] xl:py-[30px] h-[30px] xl:h-[60px] w-[111px]">
               <svg
                 width="32"
                 height="32"
@@ -49,7 +50,8 @@ export const Box1: FC = () => {
           </div>
         </div>
         <div>
-          <img src={box} alt="" className="h-[50%] w-[100%]" />
+          <img src={box} alt="" className="h-[50%] w-[100%] xl:block hidden" />
+          <img src={box1} alt="" className="xl:hidden block" />
         </div>
       </div>
     </>
