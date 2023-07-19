@@ -1,22 +1,24 @@
 import { FC } from "react";
 import img from "../../../Assets/Location_Asset/author-avatar.png";
+import img1 from "../../../Assets/Location_Asset/Pagination.png";
 import frame from "../../../Assets/Location_Asset/Frame 48.png";
+import frame1 from "../../../Assets/Location_Asset/rame.png";
 import "./Box.css";
-import {Link} from "react-router-dom"
+import { Link } from "react-router-dom";
 
 export const Box4: FC = () => {
   return (
     <>
       {/* Customer */}
-      <div className="flex flex-col px-[50px] items-center">
+      <div className="flex flex-col px-[15px] xl:px-[50px] items-center">
         <p
           style={{ fontFamily: "Satoshi" }}
-          className="flex justify-center text-[30px] font-[900] leading-[130%]"
+          className="flex justify-center text-[20px] text-center xl:w-[100%] w-[70%] xl:text-[30px] font-[900] leading-[130%]"
         >
           What our customers are saying
         </p>
-        <div className="flex items-center py-[50px] gap-[50px]">
-          <div>
+        <div className="flex items-center py-[25px] xl:py-[50px] gap-[50px] flex-col xl:flex-row">
+          <div className="hidden xl:block">
             <svg
               width="64"
               height="64"
@@ -30,12 +32,16 @@ export const Box4: FC = () => {
               />
             </svg>
           </div>
-          <div className="bg-[#FFF] shadow pt-[62px] px-[50px] pb-[58px] flex flex-col gap-[50px] rounded-[4px]">
-            <div className="flex flex-col items-center gap-[50px]">
-              <img src={img} alt="img" />
+          <div className="bg-[#FFF] shadow xl:pt-[62px] px-[10px] pt-[4px] pb-[4px] xl:px-[50px] xl:pb-[58px] flex flex-col gap-[15px] xl:gap-[50px] rounded-[4px]">
+            <div className="flex flex-col items-center xl:gap-[50px] gap-[10px]">
+              <img
+                src={img}
+                alt="img"
+                className="xl:h-[128px] h-[88px] w-[88px] xl:w-[128px]"
+              />
               <p
                 style={{ fontFamily: "Poppins" }}
-                className="w-[600px] text-[#004643] font-[400] leading-[170%] text-[20px] flex text-center"
+                className="xl:w-[600px] text-[#004643] font-[400] leading-[170%] xl:text-[20px] flex text-center"
               >
                 “Lorem ipsum dolor sit amet, consectetur adipiscing elit. Semper
                 tristique suspendisse semper vestibulum pharetra ut nec. Amet
@@ -46,19 +52,22 @@ export const Box4: FC = () => {
             <div className="flex justify-between items-center">
               <p
                 style={{ fontFamily: "Poppins" }}
-                className="text-[#0C1618] leading-[150%] font-[600] text-[20px]"
+                className="text-[#0C1618] leading-[150%] font-[600] xl:text-[20px]"
               >
                 John Doe
               </p>
               <p
                 style={{ fontFamily: "Poppins" }}
-                className="text-[#0C1618] text-[20px] font-[400] leading-[170%]"
+                className="text-[#0C1618] xl:text-[20px] font-[400] leading-[170%]"
               >
                 Via facebook
               </p>
             </div>
           </div>
-          <div>
+          <div className="xl:hidden block">
+            <img src={img1} alt="image" />
+          </div>
+          <div className="hidden xl:block">
             <svg
               width="64"
               height="64"
@@ -76,14 +85,56 @@ export const Box4: FC = () => {
       </div>
 
       {/* Skill */}
-      <div className="flex justify-center px-[50px] pb-[100px] items-center">
-        <div className="bg-[#004643] rounded-t-[4px] w-[600px] h-[450px] flex flex-col gap-[20px] p-[50px]">
-          <p style={{fontFamily: "Satoshi"}} className="font-[900] w-[200px] leading-[130%] text-[30px] text-[#FFF]">Improve your tenancy skills</p>
-          <p style={{fontFamily: "Poppins"}} className="w-[400px] text-[#FFF] text-[25px] font-[400] leading-[170%]">Let Mich Homes assist you in finding your next rental.</p>
-          <button className="mt-[30px] text-[#FFF] text-[20px] font-[500] leading-[150%] w-[200px] rounded-[8px] h-[72px] py-[16px] px-[32px] bg-[#0C1618]"><Link to="/form">Get Started</Link></button>
+      <div className="flex justify-center flex-col xl:flex-row xl:px-[50px] xl:pb-[100px] items-center xl:mt-0 mt-[20px]">
+        <div className="bg-[#004643] xl:rounded-t-[4px] w-[100%] xl:w-[600px] h-[292px] xl:h-[450px] flex flex-col gap-[10px] pt-[50px] px-[20px] xl:gap-[20px] xl:p-[50px]">
+          <p
+            style={{ fontFamily: "Satoshi" }}
+            className="font-[900] xl:w-[200px] w-[250px] leading-[130%] text-[20px] xl:text-[30px] text-[#FFF]"
+          >
+            Improve your tenancy skills
+          </p>
+          <p
+            style={{ fontFamily: "Poppins" }}
+            className="xl:w-[400px] text-[#FFF] text-[15px] xl:text-[25px] font-[400] leading-[170%]"
+          >
+            Let Mich Homes assist you in finding your next rental.
+          </p>
+          <button className="mt-[30px] xl:block hidden text-[#FFF] text-[20px] font-[500] leading-[150%] w-[200px] rounded-[8px] h-[72px] py-[16px] px-[32px] bg-[#0C1618]">
+            <Link to="/form">Get Started</Link>
+          </button>
+          <button className="mt-[10px] flex items-center text-[#FFF] font-[500] leading-[150%] w-[150px] rounded-[8px] px-[20px] py-[10px] justify-center bg-[#D1AC00]">
+            <Link to="/form">Get Started</Link>
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 16 16"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g clip-path="url(#clip0_3051_503)">
+                <path
+                  d="M8.45049 14.2999L14.7489 7.99995L8.44889 1.69995M1.25049 7.99995H14.7505H1.25049Z"
+                  stroke="white"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </g>
+              <defs>
+                <clipPath id="clip0_3051_503">
+                  <rect width="16" height="16" fill="white" />
+                </clipPath>
+              </defs>
+            </svg>
+          </button>
         </div>
         <div>
-          <img src={frame} alt="img" className="h-[450px] w-[600px]" />
+          <img
+            src={frame}
+            alt="img"
+            className="h-[450px] w-[600px] xl:block hidden"
+          />
+          <img src={frame1} alt="img" className="xl:hidden block" />
         </div>
       </div>
     </>

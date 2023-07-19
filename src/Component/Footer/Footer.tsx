@@ -232,7 +232,7 @@ export const Footer: FC = () => {
         <div className="flex flex-col gap-[10px]">
           <p
             style={{ fontFamily: "Satoshi" }}
-            className="text-[15pxpx] font-[700] text-[#fff] leading-[130%]"
+            className="text-[15px] font-[700] text-[#fff] leading-[130%]"
           >
             LEARN MORE
           </p>

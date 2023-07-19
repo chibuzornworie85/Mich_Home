@@ -1,5 +1,6 @@
 import { FC } from "react";
 import box from "../../../Assets/Location_Asset/Rectangle 3.png";
+import box1 from "../../../Assets/Location_Asset/ectangle.png";
 import { Link } from "react-router-dom";
 
 export const Box: FC = () => {
@@ -7,17 +8,17 @@ export const Box: FC = () => {
     <>
       {/* BOX */}
 
-      <div className="bg-[#FFF] flex items-center gap-[40px] px-[50px] pb-[100px] justify-between">
-        <div className="flex flex-col gap-[50px]">
+      <div className="bg-[#FFF] flex flex-col xl:flex-row items-center xl:gap-[40px] gap-[20px] px-[25px] xl:px-[50px] py-[20px] xl:py-0 xl:pb-[100px] justify-between">
+        <div className="flex flex-col xl:gap-[50px] gap-[20px]">
           <h1
             style={{ fontFamily: "Millik" }}
-            className="text-[70px] w-[500px] font-[400] leading-[100%]"
+            className="xl:text-[70px] text-[30px] w-[250px] xl:w-[500px] font-[400] leading-[100%]"
           >
             <span className="text-[#004643]">Find the right apartment</span>
           </h1>
           <p
             style={{ fontFamily: "Poppins" }}
-            className="text-[#414647] text-[20px] font-[500] leading-[170%] w-[550px]"
+            className="text-[#414647] xl:text-[20px] font-[500] leading-[170%] xl:w-[550px]"
           >
             In Awka, there are over 190,000 housing units. With no cost to you,
             we help you find your one.
@@ -25,7 +26,7 @@ export const Box: FC = () => {
 
           <div
             style={{ fontFamily: "Poppins" }}
-            className="flex text-[20px] gap-[8px] bg-[#0C1618] justify-center w-[40%] text-[#FFF] rounded-[8px] py-[16px] px-[20px] font-[500] leading-[140%] h-[60px] items-center"
+            className="flex xl:text-[20px] gap-[8px] bg-[#0C1618] justify-center w-[60%] xl:w-[40%] text-[#FFF] rounded-[8px] xl:py-[16px] xl:px-[20px] font-[500] leading-[140%] h-[40px] xl:h-[60px] items-center"
           >
             <button>
               <Link to="/apartment">View Listings</Link>
@@ -48,7 +49,8 @@ export const Box: FC = () => {
           </div>
         </div>
         <div>
-          <img src={box} alt="" />
+          <img src={box} alt="" className="hidden xl:block" />
+          <img src={box1} alt="" className="block xl:hidden" />
         </div>
       </div>
     </>
