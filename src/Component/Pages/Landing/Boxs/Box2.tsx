@@ -369,7 +369,7 @@ export const Box2: FC = () => {
               </p>
               <p
                 style={{ fontFamily: "Poppins" }}
-                className="w-[200px] xl:text-[20px] text-[10px] font-[500] leading-[150%] text-[#FFF]"
+                className="w-[150px] xl:text-[20px] text-[10px] font-[500] leading-[150%] text-[#FFF]"
               >
                 Renting with roommates: Your Guide
               </p>

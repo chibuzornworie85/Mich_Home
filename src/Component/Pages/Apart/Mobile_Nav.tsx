@@ -1,46 +1,13 @@
-import { FC } from "react";
-import logo from "../../../Assets/Landing_page_Asset/Brand Logo.png";
-import "./Nav.css";
+import {FC} from 'react';
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import "../Landing/Nav/Nav.css";
 
-export const Nav: FC = () => {
-  const [drop, sideDrop] = useState<boolean>(true);
+export const MobileNav: FC = () => {
+    const [drop, sideDrop] = useState<boolean>(true);
   return (
     <>
-      {/* Nav */}
-
-      <header className="custom-shadow hidden xl:flex justify-between px-[50px] py-[20px] text-center rounded-[8px] bg-[#FFF] items-center sticky top-0">
-        <div className="flex items-center">
-          <img src={logo} alt="logo" />
-        </div>
-        <nav style={{ fontFamily: "Poppins" }}>
-          <ul className="flex gap-[40px] items-center text-[#0C1618] text-center text-[16px] font-[500] leading-[170%]">
-            <li>About us</li>
-            <li>Careers</li>
-            <li>Blog</li>
-          </ul>
-        </nav>
-        <div style={{ fontFamily: "Poppins" }}>
-          <button className="flex bg-[#EBEBF0] text-[#0C1618] font-[500] leading-[150%] text-[16px] rounded-[8px] h-[60px] px-[24px] py-[16px] items-center gap-[8px]">
-            <Link to="/location">Choose Location</Link>
-            <svg
-              width="34"
-              height="36"
-              viewBox="0 0 34 36"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M17.0003 23.8334L5.66699 12.1667H28.3337L17.0003 23.8334Z"
-                fill="#0C1618"
-              />
-            </svg>
-          </button>
-        </div>
-      </header>
-
-      <header className="custom-shadow xl:hidden flex sticky top-0 justify-between items-center px-[15px] bg-[#FFF] h-[80px] rounded-[8px]">
+       <header className="custom-shadow flex sticky top-0 justify-between items-center px-[15px] bg-[#FFF] h-[80px] rounded-[8px]">
         <div onClick={() => sideDrop(!drop)}>
           {drop ? (
             <div>
@@ -79,7 +46,9 @@ export const Nav: FC = () => {
                   style={{ fontFamily: "Millik" }}
                   className="text-[#0C1618] text-[15px] font-[400]"
                 >
-                  <h1>Mich Homes</h1>
+                  <Link to="/">
+                    <h1>Mich Homes</h1>
+                  </Link>
                 </div>
                 <div
                   style={{ fontFamily: "Poppins" }}
@@ -107,9 +76,7 @@ export const Nav: FC = () => {
                 className="flex flex-col text-[#000] text-[15px] font-[600] leading-[170%] gap-[15px] pt-[30px]"
               >
                 <p>Our Process</p>
-                <Link to="/apartment">
-                  <p>Latest Apartment Listings</p>
-                </Link>
+                <p>Latest Apartment Listings</p>
                 <p>Neighbourhoods</p>
                 <p>Relocation</p>
                 <p>About Us</p>
@@ -128,25 +95,14 @@ export const Nav: FC = () => {
         </div>
         <div
           style={{ fontFamily: "Poppins" }}
-          className="text-[10px] font-[500] rounded-[8px] leading-[150%] text-[#FFF] bg-[#0C1618] h-[30px py-[10px] px-[8px] flex justify-center items-center"
+          className="text-[15px] font-[600] rounded-[8px] leading-[150%] text-[#000] bg-[#D1AC00] h-[30px py-[10px] px-[8px] flex justify-center items-center"
         >
-          <button className="flex items-center gap-[5px]">
-            <Link to="/location">Choose Location</Link>
-            <svg
-              width="16"
-              height="16"
-              viewBox="0 0 16 16"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M8.00008 10.6666L2.66675 5.33325H13.3334L8.00008 10.6666Z"
-                fill="white"
-              />
-            </svg>
+          <button className="flex items-center">
+            <Link to="/form">Start Now</Link>
           </button>
         </div>
       </header>
+
     </>
   );
-};
+}

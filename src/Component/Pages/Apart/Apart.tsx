@@ -6,16 +6,32 @@ import { Box3 } from "./Boxs/Box3";
 import { Footer } from "../../Footer/Footer";
 import { Box2f } from "./Boxs/Box2f";
 import { Box2f1 } from "./Boxs/Box2f1";
+import { MobileNav } from "./Mobile_Nav";
+import { Mobile_Box } from "./Boxs/Mobile_Box";
+import { Mobile_Box2 } from "./Boxs/Mobile_Box2";
+import { Mobile_Box3 } from "./Boxs/Mobile_Box3";
+import { Mobile_Box4 } from "./Boxs/Mobile_Box4";
 
 export const Apart: FC = () => {
   return (
     <>
-      <Nav />
+      <div className="xl:block hidden sticky top-0">
+        <Nav />
+      </div>
+      <div className="xl:hidden block sticky top-0">
+        <MobileNav />
+      </div>
       <Box1 />
-      <div className="flex flex-col gap-[10px] py-[50px]">
+      <div className="xl:flex flex-col gap-[10px] py-[50px] hidden">
         <Box2 />
         <Box2f />
         <Box2f1 />
+      </div>
+      <div className="xl:hidden flex flex-col py-[40px] gap-[10px]">
+        <Mobile_Box />
+        <Mobile_Box2 />
+        <Mobile_Box3 />
+        <Mobile_Box4 />
       </div>
       <Box3 />
       <Footer />

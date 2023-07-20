@@ -155,7 +155,9 @@ export const Nav: FC = () => {
                 className="flex flex-col text-[#000] text-[15px] font-[600] leading-[170%] gap-[15px] pt-[30px]"
               >
                 <p>Our Process</p>
-                <p>Latest Apartment Listings</p>
+                <Link to="/apartment">
+                  <p>Latest Apartment Listings</p>
+                </Link>
                 <p>Neighbourhoods</p>
                 <p>Relocation</p>
                 <p>About Us</p>

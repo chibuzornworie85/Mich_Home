@@ -33,10 +33,10 @@ export const Box1: FC = () => {
               placeholder="Search by Location or Type"
               className="shadow xl:text-[20px] text-[10px] w-[100%] pl-[10px] xl:pl-[20px] h-[30px] xl:h-[60px] text-[#818181] py-[15px] font-[500] rounded-l-[8px] border-2 border-[#0C1618] leading-[150%]"
             />
-            <div className="bg-[#000] flex rounded-r-[8px] justify-center items-center py-[18px] xl:py-[30px] h-[30px] xl:h-[60px] w-[111px]">
+            <div className="bg-[#000] flex rounded-r-[8px] justify-center items-center py-[17px] xl:py-[30px] h-[25px] xl:h-[60px] w-[60px] xl:w-[111px]">
               <svg
-                width="32"
-                height="32"
+                width="30"
+                height="30"
                 viewBox="0 0 32 32"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"

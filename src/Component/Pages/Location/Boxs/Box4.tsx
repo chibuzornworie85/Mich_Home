@@ -41,7 +41,7 @@ export const Box4: FC = () => {
               />
               <p
                 style={{ fontFamily: "Poppins" }}
-                className="xl:w-[600px] text-[#004643] font-[400] leading-[170%] xl:text-[20px] flex text-center"
+                className="xl:w-[600px] xl:text-[#004643] text-[#414647] font-[400] leading-[170%] xl:text-[20px] flex text-center"
               >
                 “Lorem ipsum dolor sit amet, consectetur adipiscing elit. Semper
                 tristique suspendisse semper vestibulum pharetra ut nec. Amet

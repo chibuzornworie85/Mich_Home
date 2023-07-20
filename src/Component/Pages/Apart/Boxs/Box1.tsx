@@ -3,17 +3,17 @@ import { FC } from "react";
 export const Box1: FC = () => {
   return (
     <>
-      <div className="px-[50px]">
-        <div className="flex flex-col py-[50px] gap-[20px] items-center text-center">
+      <div className="xl:px-[50px] py-[40px] xl:py-0 px-[15px] bg-[#0C1618] xl:bg-white">
+        <div className="flex flex-col pb-[20px] xl:pb-0 xl:py-[50px] gap-[10px] xl:gap-[20px] items-center text-center">
           <p
             style={{ fontFamily: "Millik" }}
-            className="text-[#004643] text-[50px] font-[400] leading-[130%]"
+            className="xl:text-[#004643] text-[#fff] text-[30px] xl:text-[50px] font-[400] leading-[130%] xl:w-[100%] w-[200px]"
           >
             Latest Apartment Listings
           </p>
           <p
             style={{ fontFamily: "Poppins" }}
-            className="w-[1010px] text-[#414647] text-[20px] font-[500] leading-[170%]"
+            className="xl:w-[1010px] xl:text-[#414647] text-[#fff] xl:text-[20px] font-[500] leading-[170%] xl:pb-[20px]"
           >
             This is the current situation with “Location” apartments. Since
             apartment prices fluctuate daily, we'll let you in on a little
@@ -28,27 +28,27 @@ export const Box1: FC = () => {
         </div>
         <div
           style={{ fontFamily: "Poppins" }}
-          className="flex justify-between gap-[10px] text-center text-[15px] font-[600] leading-[150%] text-[#FFF]"
+          className="xl:flex xl:justify-between grid grid-cols-2 gap-y-[10px] gap-x-[10px] xl:gap-[10px] text-center xl:text-[15px] font-[600] leading-[150%] text-[#FFF]"
         >
-          <div className="w-[200px] h-[50px] flex items-center justify-center py-[30px] px-[20px] rounded-[8px] bg-[#0C1618]">
+          <div className="xl:w-[200px] xl:h-[50px] flex items-center justify-center py-[15px] xl:py-[30px] xl:px-[20px] rounded-[8px] bg-[#414647] xl:bg-[#0C1618]">
             <button>Neighbourhood</button>
           </div>
-          <div className="w-[200px] h-[50px] flex items-center justify-center py-[30px] px-[20px] rounded-[8px] bg-[#0C1618]">
+          <div className="xl:w-[200px] xl:h-[50px] flex items-center justify-center py-[15px] xl:py-[30px] xl:px-[20px] rounded-[8px] bg-[#414647] xl:bg-[#0C1618]">
             <button>Budget</button>
           </div>
-          <div className="w-[200px] h-[50px] flex items-center justify-center py-[30px] px-[20px] rounded-[8px] bg-[#0C1618]">
+          <div className="xl:w-[200px] xl:h-[50px] flex items-center justify-center py-[15px] xl:py-[30px] xl:px-[20px] rounded-[8px] bg-[#414647] xl:bg-[#0C1618]">
             <button>Layout</button>
           </div>
-          <div className="w-[200px] h-[50px] flex items-center justify-center py-[30px] px-[20px] rounded-[8px] bg-[#0C1618]">
+          <div className="xl:w-[200px] xl:h-[50px] flex items-center justify-center py-[15px] xl:py-[30px] xl:px-[20px] rounded-[8px] bg-[#414647] xl:bg-[#0C1618]">
             <button>Sq. Footage</button>
           </div>
-          <div className="w-[200px] h-[50px] flex items-center justify-center py-[30px] px-[20px] rounded-[8px] bg-[#0C1618]">
+          <div className="xl:w-[200px] xl:h-[50px] flex items-center justify-center py-[15px] xl:py-[30px] xl:px-[20px] rounded-[8px] bg-[#414647] xl:bg-[#0C1618]">
             <button>All Recent</button>
           </div>
-          <div className="w-[200px] h-[50px] flex items-center justify-center py-[30px] px-[20px] rounded-[8px] bg-[#0C1618]">
+          <div className="xl:w-[200px] xl:h-[50px] flex items-center justify-center py-[15px] xl:py-[30px] xl:px-[20px] rounded-[8px] bg-[#414647] xl:bg-[#0C1618]">
             <button>Sort</button>
           </div>
-          <div className="w-[200px] h-[50px] flex items-center justify-center py-[30px] px-[20px] rounded-[8px] bg-[#D1AC00]">
+          <div className="xl:w-[200px] xl:h-[50px] flex items-center justify-center py-[15px] xl:py-[30px] xl:px-[20px] rounded-[8px] bg-[#D1AC00]">
             <button>Clear Filters</button>
           </div>
         </div>

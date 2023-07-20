@@ -4,7 +4,7 @@ import logo from "../Assets/Footer/BrandLogoLarge.png";
 export const Footer: FC = () => {
   return (
     <>
-      <footer className="hidden xl:flex bg-[#2c2f30] px-[50px] py-[60px] w-[100%] flex-col gap-[50px]">
+      <footer className="hidden xl:flex bg-[#0C1618] px-[50px] py-[60px] w-[100%] flex-col gap-[50px]">
         <div className="justify-between flex">
           <div className="flex flex-col items-start gap-[20px]">
             <img src={logo} alt="img" className="flex items-center w-[200px]" />
@@ -16,6 +16,23 @@ export const Footer: FC = () => {
               houses, apartments, and lodges that are available within Awka
               city, Nigeria.
             </p>
+          </div>
+          <div className="flex flex-col gap-[20px]">
+            <p
+              style={{ fontFamily: "Satoshi" }}
+              className="text-[20px] font-[900] leading-[130%] text-[#FFF]"
+            >
+              GET STARTED
+            </p>
+            <ul
+              style={{ fontFamily: "Poppins" }}
+              className="text-[15px] font-[400] leading-[170%] text-[#FFF]"
+            >
+              <li>Latest Apartment Listings</li>
+              <li>Our Process</li>
+              <li>Neighbourhood</li>
+              <li>FAQs</li>
+            </ul>
           </div>
           <div className="flex flex-col gap-[20px]">
             <p
@@ -61,8 +78,8 @@ export const Footer: FC = () => {
             </p>
             <div className="flex items-center gap-[20px]">
               <svg
-                width="60"
-                height="60"
+                width="50"
+                height="50"
                 viewBox="0 0 76 76"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -74,8 +91,8 @@ export const Footer: FC = () => {
                 />
               </svg>
               <svg
-                width="60"
-                height="60"
+                width="50"
+                height="50"
                 viewBox="0 0 76 76"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -101,8 +118,8 @@ export const Footer: FC = () => {
                 </defs>
               </svg>
               <svg
-                width="60"
-                height="60"
+                width="50"
+                height="50"
                 viewBox="0 0 76 76"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -137,7 +154,7 @@ export const Footer: FC = () => {
 
       {/* Moblie */}
 
-      <footer className="flex flex-col xl:hidden px-[15px] py-[20px] gap-[20px] bg-[#0C1618]">
+      <footer className="flex flex-col xl:hidden px-[15px] py-[20px] gap-[30px] bg-[#0C1618]">
         <div className="flex flex-col gap-[10px]">
           <p
             style={{ fontFamily: "Satoshi" }}
@@ -226,6 +243,39 @@ export const Footer: FC = () => {
             className="text-[#fff] font-[400] leading-[140%]"
           >
             (+234) 801 2345 678
+          </p>
+        </div>
+
+        <div className="flex flex-col gap-[10px]">
+          <p
+            style={{ fontFamily: "Satoshi" }}
+            className="text-[15px] font-[700] text-[#fff] leading-[130%]"
+          >
+            GET STARTED
+          </p>
+          <p
+            style={{ fontFamily: "Poppins" }}
+            className="text-[#fff] font-[400] leading-[140%]"
+          >
+            Latest Apartment Listings
+          </p>
+          <p
+            style={{ fontFamily: "Poppins" }}
+            className="text-[#fff] font-[400] leading-[140%]"
+          >
+            Our Process
+          </p>
+          <p
+            style={{ fontFamily: "Poppins" }}
+            className="text-[#fff] font-[400] leading-[140%]"
+          >
+            Neighbourhood
+          </p>
+          <p
+            style={{ fontFamily: "Poppins" }}
+            className="text-[#fff] font-[400] leading-[140%]"
+          >
+            FAQs
           </p>
         </div>
 
