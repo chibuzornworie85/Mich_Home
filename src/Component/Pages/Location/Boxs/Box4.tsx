@@ -102,7 +102,7 @@ export const Box4: FC = () => {
           <button className="mt-[30px] xl:block hidden text-[#FFF] text-[20px] font-[500] leading-[150%] w-[200px] rounded-[8px] h-[72px] py-[16px] px-[32px] bg-[#0C1618]">
             <Link to="/form">Get Started</Link>
           </button>
-          <button className="mt-[10px] flex items-center text-[#FFF] font-[500] leading-[150%] w-[150px] rounded-[8px] px-[20px] py-[10px] justify-center bg-[#D1AC00]">
+          <button className="mt-[10px] xl:hidden flex items-center text-[#FFF] font-[500] leading-[150%] w-[150px] rounded-[8px] px-[20px] py-[10px] justify-center bg-[#D1AC00]">
             <Link to="/form">Get Started</Link>
             <svg
               width="16"

@@ -7,7 +7,7 @@ export const Thanks: FC = () => {
   return (
     <>
       <Nav />
-      <Thankf />
+      {/* <Thankf /> */}
       <Footer />
     </>
   );

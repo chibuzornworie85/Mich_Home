@@ -1,13 +1,13 @@
-import {FC} from 'react';
+import { FC } from "react";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import "../Landing/Nav/Nav.css";
 
 export const MobileNav: FC = () => {
-    const [drop, sideDrop] = useState<boolean>(true);
+  const [drop, sideDrop] = useState<boolean>(true);
   return (
     <>
-       <header className="custom-shadow flex sticky top-0 justify-between items-center px-[15px] bg-[#FFF] h-[80px] rounded-[8px]">
+      <header className="custom-shadow flex sticky top-0 justify-between items-center px-[15px] bg-[#FFF] h-[80px] rounded-[8px]">
         <div onClick={() => sideDrop(!drop)}>
           {drop ? (
             <div>
@@ -102,7 +102,6 @@ export const MobileNav: FC = () => {
           </button>
         </div>
       </header>
-
     </>
   );
-}
+};
