@@ -3,6 +3,7 @@ import { useState } from "react";
 import img from "../../../Assets/Apart_Asset/tangle (1).png";
 import img2 from "../../../Assets/Apart_Asset/tangle (2).png";
 import img3 from "../../../Assets/Apart_Asset/tangle (3).png";
+import { Link } from "react-router-dom";
 
 export const Mobile_Box: FC = () => {
   const [drop, sideDrop] = useState<boolean>(true);
@@ -49,8 +50,8 @@ export const Mobile_Box: FC = () => {
                     </svg>
                   </div>
                 </div>
-                <div className="bg-[#fff] h-[70vh]">
-                  <div className="flex justify-around gap-[20px] px-[20px] py-[30px]">
+                <div className="bg-[#fff] h-[70vh] px-[20px] flex flex-col py-[20px] gap-[20px]">
+                  <div className="flex justify-around gap-[20px] py-[20px">
                     <div>
                       <img src={img2} alt="img" />
                     </div>
@@ -62,8 +63,11 @@ export const Mobile_Box: FC = () => {
                     </div>
                   </div>
 
-                  <div className="px-[20px] flex justify-between items-center">
-                    <div style={{fontFamily: "Poppins"}} className="flex font-[400] leading-[170%] text-[#000] flex-col gap-[30px]">
+                  <div className="flex justify-between items-center">
+                    <div
+                      style={{ fontFamily: "Poppins" }}
+                      className="flex font-[400] leading-[170%] text-[#000] flex-col gap-[30px]"
+                    >
                       <div className="flex flex-col gap-[10px]">
                         <p>Neighborhood</p>
                         <p>Rental Amount</p>
@@ -77,7 +81,10 @@ export const Mobile_Box: FC = () => {
                         <p>Listing Found</p>
                       </div>
                     </div>
-                    <div style={{fontFamily: "Poppins"}} className="flex font-[600] leading-[170%] text-[#000] flex-col gap-[30px]">
+                    <div
+                      style={{ fontFamily: "Poppins" }}
+                      className="flex font-[600] leading-[170%] text-[#000] flex-col gap-[30px]"
+                    >
                       <div className="flex flex-col gap-[10px]">
                         <p>Amawbia, Awka</p>
                         <p>N240,000/yr</p>
@@ -92,6 +99,36 @@ export const Mobile_Box: FC = () => {
                       </div>
                     </div>
                   </div>
+                  <Link to="/form">
+                    <div
+                      style={{ fontFamily: "Poppins" }}
+                      className="text-[#fff] font-[500] leading-[150%] gap-[10px] bg-[#0C1618] h-[72px] rounded-[8px] flex items-center justify-center"
+                    >
+                      I want something similar{" "}
+                      <svg
+                        width="16"
+                        height="16"
+                        viewBox="0 0 16 16"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <g clip-path="url(#clip0_3066_507)">
+                          <path
+                            d="M8.45037 14.3001L14.7488 8.00007L8.44877 1.70007M1.25037 8.00007H14.7504H1.25037Z"
+                            stroke="white"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_3066_507">
+                            <rect width="16" height="16" fill="white" />
+                          </clipPath>
+                        </defs>
+                      </svg>
+                    </div>
+                  </Link>
                 </div>
               </div>
             )}
@@ -251,8 +288,8 @@ export const Mobile_Box: FC = () => {
                     </svg>
                   </div>
                 </div>
-                <div className="bg-[#fff] h-[70vh]">
-                  <div className="flex justify-around gap-[20px] px-[20px] py-[30px]">
+                <div className="bg-[#fff] h-[70vh] px-[20px] flex flex-col py-[20px] gap-[20px]">
+                  <div className="flex justify-around gap-[20px] py-[20px">
                     <div>
                       <img src={img2} alt="img" />
                     </div>
@@ -264,8 +301,11 @@ export const Mobile_Box: FC = () => {
                     </div>
                   </div>
 
-                  <div className="px-[20px] flex justify-between items-center">
-                    <div style={{fontFamily: "Poppins"}} className="flex font-[400] leading-[170%] text-[#000] flex-col gap-[30px]">
+                  <div className="flex justify-between items-center">
+                    <div
+                      style={{ fontFamily: "Poppins" }}
+                      className="flex font-[400] leading-[170%] text-[#000] flex-col gap-[30px]"
+                    >
                       <div className="flex flex-col gap-[10px]">
                         <p>Neighborhood</p>
                         <p>Rental Amount</p>
@@ -279,7 +319,10 @@ export const Mobile_Box: FC = () => {
                         <p>Listing Found</p>
                       </div>
                     </div>
-                    <div style={{fontFamily: "Poppins"}} className="flex font-[600] leading-[170%] text-[#000] flex-col gap-[30px]">
+                    <div
+                      style={{ fontFamily: "Poppins" }}
+                      className="flex font-[600] leading-[170%] text-[#000] flex-col gap-[30px]"
+                    >
                       <div className="flex flex-col gap-[10px]">
                         <p>Amawbia, Awka</p>
                         <p>N240,000/yr</p>
@@ -294,6 +337,36 @@ export const Mobile_Box: FC = () => {
                       </div>
                     </div>
                   </div>
+                  <Link to="/form">
+                    <div
+                      style={{ fontFamily: "Poppins" }}
+                      className="text-[#fff] font-[500] leading-[150%] gap-[10px] bg-[#0C1618] h-[72px] rounded-[8px] flex items-center justify-center"
+                    >
+                      I want something similar{" "}
+                      <svg
+                        width="16"
+                        height="16"
+                        viewBox="0 0 16 16"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <g clip-path="url(#clip0_3066_507)">
+                          <path
+                            d="M8.45037 14.3001L14.7488 8.00007L8.44877 1.70007M1.25037 8.00007H14.7504H1.25037Z"
+                            stroke="white"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_3066_507">
+                            <rect width="16" height="16" fill="white" />
+                          </clipPath>
+                        </defs>
+                      </svg>
+                    </div>
+                  </Link>
                 </div>
               </div>
             )}

@@ -1,27 +1,43 @@
 import { FC } from "react";
-import { useState } from "react";
+import { useState, FormEvent } from "react";
+import { useNavigate } from "react-router-dom";
 import "../Form/Form.css";
 import { Link } from "react-router-dom";
 
 export const Formf: FC = () => {
   const [InputClicked, setInputClicked] = useState(false);
-  const [form, setForm] = useState({
-    bedrooms: "",
-    bedrooms1: "",
-    budget: "",
-  });
+  const [bed, setBed] = useState("");
+  const [room, setRoom] = useState("");
+  const [budget, setBudget] = useState("");
+  const [bedError, setBedError] = useState("");
+  const [roomError, setRoomError] = useState("");
+  const [budgetError, setBudgetError] = useState("");
+  const navigate = useNavigate();
 
   const handdleInputChange = () => {
     setInputClicked(true);
   };
 
-  const clearForm = () => {
-    setForm({
-      bedrooms: "",
-      bedrooms1: "",
-      budget: "",
-    });
+  const validateForm = (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+
+    if (bed.trim() === "") {
+      setBedError("Please add your input.");
+      return;
+    }
+
+    if (room.trim() === "") {
+      setRoomError("Please add your input.");
+      return;
+    }
+    if (budget.trim() === "") {
+      setBudgetError("Please add your input.");
+      return;
+    }
+    navigate("/form2");
   };
+
+  
   return (
     <>
       <div className="px-[50px] hidden xl:flex justify-between py-[50px]">
@@ -49,153 +65,179 @@ export const Formf: FC = () => {
             </svg>
           </div>
         </div>
-        <div className="w-[700px] h-[550px] flex flex-col gap-[50px] px-[100px pt-[60px] rounded-[8px] px-[50px] bg-[#004643]">
-          <div
-            style={{ fontFamily: "Poppins" }}
-            className="flex h-[50px] text-[18px] font-[500] leading-[150%] justify-between items-center gap-[40px]"
+        <div className="w-[700px] h-[550px] px-[100px pt-[60px] rounded-[8px] px-[50px] bg-[#004643]">
+          <form
+            action=""
+            onSubmit={validateForm}
+            className="flex flex-col gap-[50px] "
           >
-            <div className="w-[50%]">
-              <div className="flex flex-col gap-[10px]">
-                <label className="text-[#fff]">Bedrooms</label>
-                <div className="flex items-center">
-                  <input
-                    onClick={handdleInputChange}
-                    type="number"
-                    className="pl-[10px] bg-[#fff] rounded-l-[8px] h-[60px] w-[70%]"
-                    placeholder="-"
-                    value={form.bedrooms}
-                    onChange={(e) =>
-                      setForm({ ...form, bedrooms: e.target.value })
-                    }
-                  />
-                  <div className="hello w-[80px] h-[60px] bg-[black] flex justify-center items-center">
-                    <svg
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M12 16.6024C11.8218 16.6024 11.6513 16.5727 11.4885 16.5133C11.3246 16.4539 11.1832 16.35 11.0644 16.2015L3.26733 8.44898C3.08911 8.27076 3 8.07769 3 7.86977C3 7.66185 3.10396 7.46878 3.31188 7.29056C3.4901 7.11234 3.68317 7.02323 3.89109 7.02323C4.09901 7.02323 4.29208 7.09749 4.4703 7.24601L12 14.8203L19.5297 7.24601C19.7079 7.06779 19.901 6.9864 20.1089 7.00185C20.3168 7.01611 20.5248 7.11234 20.7327 7.29056C20.9109 7.46878 21 7.66185 21 7.86977C21 8.07769 20.9109 8.27076 20.7327 8.44898L12.9356 16.2015C12.8168 16.35 12.676 16.4539 12.5133 16.5133C12.3493 16.5727 12.1782 16.6024 12 16.6024V16.6024Z"
-                        fill="white"
-                      />
-                    </svg>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="w-[50%]">
-              <div className="flex flex-col gap-[10px]">
-                <label className="text-[#fff]">Bedrooms</label>
-                <div className="flex items-center">
-                  <input
-                    onClick={handdleInputChange}
-                    type="number"
-                    className="pl-[10px] bg-[#fff] rounded-l-[8px] h-[60px] w-[70%]"
-                    placeholder="-"
-                    value={form.bedrooms1}
-                    onChange={(e) =>
-                      setForm({ ...form, bedrooms1: e.target.value })
-                    }
-                  />
-                  <div className="hello w-[80px] h-[60px] bg-[black] flex justify-center items-center">
-                    <svg
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M12 16.6024C11.8218 16.6024 11.6513 16.5727 11.4885 16.5133C11.3246 16.4539 11.1832 16.35 11.0644 16.2015L3.26733 8.44898C3.08911 8.27076 3 8.07769 3 7.86977C3 7.66185 3.10396 7.46878 3.31188 7.29056C3.4901 7.11234 3.68317 7.02323 3.89109 7.02323C4.09901 7.02323 4.29208 7.09749 4.4703 7.24601L12 14.8203L19.5297 7.24601C19.7079 7.06779 19.901 6.9864 20.1089 7.00185C20.3168 7.01611 20.5248 7.11234 20.7327 7.29056C20.9109 7.46878 21 7.66185 21 7.86977C21 8.07769 20.9109 8.27076 20.7327 8.44898L12.9356 16.2015C12.8168 16.35 12.676 16.4539 12.5133 16.5133C12.3493 16.5727 12.1782 16.6024 12 16.6024V16.6024Z"
-                        fill="white"
-                      />
-                    </svg>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div>
             <div
               style={{ fontFamily: "Poppins" }}
-              className="flex flex-col gap-[10px]"
+              className="flex h-[50px] text-[18px] font-[500] leading-[150%] justify-between items-center gap-[40px]"
             >
-              <label className="text-[18px] font-[500] leading-[150%] text-[#fff]">
-                Budget
-              </label>
-              <div className="flex items-center">
-                <input
-                  type="number"
-                  onClick={handdleInputChange}
-                  placeholder="-"
-                  className="w-[100%] text-[#000] text-[18px] font-[500] leading-[150%] rounded-l-[8px] pl-[10px] h-[60px]"
-                  value={form.budget}
-                  onChange={(e) => setForm({ ...form, budget: e.target.value })}
-                />
-                <div className="hello w-[80px] h-[60px] flex items-center bg-[#000] justify-center">
+              <div className="w-[50%]">
+                <div className="flex flex-col gap-[10px]">
+                  <label className="text-[#fff]">Bedrooms</label>
+                  <div className="flex items-center">
+                    <input
+                      value={bed}
+                      onChange={(e) => setBed(e.target.value)}
+                      onClick={handdleInputChange}
+                      type="number"
+                      className="pl-[10px] bg-[#fff] rounded-l-[8px] h-[60px] w-[70%]"
+                      placeholder="-"
+                    />
+                    {bedError && (
+                      <p
+                        style={{ fontFamily: "Poppins" }}
+                        className="text-red-500 absolute -mt-[80px]"
+                      >
+                        {bedError}
+                      </p>
+                    )}
+                    <div className="hello w-[80px] h-[60px] bg-[black] flex justify-center items-center">
+                      <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M12 16.6024C11.8218 16.6024 11.6513 16.5727 11.4885 16.5133C11.3246 16.4539 11.1832 16.35 11.0644 16.2015L3.26733 8.44898C3.08911 8.27076 3 8.07769 3 7.86977C3 7.66185 3.10396 7.46878 3.31188 7.29056C3.4901 7.11234 3.68317 7.02323 3.89109 7.02323C4.09901 7.02323 4.29208 7.09749 4.4703 7.24601L12 14.8203L19.5297 7.24601C19.7079 7.06779 19.901 6.9864 20.1089 7.00185C20.3168 7.01611 20.5248 7.11234 20.7327 7.29056C20.9109 7.46878 21 7.66185 21 7.86977C21 8.07769 20.9109 8.27076 20.7327 8.44898L12.9356 16.2015C12.8168 16.35 12.676 16.4539 12.5133 16.5133C12.3493 16.5727 12.1782 16.6024 12 16.6024V16.6024Z"
+                          fill="white"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="w-[50%]">
+                <div className="flex flex-col gap-[10px]">
+                  <label className="text-[#fff]">Bedrooms</label>
+                  <div className="flex items-center">
+                    <input
+                      value={room}
+                      onChange={(e) => setRoom(e.target.value)}
+                      onClick={handdleInputChange}
+                      type="number"
+                      className="pl-[10px] bg-[#fff] rounded-l-[8px] h-[60px] w-[70%]"
+                      placeholder="-"
+                    />
+                    {roomError && (
+                      <p
+                        style={{ fontFamily: "Poppins" }}
+                        className="text-red-500 absolute -mt-[80px]"
+                      >
+                        {roomError}
+                      </p>
+                    )}
+                    <div className="hello w-[80px] h-[60px] bg-[black] flex justify-center items-center">
+                      <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M12 16.6024C11.8218 16.6024 11.6513 16.5727 11.4885 16.5133C11.3246 16.4539 11.1832 16.35 11.0644 16.2015L3.26733 8.44898C3.08911 8.27076 3 8.07769 3 7.86977C3 7.66185 3.10396 7.46878 3.31188 7.29056C3.4901 7.11234 3.68317 7.02323 3.89109 7.02323C4.09901 7.02323 4.29208 7.09749 4.4703 7.24601L12 14.8203L19.5297 7.24601C19.7079 7.06779 19.901 6.9864 20.1089 7.00185C20.3168 7.01611 20.5248 7.11234 20.7327 7.29056C20.9109 7.46878 21 7.66185 21 7.86977C21 8.07769 20.9109 8.27076 20.7327 8.44898L12.9356 16.2015C12.8168 16.35 12.676 16.4539 12.5133 16.5133C12.3493 16.5727 12.1782 16.6024 12 16.6024V16.6024Z"
+                          fill="white"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div
+                style={{ fontFamily: "Poppins" }}
+                className="flex flex-col gap-[10px]"
+              >
+                <label className="text-[18px] font-[500] leading-[150%] text-[#fff]">
+                  Budget
+                </label>
+                <div className="flex items-center">
+                  <input
+                    value={budget}
+                    onChange={(e) => setBudget(e.target.value)}
+                    type="number"
+                    onClick={handdleInputChange}
+                    placeholder="-"
+                    className="w-[100%] text-[#000] text-[18px] font-[500] leading-[150%] rounded-l-[8px] pl-[10px] h-[60px]"
+                  />
+                  {budgetError && (
+                    <p
+                      style={{ fontFamily: "Poppins" }}
+                      className="text-red-500 absolute -mt-[80px]"
+                    >
+                      {budgetError}
+                    </p>
+                  )}
+                  <div className="hello w-[80px] h-[60px] flex items-center bg-[#000] justify-center">
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M12 16.6024C11.8218 16.6024 11.6513 16.5727 11.4885 16.5133C11.3246 16.4539 11.1832 16.35 11.0644 16.2015L3.26733 8.44898C3.08911 8.27076 3 8.07769 3 7.86977C3 7.66185 3.10396 7.46878 3.31188 7.29056C3.4901 7.11234 3.68317 7.02323 3.89109 7.02323C4.09901 7.02323 4.29208 7.09749 4.4703 7.24601L12 14.8203L19.5297 7.24601C19.7079 7.06779 19.901 6.9864 20.1089 7.00185C20.3168 7.01611 20.5248 7.11234 20.7327 7.29056C20.9109 7.46878 21 7.66185 21 7.86977C21 8.07769 20.9109 8.27076 20.7327 8.44898L12.9356 16.2015C12.8168 16.35 12.676 16.4539 12.5133 16.5133C12.3493 16.5727 12.1782 16.6024 12 16.6024V16.6024Z"
+                        fill="white"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="flex items-center gap-[20px] w-[100%]">
+              <div className="w-[135px] items-center h-[70px] py-[28px] rounded-[8px] border-[2px] border-[#fff] flex justify-center">
+                <Link to="/form">
+                  {" "}
                   <svg
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
+                    width="32"
+                    height="32"
+                    viewBox="0 0 32 32"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
-                      d="M12 16.6024C11.8218 16.6024 11.6513 16.5727 11.4885 16.5133C11.3246 16.4539 11.1832 16.35 11.0644 16.2015L3.26733 8.44898C3.08911 8.27076 3 8.07769 3 7.86977C3 7.66185 3.10396 7.46878 3.31188 7.29056C3.4901 7.11234 3.68317 7.02323 3.89109 7.02323C4.09901 7.02323 4.29208 7.09749 4.4703 7.24601L12 14.8203L19.5297 7.24601C19.7079 7.06779 19.901 6.9864 20.1089 7.00185C20.3168 7.01611 20.5248 7.11234 20.7327 7.29056C20.9109 7.46878 21 7.66185 21 7.86977C21 8.07769 20.9109 8.27076 20.7327 8.44898L12.9356 16.2015C12.8168 16.35 12.676 16.4539 12.5133 16.5133C12.3493 16.5727 12.1782 16.6024 12 16.6024V16.6024Z"
-                      fill="white"
+                      d="M3.45254 16.6544L3.45183 16.6537C3.32557 16.5275 3.25904 16.4226 3.22679 16.342C3.18901 16.2475 3.16663 16.1356 3.16663 16.0001C3.16663 15.8646 3.18901 15.7526 3.22679 15.6582C3.25904 15.5776 3.32557 15.4727 3.45183 15.3464L3.45254 15.3457L15.4902 3.26011C15.4903 3.26003 15.4904 3.25996 15.4904 3.25988C15.5575 3.19288 15.6226 3.16675 15.7122 3.16675C15.7471 3.16675 15.8272 3.17749 15.9561 3.32787L15.9686 3.34245L15.9821 3.35603C16.1014 3.47534 16.1235 3.56204 16.1235 3.62598C16.1235 3.68985 16.1015 3.77643 15.9825 3.89553C15.9824 3.89566 15.9823 3.89579 15.9821 3.89593L5.09563 14.7345L4.23751 15.5888H5.4484H28.47C28.5462 15.5888 28.6232 15.6127 28.7169 15.7052C28.7953 15.7847 28.8333 15.8727 28.8333 16.0001C28.8333 16.1272 28.7963 16.1966 28.7341 16.2536C28.6434 16.3355 28.5611 16.3634 28.47 16.3634H5.4484H4.24129L5.09485 17.2169L16.0301 28.1522C16.0973 28.2194 16.1235 28.2845 16.1235 28.3742C16.1235 28.4381 16.1014 28.5248 15.9821 28.6441L15.9686 28.6577L15.9561 28.6723C15.8272 28.8227 15.7471 28.8334 15.7122 28.8334C15.6678 28.8334 15.5637 28.8135 15.3945 28.6444C15.3944 28.6443 15.3944 28.6442 15.3943 28.6441L3.45254 16.6544Z"
+                      stroke="white"
                     />
                   </svg>
-                </div>
+                </Link>
               </div>
-            </div>
-          </div>
-          <div className="flex items-center gap-[20px] w-[100%]">
-            <div
-              onClick={handdleInputChange}
-              className="w-[135px] items-center h-[70px] py-[28px] rounded-[8px] border-[2px] border-[#fff] flex justify-center"
-            >
-              <svg
-                onClick={clearForm}
-                width="32"
-                height="32"
-                viewBox="0 0 32 32"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
+              <button
+                type="submit"
+                style={{
+                  fontFamily: "Poppins",
+                  backgroundColor: InputClicked ? "#000" : "#C7C9D9",
+                  color: InputClicked ? "#fff" : "#000",
+                }}
+                className="flex w-[701px] bg-[#C7C9D9] h-[70px] py-[16px] rounded-[8px] text-[25px] font-[500] leading-[150%] px-[48px] gap-[10px] justify-center items-center"
               >
-                <path
-                  d="M3.45254 16.6544L3.45183 16.6537C3.32557 16.5275 3.25904 16.4226 3.22679 16.342C3.18901 16.2475 3.16663 16.1356 3.16663 16.0001C3.16663 15.8646 3.18901 15.7526 3.22679 15.6582C3.25904 15.5776 3.32557 15.4727 3.45183 15.3464L3.45254 15.3457L15.4902 3.26011C15.4903 3.26003 15.4904 3.25996 15.4904 3.25988C15.5575 3.19288 15.6226 3.16675 15.7122 3.16675C15.7471 3.16675 15.8272 3.17749 15.9561 3.32787L15.9686 3.34245L15.9821 3.35603C16.1014 3.47534 16.1235 3.56204 16.1235 3.62598C16.1235 3.68985 16.1015 3.77643 15.9825 3.89553C15.9824 3.89566 15.9823 3.89579 15.9821 3.89593L5.09563 14.7345L4.23751 15.5888H5.4484H28.47C28.5462 15.5888 28.6232 15.6127 28.7169 15.7052C28.7953 15.7847 28.8333 15.8727 28.8333 16.0001C28.8333 16.1272 28.7963 16.1966 28.7341 16.2536C28.6434 16.3355 28.5611 16.3634 28.47 16.3634H5.4484H4.24129L5.09485 17.2169L16.0301 28.1522C16.0973 28.2194 16.1235 28.2845 16.1235 28.3742C16.1235 28.4381 16.1014 28.5248 15.9821 28.6441L15.9686 28.6577L15.9561 28.6723C15.8272 28.8227 15.7471 28.8334 15.7122 28.8334C15.6678 28.8334 15.5637 28.8135 15.3945 28.6444C15.3944 28.6443 15.3944 28.6442 15.3943 28.6441L3.45254 16.6544Z"
-                  stroke="white"
-                />
-              </svg>
+                Next
+                <svg
+                  width="25"
+                  height="24"
+                  viewBox="0 0 25 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M13.1755 21.45L22.6231 12L13.1731 2.55005M2.37549 12H22.6255H2.37549Z"
+                    stroke="#0C1618"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </button>
             </div>
-            <button
-              style={{
-                fontFamily: "Poppins",
-                backgroundColor: InputClicked ? "#000" : "#C7C9D9",
-                color: InputClicked ? "#fff" : "#000",
-              }}
-              className="flex w-[701px] bg-[#C7C9D9] h-[70px] py-[16px] rounded-[8px] text-[25px] font-[500] leading-[150%] px-[48px] gap-[10px] justify-center items-center"
-            >
-              <Link to="/form2">Next</Link>
-              <svg
-                width="25"
-                height="24"
-                viewBox="0 0 25 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M13.1755 21.45L22.6231 12L13.1731 2.55005M2.37549 12H22.6255H2.37549Z"
-                  stroke="#0C1618"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-            </button>
-          </div>
+          </form>
         </div>
       </div>
 
@@ -207,6 +249,7 @@ export const Formf: FC = () => {
           <p>Which apartment size and what is your budget?</p>
         </div>
         <form
+          onSubmit={validateForm}
           style={{ fontFamily: "Poppins" }}
           action=""
           className="flex font-[500] leading-[130%] text-[#818181] flex-col gap-[30px]"
@@ -216,10 +259,21 @@ export const Formf: FC = () => {
               <label>Bedroom</label>
               <div className="flex items-center border-[1px] border-[#DCDFE0] w-[100%] rounded-[4px]">
                 <input
+                  onClick={handdleInputChange}
+                  value={bed}
+                  onChange={(e) => setBed(e.target.value)}
                   type="number"
                   placeholder="-"
                   className="text-[#000] pl-[10px] w-[100%] h-[50px]"
                 />
+                {bedError && (
+                  <p
+                    style={{ fontFamily: "Poppins" }}
+                    className="text-red-500 absolute -mt-[60px]"
+                  >
+                    {bedError}
+                  </p>
+                )}
                 <svg
                   className="bg-[#004643] h-[50px] w-[40%] rounded-[4px] px-[5px]"
                   width="10"
@@ -239,10 +293,21 @@ export const Formf: FC = () => {
               <label>Bedroom</label>
               <div className="flex items-center border-[1px] border-[#DCDFE0] w-[100%] rounded-[4px]">
                 <input
+                  value={room}
+                  onChange={(e) => setRoom(e.target.value)}
+                  onClick={handdleInputChange}
                   type="number"
                   placeholder="-"
                   className="text-[#000] pl-[10px] w-[100%] h-[50px]"
                 />
+                {roomError && (
+                  <p
+                    style={{ fontFamily: "Poppins" }}
+                    className="text-red-500 absolute -mt-[60px]"
+                  >
+                    {roomError}
+                  </p>
+                )}
                 <svg
                   className="bg-[#004643] h-[50px] w-[40%] rounded-[4px] px-[5px]"
                   width="10"
@@ -263,10 +328,21 @@ export const Formf: FC = () => {
             <label>Budget</label>
             <div className="flex items-center border-[1px] border-[#DCDFE0] w-[100%] rounded-[4px]">
               <input
+                value={budget}
+                onChange={(e) => setBudget(e.target.value)}
+                onClick={handdleInputChange}
                 type="number"
                 placeholder="-"
                 className="text-[#000] pl-[10px] w-[100%] h-[50px]"
               />
+              {budgetError && (
+                <p
+                  style={{ fontFamily: "Poppins" }}
+                  className="text-red-500 absolute -mt-[60px]"
+                >
+                  {budgetError}
+                </p>
+              )}
               <svg
                 className="bg-[#004643] h-[50px] w-[15%] rounded-[4px] px-[5px]"
                 width="10"
@@ -288,6 +364,7 @@ export const Formf: FC = () => {
             className="flex font-[500] leading-[150%] rounded-[4px] w-[100%] py-[20px] px-[10px] justify-between bg-[#DCDFE0] mt-[40px]"
           >
             <input
+              onClick={handdleInputChange}
               type="text"
               placeholder="Find out the ‘why’?"
               className="bg-[#DCDFE0] border-[none] text-[#000]"
@@ -324,8 +401,12 @@ export const Formf: FC = () => {
               </Link>
             </div>
             <button
-              style={{ fontFamily: "Poppins" }}
-              className="bg-[#DCDFE0] font-[500] leading-[150%] rounded-[4px] flex justify-center items-center gap-[5px] text-[#fff] py-[14px] px-[16px] w-[80%]"
+              style={{
+                fontFamily: "Poppins",
+                backgroundColor: InputClicked ? "#000" : "#DCDFE0",
+                color: InputClicked ? "#fff" : "#000",
+              }}
+              className="font-[500] leading-[150%] rounded-[4px] flex justify-center items-center gap-[5px] text-[#fff] py-[14px] px-[16px] w-[80%]"
             >
               Next
               <svg

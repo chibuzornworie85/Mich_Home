@@ -1,37 +1,29 @@
-import React, { FC } from "react";
-import { useState } from "react";
+import { FC } from "react";
+import { useState, FormEvent } from "react";
+import { useNavigate } from "react-router-dom";
 import "./Form.css";
-import { Link } from "react-router-dom";
 
 export const Formf: FC = () => {
   const [InputClicked, setInputClicked] = useState(false);
+  const [input, setInput] = useState("");
+  const [inputError, setInputError] = useState("");
+  const navigate = useNavigate();
 
   const handdleInputChange = () => {
     setInputClicked(true);
   };
 
-  // const [form, setForm] = useState({
-  //   name: '',
-  //   email: '',
-  // })
+  const validateForm = (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
 
-  // const clearForm = () =>{
-  //   setForm({
-  //     name: '',
-  //     email: '',
-  //   })
-  // }
+    if (input.trim() === "") {
+      setInputError("Please add your input.");
+      return;
+    }
+    navigate("/form1f");
+  };
   return (
     <>
-      {/* <div>
-      <form action="">
-        <input type="text" name="name" value={form.name} onChange={(e)=> setForm({ ...form, name: e.target.value})} onClick={handdleInputChange} />
-        <input type="email" name="email" value={form.email} onChange={(e)=> setForm({ ...form, email: e.target.value})} onClick={handdleInputChange} />
-        <button type="button" onClick={clearForm} >Clear</button>
-        <button  style={{backgroundColor: InputClicked ? 'green' : 'blue'}}>Submit</button>
-      </form>
-      </div> */}
-
       <div className="px-[50px] hidden xl:flex justify-between py-[50px] gap-[40px">
         <div className="flex flex-col gap-[50px]">
           <p
@@ -57,7 +49,7 @@ export const Formf: FC = () => {
             </svg>
           </div>
         </div>
-        <form action="">
+        <form action="" onSubmit={validateForm}>
           <div className="h-[500px] flex flex-col w-[600px] gap-[25px] px-[50px] pt-[50px] rounded-[8px] bg-[#004643]">
             <p
               style={{ fontFamily: "Poppins" }}
@@ -68,10 +60,20 @@ export const Formf: FC = () => {
             <div className="flex h-[60px] items-center w-[100%] rounded-[8px]">
               <input
                 onClick={handdleInputChange}
-                type="number"
+                value={input}
+                onChange={(e) => setInput(e.target.value)}
+                type="text"
                 className="w-[100%] h-[60px] pl-[10px] bg-[#fff] rounded-l-[8px]"
                 placeholder="Input date"
               />
+              {inputError && (
+                <p
+                  style={{ fontFamily: "Poppins" }}
+                  className="text-red-500 absolute -mt-[100px]"
+                >
+                  {inputError}
+                </p>
+              )}
               <div className="hello bg-[#0C1618] py-[11px] rounded-[8px] px-[16px] h-[60px] flex items-center w-[80px]">
                 <svg
                   width="48"
@@ -88,6 +90,7 @@ export const Formf: FC = () => {
               </div>
             </div>
             <button
+              type="submit"
               style={{
                 fontFamily: "Poppins",
                 backgroundColor: InputClicked ? "#000" : "#C7C9D9",
@@ -95,8 +98,11 @@ export const Formf: FC = () => {
               }}
               className="flex w-[100%] h-[60px] py-[16px] text-[25px] rounded-[8px] font-[500] leading-[150%] px-[48px] gap-[10px] justify-center items-center"
             >
-              <Link to="/form1f">Next</Link>
+              Next
               <svg
+                style={{
+                  color: InputClicked ? "#fff" : "#000",
+                }}
                 width="25"
                 height="24"
                 viewBox="0 0 25 24"
@@ -123,7 +129,11 @@ export const Formf: FC = () => {
         >
           <p>When are you looking to move to Awka?</p>
         </div>
-        <form action="" className="flex flex-col gap-[30px]">
+        <form
+          action=""
+          onSubmit={validateForm}
+          className="flex flex-col gap-[30px]"
+        >
           <div className="flex flex-col gap-[10px]">
             <label
               style={{ fontFamily: "Poppins" }}
@@ -136,10 +146,21 @@ export const Formf: FC = () => {
               className="flex w-[100%] font-[500] leading-[150%] text-[#C7C9D9] border-[1px] border-[#DCDFE0] rounded-[4px]"
             >
               <input
-                type="number"
+                value={input}
+                onChange={(e) => setInput(e.target.value)}
+                onClick={handdleInputChange}
+                type="text"
                 placeholder="Input date"
                 className="w-[80%] pl-[10px] rounded-l-[4px] text-[#000]"
               />
+              {inputError && (
+                <p
+                  style={{ fontFamily: "Poppins" }}
+                  className="text-red-500 absolute -mt-[20px]"
+                >
+                  {inputError}
+                </p>
+              )}
               <svg
                 className="bg-[#004643] w-[20%] py-[8px] px-[16px] rounded-[4px]"
                 width="48"
@@ -161,6 +182,7 @@ export const Formf: FC = () => {
             className="flex font-[500] leading-[150%] rounded-[4px] w-[100%] py-[20px] px-[10px] justify-between bg-[#DCDFE0]"
           >
             <input
+              onClick={handdleInputChange}
               type="text"
               placeholder="Find out the ‘why’?"
               className="bg-[#DCDFE0] border-[none] text-[#000]"
@@ -181,8 +203,12 @@ export const Formf: FC = () => {
 
           <div>
             <button
-              style={{ fontFamily: "Poppins" }}
-              className="bg-[#DCDFE0] font-[500] leading-[150%] rounded-[4px] flex justify-center items-center gap-[5px] text-[#fff] py-[14px] px-[16px] w-[100%]"
+              type="submit"
+              style={{
+                fontFamily: "Poppins",
+                backgroundColor: InputClicked ? "#000" : "#DCDFE0",
+              }}
+              className="font-[500] leading-[150%] rounded-[4px] flex justify-center items-center gap-[5px] text-[#fff] py-[14px] px-[16px] w-[100%]"
             >
               Next
               <svg

@@ -8,7 +8,7 @@ export const Nav: FC = () => {
   const [drop, sideDrop] = useState<boolean>(true);
   return (
     <>
-      <header className="custom-shadow hidden xl:flex justify-between px-[50px] py-[20px] text-center rounded-[8px] bg-[#FFF] items-center sticky top-0">
+      <header className="custom-shadow hidden xl:flex justify-between px-[50px] py-[20px] text-center rounded-[8px] bg-[#FFF] items-center sticky top-0 z-10">
         <div className="flex items-center gap-[20px]">
           <Link to="/">
             <img src={logo} alt="logo" />
@@ -78,7 +78,7 @@ export const Nav: FC = () => {
           </div>
         </div>
       </header>{" "}
-      <header className="custom-shadow xl:hidden flex sticky top-0 gap-[10px] items-center px-[15px] bg-[#FFF] h-[80px] rounded-[8px]">
+      <header className="custom-shadow xl:hidden flex sticky top-0 gap-[10px] items-center px-[15px] bg-[#FFF] h-[80px] rounded-[8px] z-10">
         <div onClick={() => sideDrop(!drop)}>
           {drop ? (
             <div>
@@ -117,7 +117,9 @@ export const Nav: FC = () => {
                   style={{ fontFamily: "Millik" }}
                   className="text-[#0C1618] text-[15px] font-[400]"
                 >
-                  <h1>Mich Homes</h1>
+                  <h1>
+                    <Link to="/">Mich Homes</Link>
+                  </h1>
                 </div>
                 <div
                   style={{ fontFamily: "Poppins" }}
@@ -160,7 +162,7 @@ export const Nav: FC = () => {
         </div>
         <div
           style={{ fontFamily: "Millik" }}
-          className="text-[#0C1618] text-[15px] font-[400]"
+          className="text-[#0C1618] text-[20px] font-[400]"
         >
           <h1>Mich Homes</h1>
         </div>
