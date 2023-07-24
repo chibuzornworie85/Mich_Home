@@ -403,8 +403,7 @@ export const Formf: FC = () => {
             <button
               style={{
                 fontFamily: "Poppins",
-                backgroundColor: InputClicked ? "#000" : "#DCDFE0",
-                color: InputClicked ? "#fff" : "#000",
+                backgroundColor: InputClicked ? "#000" : "#DCDFE0"
               }}
               className="font-[500] leading-[150%] rounded-[4px] flex justify-center items-center gap-[5px] text-[#fff] py-[14px] px-[16px] w-[80%]"
             >
