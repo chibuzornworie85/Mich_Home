@@ -50,8 +50,8 @@ export const Box1: FC = () => {
           </div>
         </div>
         <div>
-          <img src={box} alt="" className="h-[50%] w-[100%] xl:block hidden" />
-          <img src={box1} alt="" className="xl:hidden block" />
+          <img src={box} alt="gallery" className="h-[50%] w-[100%] xl:block hidden" />
+          <img src={box1} alt="gallery" className="xl:hidden block" />
         </div>
       </div>
     </>

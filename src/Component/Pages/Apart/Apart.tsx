@@ -7,10 +7,10 @@ import { Footer } from "../../Footer/Footer";
 import { Box2f } from "./Boxs/Box2f";
 import { Box2f1 } from "./Boxs/Box2f1";
 import { MobileNav } from "./Mobile_Nav";
-import { Mobile_Box } from "./Boxs/Mobile_Box";
-import { Mobile_Box2 } from "./Boxs/Mobile_Box2";
-import { Mobile_Box3 } from "./Boxs/Mobile_Box3";
-import { Mobile_Box4 } from "./Boxs/Mobile_Box4";
+import { MobileBox } from "./Boxs/Mobile_Box";
+import { MobileBox2 } from "./Boxs/Mobile_Box2";
+import { MobileBox3 } from "./Boxs/Mobile_Box3";
+import { MobileBox4 } from "./Boxs/Mobile_Box4";
 
 export const Apart: FC = () => {
   return (
@@ -28,10 +28,10 @@ export const Apart: FC = () => {
         <Box2f1 />
       </div>
       <div className="xl:hidden flex flex-col py-[40px] gap-[10px]">
-        <Mobile_Box />
-        <Mobile_Box2 />
-        <Mobile_Box3 />
-        <Mobile_Box4 />
+        <MobileBox />
+        <MobileBox2 />
+        <MobileBox3 />
+        <MobileBox4 />
       </div>
       <Box3 />
       <Footer />

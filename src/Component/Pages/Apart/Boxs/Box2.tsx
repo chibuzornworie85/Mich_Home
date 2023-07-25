@@ -1,5 +1,7 @@
 import { FC } from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import "aos/dist/aos.css";
+import AOS from "aos";
 import img from "../../../Assets/Apart_Asset/Rectangle 29.png";
 import img1 from "../../../Assets/Apart_Asset/Rectangle 29 (1).png";
 import img2 from "../../../Assets/Apart_Asset/Rectangle 29 (2).png";
@@ -8,148 +10,38 @@ import img4 from "../../../Assets/Apart_Asset/Rectangle 29 (4).png";
 import img5 from "../../../Assets/Apart_Asset/Rectangle 29 (5).png";
 
 export const Box2: FC = () => {
-  const [drop, sideDrop] = useState<boolean>(true);
+const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsOpen((prev) => !prev);
+  };
+
+  useEffect(() => {
+    AOS.init({ duration: 700 });
+  }, []);
+
   return (
     <>
       <div className="px-[50px] flex flex-col gap-[20px]">
         <div className="flex justify-between gap-[10px]">
           <div className="bg-[url('/src/Component/Assets/Apart_Asset/bg.png')] bg-no-repeat bg-cover bg-center h-[544px] w-[788px]">
-            <div
-              className="flex justify-between items-center pt-[250px]"
-              onClick={() => sideDrop(!drop)}
-            >
-              {drop ? (
-                <div>
-                  <svg
-                    className="cursor-pointer"
-                    width="48"
-                    height="48"
-                    viewBox="0 0 48 48"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M30.3069 41.3762L14.802 25.8713C14.505 25.6337 14.297 25.3366 14.1782 24.9802C14.0594 24.6238 14 24.297 14 24C14 23.6436 14.0594 23.3014 14.1782 22.9735C14.297 22.6479 14.505 22.3663 14.802 22.1287L30.3069 6.53465C30.6634 6.17822 31.0495 6 31.4653 6C31.8812 6 32.2673 6.17822 32.6238 6.53465C32.9802 6.9505 33.1584 7.36634 33.1584 7.78218C33.1584 8.19802 32.9802 8.58416 32.6238 8.9406L17.5644 24L32.6238 39.0594C32.9802 39.4158 33.1584 39.802 33.1584 40.2178C33.1584 40.6337 32.9802 41.0198 32.6238 41.3762C32.2673 41.7921 31.8812 42 31.4653 42C31.0495 42 30.6634 41.7921 30.3069 41.3762Z"
-                      fill="white"
-                    />
-                  </svg>
-                </div>
-              ) : (
-                <div>
-                  <div>
-                    <svg
-                      width="48"
-                      height="48"
-                      viewBox="0 0 48 48"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M30.3069 41.3762L14.802 25.8713C14.505 25.6337 14.297 25.3366 14.1782 24.9802C14.0594 24.6238 14 24.297 14 24C14 23.6436 14.0594 23.3014 14.1782 22.9735C14.297 22.6479 14.505 22.3663 14.802 22.1287L30.3069 6.53465C30.6634 6.17822 31.0495 6 31.4653 6C31.8812 6 32.2673 6.17822 32.6238 6.53465C32.9802 6.9505 33.1584 7.36634 33.1584 7.78218C33.1584 8.19802 32.9802 8.58416 32.6238 8.9406L17.5644 24L32.6238 39.0594C32.9802 39.4158 33.1584 39.802 33.1584 40.2178C33.1584 40.6337 32.9802 41.0198 32.6238 41.3762C32.2673 41.7921 31.8812 42 31.4653 42C31.0495 42 30.6634 41.7921 30.3069 41.3762Z"
-                        fill="white"
-                      />
-                    </svg>
-                  </div>
-
-                  <div className="top-0 right-0 fixed w-[50%]">
-                    <div className="bg-[url('/src/Component/Assets/Apart_Asset/Rect.png')] bg-no-repeat bg-cover bg-center px-[50px] h-[50vh]">
-                      <div className="py-[30px]">
-                        <svg
-                          width="48"
-                          height="48"
-                          viewBox="0 0 48 48"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <rect width="48" height="48" rx="4" fill="white" />
-                          <path
-                            d="M25.8801 24.0002L36.9335 12.9468C37.1519 12.6918 37.266 12.3637 37.2531 12.0281C37.2401 11.6925 37.101 11.3742 36.8635 11.1367C36.6261 10.8993 36.3078 10.7602 35.9722 10.7472C35.6366 10.7343 35.3085 10.8484 35.0535 11.0668L24.0001 22.1202L12.9468 11.0535C12.6957 10.8024 12.3552 10.6614 12.0001 10.6614C11.6451 10.6614 11.3045 10.8024 11.0535 11.0535C10.8024 11.3046 10.6613 11.6451 10.6613 12.0002C10.6613 12.3552 10.8024 12.6958 11.0535 12.9468L22.1201 24.0002L11.0535 35.0535C10.9139 35.173 10.8005 35.3201 10.7205 35.4855C10.6405 35.651 10.5955 35.8311 10.5884 36.0148C10.5813 36.1984 10.6122 36.3815 10.6793 36.5526C10.7463 36.7237 10.848 36.8791 10.9779 37.009C11.1079 37.139 11.2633 37.2406 11.4344 37.3077C11.6055 37.3747 11.7886 37.4057 11.9722 37.3986C12.1558 37.3915 12.336 37.3465 12.5014 37.2665C12.6668 37.1864 12.8139 37.0731 12.9335 36.9335L24.0001 25.8802L35.0535 36.9335C35.3085 37.1519 35.6366 37.2661 35.9722 37.2531C36.3078 37.2402 36.6261 37.101 36.8635 36.8636C37.101 36.6261 37.2401 36.3078 37.2531 35.9722C37.266 35.6367 37.1519 35.3086 36.9335 35.0535L25.8801 24.0002Z"
-                            fill="#004643"
-                          />
-                        </svg>
-                      </div>
-                    </div>
-                    <div className="bg-[#FFF] h-[50vh] px-[50px]">
-                      <div className="flex justify-center py-[50px] gap-[20px]">
-                        <img src={img} alt="img" />
-
-                        <img src={img1} alt="img" />
-
-                        <img src={img2} alt="img" />
-
-                        <img src={img3} alt="img" />
-
-                        <img src={img4} alt="img" />
-
-                        <img src={img5} alt="img" />
-                      </div>
-                      <div className="flex items-center gap-[200px] pt-[50px]">
-                        <div className="flex flex-col gap-[50px]">
-                          <div>
-                            <p
-                              style={{ fontFamily: "Poppins" }}
-                              className="text-[20px] font-[400] text-[#0C1618] leading-[170%]"
-                            >
-                              Neighborhood
-                            </p>
-                            <p
-                              style={{ fontFamily: "Poppins" }}
-                              className="text-[#0C1618] text-[20px] font-[600] leading-[170%]"
-                            >
-                              Amawbia, Awka
-                            </p>
-                          </div>
-                          <div>
-                            <p
-                              style={{ fontFamily: "Poppins" }}
-                              className="text-[20px] font-[400] text-[#0C1618] leading-[170%]"
-                            >
-                              Bedrooms
-                            </p>
-                            <p
-                              style={{ fontFamily: "Poppins" }}
-                              className="text-[#0C1618] text-[20px] font-[600] leading-[170%]"
-                            >
-                              2
-                            </p>
-                          </div>
-                        </div>
-                        <div className="flex flex-col gap-[50px]">
-                          <div>
-                            <p
-                              style={{ fontFamily: "Poppins" }}
-                              className="text-[20px] font-[400] text-[#0C1618] leading-[170%]"
-                            >
-                              Rental Amout
-                            </p>
-                            <p
-                              style={{ fontFamily: "Poppins" }}
-                              className="text-[#0C1618] text-[20px] font-[600] leading-[170%]"
-                            >
-                              N240,000/yr
-                            </p>
-                          </div>
-                          <div>
-                            <p
-                              style={{ fontFamily: "Poppins" }}
-                              className="text-[20px] font-[400] text-[#0C1618] leading-[170%]"
-                            >
-                              Bedrooms
-                            </p>
-                            <p
-                              style={{ fontFamily: "Poppins" }}
-                              className="text-[#0C1618] text-[20px] font-[600] leading-[170%]"
-                            >
-                              2
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              )}
-              <div>
+            <div className="flex justify-between items-center pt-[250px]">
+              <div onClick={toggleMenu}>
+                <svg
+                  className="cursor-pointer"
+                  width="48"
+                  height="48"
+                  viewBox="0 0 48 48"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M30.3069 41.3762L14.802 25.8713C14.505 25.6337 14.297 25.3366 14.1782 24.9802C14.0594 24.6238 14 24.297 14 24C14 23.6436 14.0594 23.3014 14.1782 22.9735C14.297 22.6479 14.505 22.3663 14.802 22.1287L30.3069 6.53465C30.6634 6.17822 31.0495 6 31.4653 6C31.8812 6 32.2673 6.17822 32.6238 6.53465C32.9802 6.9505 33.1584 7.36634 33.1584 7.78218C33.1584 8.19802 32.9802 8.58416 32.6238 8.9406L17.5644 24L32.6238 39.0594C32.9802 39.4158 33.1584 39.802 33.1584 40.2178C33.1584 40.6337 32.9802 41.0198 32.6238 41.3762C32.2673 41.7921 31.8812 42 31.4653 42C31.0495 42 30.6634 41.7921 30.3069 41.3762Z"
+                    fill="white"
+                  />
+                </svg>
+              </div>
+              <div onClick={toggleMenu}>
                 <svg
                   className="cursor-pointer"
                   width="48"
@@ -262,144 +154,125 @@ export const Box2: FC = () => {
                 <p>2 days ago</p>
               </div>
             </div>
+
+            {isOpen && (
+              <div  data-aos="fade-left" className="top-0 right-0 fixed w-[50%]">
+                <div className="bg-[url('/src/Component/Assets/Apart_Asset/Rect.png')] bg-no-repeat bg-cover bg-center px-[50px] h-[50vh]">
+                  <div className="py-[30px]" onClick={toggleMenu}>
+                    <svg
+                      width="48"
+                      height="48"
+                      viewBox="0 0 48 48"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <rect width="48" height="48" rx="4" fill="white" />
+                      <path
+                        d="M25.8801 24.0002L36.9335 12.9468C37.1519 12.6918 37.266 12.3637 37.2531 12.0281C37.2401 11.6925 37.101 11.3742 36.8635 11.1367C36.6261 10.8993 36.3078 10.7602 35.9722 10.7472C35.6366 10.7343 35.3085 10.8484 35.0535 11.0668L24.0001 22.1202L12.9468 11.0535C12.6957 10.8024 12.3552 10.6614 12.0001 10.6614C11.6451 10.6614 11.3045 10.8024 11.0535 11.0535C10.8024 11.3046 10.6613 11.6451 10.6613 12.0002C10.6613 12.3552 10.8024 12.6958 11.0535 12.9468L22.1201 24.0002L11.0535 35.0535C10.9139 35.173 10.8005 35.3201 10.7205 35.4855C10.6405 35.651 10.5955 35.8311 10.5884 36.0148C10.5813 36.1984 10.6122 36.3815 10.6793 36.5526C10.7463 36.7237 10.848 36.8791 10.9779 37.009C11.1079 37.139 11.2633 37.2406 11.4344 37.3077C11.6055 37.3747 11.7886 37.4057 11.9722 37.3986C12.1558 37.3915 12.336 37.3465 12.5014 37.2665C12.6668 37.1864 12.8139 37.0731 12.9335 36.9335L24.0001 25.8802L35.0535 36.9335C35.3085 37.1519 35.6366 37.2661 35.9722 37.2531C36.3078 37.2402 36.6261 37.101 36.8635 36.8636C37.101 36.6261 37.2401 36.3078 37.2531 35.9722C37.266 35.6367 37.1519 35.3086 36.9335 35.0535L25.8801 24.0002Z"
+                        fill="#004643"
+                      />
+                    </svg>
+                  </div>
+                </div>
+                <div className="bg-[#FFF] h-[50vh] px-[50px]">
+                  <div className="flex justify-center py-[50px] gap-[20px]">
+                    <img src={img} alt="gallery" />
+
+                    <img src={img1} alt="gallery" />
+
+                    <img src={img2} alt="gallery" />
+
+                    <img src={img3} alt="gallery" />
+
+                    <img src={img4} alt="gallery" />
+
+                    <img src={img5} alt="gallery" />
+                  </div>
+                  <div className="flex items-center gap-[200px] pt-[50px]">
+                    <div className="flex flex-col gap-[50px]">
+                      <div>
+                        <p
+                          style={{ fontFamily: "Poppins" }}
+                          className="text-[20px] font-[400] text-[#0C1618] leading-[170%]"
+                        >
+                          Neighborhood
+                        </p>
+                        <p
+                          style={{ fontFamily: "Poppins" }}
+                          className="text-[#0C1618] text-[20px] font-[600] leading-[170%]"
+                        >
+                          Amawbia, Awka
+                        </p>
+                      </div>
+                      <div>
+                        <p
+                          style={{ fontFamily: "Poppins" }}
+                          className="text-[20px] font-[400] text-[#0C1618] leading-[170%]"
+                        >
+                          Bedrooms
+                        </p>
+                        <p
+                          style={{ fontFamily: "Poppins" }}
+                          className="text-[#0C1618] text-[20px] font-[600] leading-[170%]"
+                        >
+                          2
+                        </p>
+                      </div>
+                    </div>
+                    <div className="flex flex-col gap-[50px]">
+                      <div>
+                        <p
+                          style={{ fontFamily: "Poppins" }}
+                          className="text-[20px] font-[400] text-[#0C1618] leading-[170%]"
+                        >
+                          Rental Amout
+                        </p>
+                        <p
+                          style={{ fontFamily: "Poppins" }}
+                          className="text-[#0C1618] text-[20px] font-[600] leading-[170%]"
+                        >
+                          N240,000/yr
+                        </p>
+                      </div>
+                      <div>
+                        <p
+                          style={{ fontFamily: "Poppins" }}
+                          className="text-[20px] font-[400] text-[#0C1618] leading-[170%]"
+                        >
+                          Bedrooms
+                        </p>
+                        <p
+                          style={{ fontFamily: "Poppins" }}
+                          className="text-[#0C1618] text-[20px] font-[600] leading-[170%]"
+                        >
+                          2
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            )}
           </div>
+
           <div className="bg-[url('/src/Component/Assets/Apart_Asset/bg.png')] bg-no-repeat bg-cover bg-center h-[544px] w-[788px]">
-            <div
-              className="flex justify-between items-center pt-[250px]"
-              onClick={() => sideDrop(!drop)}
-            >
-              {drop ? (
-                <div className="cursor-pointer">
-                  <svg
-                    width="48"
-                    height="48"
-                    viewBox="0 0 48 48"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M30.3069 41.3762L14.802 25.8713C14.505 25.6337 14.297 25.3366 14.1782 24.9802C14.0594 24.6238 14 24.297 14 24C14 23.6436 14.0594 23.3014 14.1782 22.9735C14.297 22.6479 14.505 22.3663 14.802 22.1287L30.3069 6.53465C30.6634 6.17822 31.0495 6 31.4653 6C31.8812 6 32.2673 6.17822 32.6238 6.53465C32.9802 6.9505 33.1584 7.36634 33.1584 7.78218C33.1584 8.19802 32.9802 8.58416 32.6238 8.9406L17.5644 24L32.6238 39.0594C32.9802 39.4158 33.1584 39.802 33.1584 40.2178C33.1584 40.6337 32.9802 41.0198 32.6238 41.3762C32.2673 41.7921 31.8812 42 31.4653 42C31.0495 42 30.6634 41.7921 30.3069 41.3762Z"
-                      fill="white"
-                    />
-                  </svg>
-                </div>
-              ) : (
-                <div>
-                  <div>
-                    <svg
-                      width="48"
-                      height="48"
-                      viewBox="0 0 48 48"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M30.3069 41.3762L14.802 25.8713C14.505 25.6337 14.297 25.3366 14.1782 24.9802C14.0594 24.6238 14 24.297 14 24C14 23.6436 14.0594 23.3014 14.1782 22.9735C14.297 22.6479 14.505 22.3663 14.802 22.1287L30.3069 6.53465C30.6634 6.17822 31.0495 6 31.4653 6C31.8812 6 32.2673 6.17822 32.6238 6.53465C32.9802 6.9505 33.1584 7.36634 33.1584 7.78218C33.1584 8.19802 32.9802 8.58416 32.6238 8.9406L17.5644 24L32.6238 39.0594C32.9802 39.4158 33.1584 39.802 33.1584 40.2178C33.1584 40.6337 32.9802 41.0198 32.6238 41.3762C32.2673 41.7921 31.8812 42 31.4653 42C31.0495 42 30.6634 41.7921 30.3069 41.3762Z"
-                        fill="white"
-                      />
-                    </svg>
-                  </div>
-
-                  <div className="top-0 right-0 fixed w-[50%]">
-                    <div className="bg-[url('/src/Component/Assets/Apart_Asset/Rect.png')] bg-no-repeat bg-cover bg-center px-[50px] h-[50vh]">
-                      <div className="py-[30px]">
-                        <svg
-                          className="cursor-pointer"
-                          width="48"
-                          height="48"
-                          viewBox="0 0 48 48"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <rect width="48" height="48" rx="4" fill="white" />
-                          <path
-                            d="M25.8801 24.0002L36.9335 12.9468C37.1519 12.6918 37.266 12.3637 37.2531 12.0281C37.2401 11.6925 37.101 11.3742 36.8635 11.1367C36.6261 10.8993 36.3078 10.7602 35.9722 10.7472C35.6366 10.7343 35.3085 10.8484 35.0535 11.0668L24.0001 22.1202L12.9468 11.0535C12.6957 10.8024 12.3552 10.6614 12.0001 10.6614C11.6451 10.6614 11.3045 10.8024 11.0535 11.0535C10.8024 11.3046 10.6613 11.6451 10.6613 12.0002C10.6613 12.3552 10.8024 12.6958 11.0535 12.9468L22.1201 24.0002L11.0535 35.0535C10.9139 35.173 10.8005 35.3201 10.7205 35.4855C10.6405 35.651 10.5955 35.8311 10.5884 36.0148C10.5813 36.1984 10.6122 36.3815 10.6793 36.5526C10.7463 36.7237 10.848 36.8791 10.9779 37.009C11.1079 37.139 11.2633 37.2406 11.4344 37.3077C11.6055 37.3747 11.7886 37.4057 11.9722 37.3986C12.1558 37.3915 12.336 37.3465 12.5014 37.2665C12.6668 37.1864 12.8139 37.0731 12.9335 36.9335L24.0001 25.8802L35.0535 36.9335C35.3085 37.1519 35.6366 37.2661 35.9722 37.2531C36.3078 37.2402 36.6261 37.101 36.8635 36.8636C37.101 36.6261 37.2401 36.3078 37.2531 35.9722C37.266 35.6367 37.1519 35.3086 36.9335 35.0535L25.8801 24.0002Z"
-                            fill="#004643"
-                          />
-                        </svg>
-                      </div>
-                    </div>
-                    <div className="bg-[#FFF] h-[50vh] px-[50px]">
-                      <div className="flex justify-center py-[50px] gap-[20px]">
-                        <img src={img} alt="img" />
-
-                        <img src={img1} alt="img" />
-
-                        <img src={img2} alt="img" />
-
-                        <img src={img3} alt="img" />
-
-                        <img src={img4} alt="img" />
-
-                        <img src={img5} alt="img" />
-                      </div>
-                      <div className="flex items-center gap-[200px] pt-[50px]">
-                        <div className="flex flex-col gap-[50px]">
-                          <div>
-                            <p
-                              style={{ fontFamily: "Poppins" }}
-                              className="text-[20px] font-[400] text-[#0C1618] leading-[170%]"
-                            >
-                              Neighborhood
-                            </p>
-                            <p
-                              style={{ fontFamily: "Poppins" }}
-                              className="text-[#0C1618] text-[20px] font-[600] leading-[170%]"
-                            >
-                              Amawbia, Awka
-                            </p>
-                          </div>
-                          <div>
-                            <p
-                              style={{ fontFamily: "Poppins" }}
-                              className="text-[20px] font-[400] text-[#0C1618] leading-[170%]"
-                            >
-                              Bedrooms
-                            </p>
-                            <p
-                              style={{ fontFamily: "Poppins" }}
-                              className="text-[#0C1618] text-[20px] font-[600] leading-[170%]"
-                            >
-                              2
-                            </p>
-                          </div>
-                        </div>
-                        <div className="flex flex-col gap-[50px]">
-                          <div>
-                            <p
-                              style={{ fontFamily: "Poppins" }}
-                              className="text-[20px] font-[400] text-[#0C1618] leading-[170%]"
-                            >
-                              Rental Amout
-                            </p>
-                            <p
-                              style={{ fontFamily: "Poppins" }}
-                              className="text-[#0C1618] text-[20px] font-[600] leading-[170%]"
-                            >
-                              N240,000/yr
-                            </p>
-                          </div>
-                          <div>
-                            <p
-                              style={{ fontFamily: "Poppins" }}
-                              className="text-[20px] font-[400] text-[#0C1618] leading-[170%]"
-                            >
-                              Bedrooms
-                            </p>
-                            <p
-                              style={{ fontFamily: "Poppins" }}
-                              className="text-[#0C1618] text-[20px] font-[600] leading-[170%]"
-                            >
-                              2
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              )}
-              <div>
+            <div className="flex justify-between items-center pt-[250px]">
+              <div onClick={toggleMenu}>
+                <svg
+                  className="cursor-pointer"
+                  width="48"
+                  height="48"
+                  viewBox="0 0 48 48"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M30.3069 41.3762L14.802 25.8713C14.505 25.6337 14.297 25.3366 14.1782 24.9802C14.0594 24.6238 14 24.297 14 24C14 23.6436 14.0594 23.3014 14.1782 22.9735C14.297 22.6479 14.505 22.3663 14.802 22.1287L30.3069 6.53465C30.6634 6.17822 31.0495 6 31.4653 6C31.8812 6 32.2673 6.17822 32.6238 6.53465C32.9802 6.9505 33.1584 7.36634 33.1584 7.78218C33.1584 8.19802 32.9802 8.58416 32.6238 8.9406L17.5644 24L32.6238 39.0594C32.9802 39.4158 33.1584 39.802 33.1584 40.2178C33.1584 40.6337 32.9802 41.0198 32.6238 41.3762C32.2673 41.7921 31.8812 42 31.4653 42C31.0495 42 30.6634 41.7921 30.3069 41.3762Z"
+                    fill="white"
+                  />
+                </svg>
+              </div>
+              <div onClick={toggleMenu}>
                 <svg
                   className="cursor-pointer"
                   width="48"
@@ -512,6 +385,108 @@ export const Box2: FC = () => {
                 <p>2 days ago</p>
               </div>
             </div>
+
+            {isOpen && (
+              <div data-aos="fade-left" className="top-0 right-0 fixed w-[50%]">
+                <div className="bg-[url('/src/Component/Assets/Apart_Asset/Rect.png')] bg-no-repeat bg-cover bg-center px-[50px] h-[50vh]">
+                  <div
+                    className="py-[30px] cursor-pointer"
+                    onClick={toggleMenu}
+                  >
+                    <svg
+                      width="48"
+                      height="48"
+                      viewBox="0 0 48 48"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <rect width="48" height="48" rx="4" fill="white" />
+                      <path
+                        d="M25.8801 24.0002L36.9335 12.9468C37.1519 12.6918 37.266 12.3637 37.2531 12.0281C37.2401 11.6925 37.101 11.3742 36.8635 11.1367C36.6261 10.8993 36.3078 10.7602 35.9722 10.7472C35.6366 10.7343 35.3085 10.8484 35.0535 11.0668L24.0001 22.1202L12.9468 11.0535C12.6957 10.8024 12.3552 10.6614 12.0001 10.6614C11.6451 10.6614 11.3045 10.8024 11.0535 11.0535C10.8024 11.3046 10.6613 11.6451 10.6613 12.0002C10.6613 12.3552 10.8024 12.6958 11.0535 12.9468L22.1201 24.0002L11.0535 35.0535C10.9139 35.173 10.8005 35.3201 10.7205 35.4855C10.6405 35.651 10.5955 35.8311 10.5884 36.0148C10.5813 36.1984 10.6122 36.3815 10.6793 36.5526C10.7463 36.7237 10.848 36.8791 10.9779 37.009C11.1079 37.139 11.2633 37.2406 11.4344 37.3077C11.6055 37.3747 11.7886 37.4057 11.9722 37.3986C12.1558 37.3915 12.336 37.3465 12.5014 37.2665C12.6668 37.1864 12.8139 37.0731 12.9335 36.9335L24.0001 25.8802L35.0535 36.9335C35.3085 37.1519 35.6366 37.2661 35.9722 37.2531C36.3078 37.2402 36.6261 37.101 36.8635 36.8636C37.101 36.6261 37.2401 36.3078 37.2531 35.9722C37.266 35.6367 37.1519 35.3086 36.9335 35.0535L25.8801 24.0002Z"
+                        fill="#004643"
+                      />
+                    </svg>
+                  </div>
+                </div>
+                <div className="bg-[#FFF] h-[50vh] px-[50px]">
+                  <div className="flex justify-center py-[50px] gap-[20px]">
+                    <img src={img} alt="gallery" />
+
+                    <img src={img1} alt="gallery" />
+
+                    <img src={img2} alt="gallery" />
+
+                    <img src={img3} alt="gallery" />
+
+                    <img src={img4} alt="gallery" />
+
+                    <img src={img5} alt="gallery" />
+                  </div>
+                  <div className="flex items-center gap-[200px] pt-[50px]">
+                    <div className="flex flex-col gap-[50px]">
+                      <div>
+                        <p
+                          style={{ fontFamily: "Poppins" }}
+                          className="text-[20px] font-[400] text-[#0C1618] leading-[170%]"
+                        >
+                          Neighborhood
+                        </p>
+                        <p
+                          style={{ fontFamily: "Poppins" }}
+                          className="text-[#0C1618] text-[20px] font-[600] leading-[170%]"
+                        >
+                          Amawbia, Awka
+                        </p>
+                      </div>
+                      <div>
+                        <p
+                          style={{ fontFamily: "Poppins" }}
+                          className="text-[20px] font-[400] text-[#0C1618] leading-[170%]"
+                        >
+                          Bedrooms
+                        </p>
+                        <p
+                          style={{ fontFamily: "Poppins" }}
+                          className="text-[#0C1618] text-[20px] font-[600] leading-[170%]"
+                        >
+                          2
+                        </p>
+                      </div>
+                    </div>
+                    <div className="flex flex-col gap-[50px]">
+                      <div>
+                        <p
+                          style={{ fontFamily: "Poppins" }}
+                          className="text-[20px] font-[400] text-[#0C1618] leading-[170%]"
+                        >
+                          Rental Amout
+                        </p>
+                        <p
+                          style={{ fontFamily: "Poppins" }}
+                          className="text-[#0C1618] text-[20px] font-[600] leading-[170%]"
+                        >
+                          N240,000/yr
+                        </p>
+                      </div>
+                      <div>
+                        <p
+                          style={{ fontFamily: "Poppins" }}
+                          className="text-[20px] font-[400] text-[#0C1618] leading-[170%]"
+                        >
+                          Bedrooms
+                        </p>
+                        <p
+                          style={{ fontFamily: "Poppins" }}
+                          className="text-[#0C1618] text-[20px] font-[600] leading-[170%]"
+                        >
+                          2
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            )}
           </div>
         </div>
       </div>

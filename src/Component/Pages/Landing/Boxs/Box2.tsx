@@ -27,13 +27,13 @@ export const Box2: FC = () => {
             </p>
           </div>
           <div>
-            <img src={img} alt="img" className="hidden xl:block" />
-            <img src={img1} alt="img" className="block xl:hidden pt-[10px]" />
+            <img src={img} alt="gallery" className="hidden xl:block" />
+            <img src={img1} alt="gallery" className="block xl:hidden pt-[10px]" />
           </div>
         </div>
         <div className="flex justify-center flex-col xl:flex-row items-center xl:gap-[90px]">
           <div className="xl:block hidden">
-            <img src={rec} alt="img" />
+            <img src={rec} alt="gallery" />
           </div>
           <div className="flex flex-col xl:gap-[20px]">
             <p
@@ -81,9 +81,9 @@ export const Box2: FC = () => {
               <path
                 d="M12.676 21.45L22.1236 12L12.6736 2.55002M1.87598 12H22.126H1.87598Z"
                 stroke="#004643"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
               />
             </svg>
           </div>

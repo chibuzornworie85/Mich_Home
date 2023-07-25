@@ -7,7 +7,7 @@ export const Box3: FC = () => {
     <>
       {/* BOX3 */}
       <div className="xl:px-[50px] px-[15px] xl:pb-[100px] flex-col xl:flex-row flex justify-between items-center py-[50px] xl:py-0 gap-[20px] xl:gap-[100px]">
-        <img src={img} alt="image" className="xl:hidden block" />
+        <img src={img} alt="gallery" className="xl:hidden block" />
         <div className="flex flex-col gap-[10px] xl:gap-[20px]">
           <p
             style={{ fontFamily: "Satoshi" }}
@@ -41,15 +41,15 @@ export const Box3: FC = () => {
               <path
                 d="M12.676 21.95L22.1236 12.5L12.6736 3.05005M1.87598 12.5H22.126H1.87598Z"
                 stroke="white"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
               />
             </svg>
           </button>
         </div>
         <div>
-          <img src={img1} alt="img" className="hidden xl:block" />
+          <img src={img1} alt="gallery" className="hidden xl:block" />
         </div>
       </div>
     </>

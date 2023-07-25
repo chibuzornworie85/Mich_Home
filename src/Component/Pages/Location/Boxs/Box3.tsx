@@ -13,7 +13,7 @@ export const Box3: FC = () => {
           <div className="flex flex-col gap-[20px]">
             <p
               style={{ fontFamily: "Satoshi" }}
-              className="xl:text-[25px] font-[900] leading-[130%] xl:w-[450px]"
+              className="xl:text-[25px] text-[18px] font-[600] xl:font-[900] leading-[150%] xl:leading-[130%] xl:w-[450px]"
             >
               Everyone needs a place to live, and you deserve a place you adore.
             </p>
@@ -28,19 +28,19 @@ export const Box3: FC = () => {
             </p>
           </div>
           <div>
-            <img src={img} alt="img" className="h-[450px] xl:block hidden" />
-            <img src={imgs1} alt="img" className="block xl:hidden" />
+            <img src={img} alt="gallery" className="h-[450px] xl:block hidden" />
+            <img src={imgs1} alt="gallery" className="block xl:hidden" />
           </div>
         </div>
         <div className="flex justify-between items-center xl:gap-[30px] flex-col xl:flex-row gap-[20px]">
           <div>
-            <img src={imgs} alt="img" className="h-[450px] xl:block hidden" />
-            <img src={img1} alt="img" className="block xl:hidden" />
+            <img src={imgs} alt="gallery" className="h-[450px] xl:block hidden" />
+            <img src={img1} alt="gallery" className="block xl:hidden" />
           </div>
           <div className="flex flex-col gap-[20px]">
             <p
               style={{ fontFamily: "Satoshi" }}
-              className="xl:text-[25px] font-[900] leading-[130%] xl:w-[400px]"
+              className="xl:text-[25px] text-[18px] font-[600] xl:font-[900] leading-[150%] xl:leading-[130%] xl:w-[400px]"
             >
               Having access to Location's top apartment bargains.
             </p>
@@ -69,9 +69,9 @@ export const Box3: FC = () => {
                 <path
                   d="M12.6755 21.95L22.1231 12.5L12.6731 3.05003M1.87549 12.5H22.1255H1.87549Z"
                   stroke="white"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                 />
               </svg>
             </div>

@@ -41,16 +41,16 @@ export const Box: FC = () => {
               <path
                 d="M12.676 21.45L22.1236 12L12.6736 2.55005M1.87598 12H22.126H1.87598Z"
                 stroke="white"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
               />
             </svg>
           </div>
         </div>
         <div>
-          <img src={box} alt="" className="hidden xl:block" />
-          <img src={box1} alt="" className="block xl:hidden" />
+          <img src={box} alt="gallery" className="hidden xl:block" />
+          <img src={box1} alt="gallery" className="block xl:hidden" />
         </div>
       </div>
     </>

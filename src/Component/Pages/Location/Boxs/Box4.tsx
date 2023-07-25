@@ -13,7 +13,7 @@ export const Box4: FC = () => {
       <div className="flex flex-col px-[15px] xl:px-[50px] items-center">
         <p
           style={{ fontFamily: "Satoshi" }}
-          className="flex justify-center text-[20px] text-center xl:w-[100%] w-[70%] xl:text-[30px] font-[900] leading-[130%]"
+          className="flex justify-center text-[20px] text-center xl:w-[100%] w-[70%] xl:text-[30px] font-[900] leading-[150%] xl:leading-[130%]"
         >
           What our customers are saying
         </p>
@@ -36,7 +36,7 @@ export const Box4: FC = () => {
             <div className="flex flex-col items-center xl:gap-[50px] gap-[10px]">
               <img
                 src={img}
-                alt="img"
+                alt="gallery"
                 className="xl:h-[128px] h-[88px] w-[88px] xl:w-[128px]"
               />
               <p
@@ -65,7 +65,7 @@ export const Box4: FC = () => {
             </div>
           </div>
           <div className="xl:hidden block">
-            <img src={img1} alt="image" />
+            <img src={img1} alt="" />
           </div>
           <div className="hidden xl:block">
             <svg
@@ -111,13 +111,13 @@ export const Box4: FC = () => {
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
             >
-              <g clip-path="url(#clip0_3051_503)">
+              <g clipPath="url(#clip0_3051_503)">
                 <path
                   d="M8.45049 14.2999L14.7489 7.99995L8.44889 1.69995M1.25049 7.99995H14.7505H1.25049Z"
                   stroke="white"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeWidth="1.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                 />
               </g>
               <defs>
@@ -131,10 +131,10 @@ export const Box4: FC = () => {
         <div>
           <img
             src={frame}
-            alt="img"
+            alt="gallery"
             className="h-[450px] w-[600px] xl:block hidden"
           />
-          <img src={frame1} alt="img" className="xl:hidden block" />
+          <img src={frame1} alt="gallery" className="xl:hidden block" />
         </div>
       </div>
     </>

@@ -29,9 +29,9 @@ export const Box3: FC = () => {
               <path
                 d="M12.6755 21.45L22.1231 12L12.6731 2.55003M1.87549 12H22.1255H1.87549Z"
                 stroke="white"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
               />
             </svg>
           </div>

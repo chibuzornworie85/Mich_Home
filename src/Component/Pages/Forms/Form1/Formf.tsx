@@ -230,9 +230,9 @@ export const Formf: FC = () => {
                   <path
                     d="M13.1755 21.45L22.6231 12L13.1731 2.55005M2.37549 12H22.6255H2.37549Z"
                     stroke="#0C1618"
-                    stroke-width="2"
+                    strokeWidth="2"
                     stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinejoin="round"
                   />
                 </svg>
               </button>
@@ -415,13 +415,13 @@ export const Formf: FC = () => {
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
               >
-                <g clip-path="url(#clip0_3051_468)">
+                <g clipPath="url(#clip0_3051_468)">
                   <path
                     d="M8.45037 14.3001L14.7488 8.00007L8.44877 1.70007M1.25037 8.00007H14.7504H1.25037Z"
                     stroke="white"
-                    stroke-width="1.5"
+                    strokeWidth="1.5"
                     stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinejoin="round"
                   />
                 </g>
                 <defs>
