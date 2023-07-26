@@ -15,19 +15,19 @@ import { MobileBox4 } from "./Boxs/Mobile_Box4";
 export const Apart: FC = () => {
   return (
     <>
-      <div className="xl:block hidden sticky top-0">
+      <div className="xl:block lg:block hidden sticky top-0">
         <Nav />
       </div>
-      <div className="xl:hidden block sticky top-0">
+      <div className="xl:hidden md:block lg:hidden block sticky top-0">
         <MobileNav />
       </div>
       <Box1 />
-      <div className="xl:flex flex-col gap-[10px] py-[50px] hidden">
+      <div className="xl:flex md:flex flex-col gap-[10px] py-[50px] hidden">
         <Box2 />
         <Box2f />
         <Box2f1 />
       </div>
-      <div className="xl:hidden flex flex-col py-[40px] gap-[10px]">
+      <div className="xl:hidden md:hidden flex flex-col py-[40px] gap-[10px]">
         <MobileBox />
         <MobileBox2 />
         <MobileBox3 />

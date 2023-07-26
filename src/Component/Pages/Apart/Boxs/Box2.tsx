@@ -22,7 +22,7 @@ const [isOpen, setIsOpen] = useState(false);
 
   return (
     <>
-      <div className="px-[50px] flex flex-col gap-[20px]">
+      <div className="xl:px-[50px] lg:px-[25px] md:px-[30px] flex flex-col gap-[20px]">
         <div className="flex justify-between gap-[10px]">
           <div className="bg-[url('/src/Component/Assets/Apart_Asset/bg.png')] bg-no-repeat bg-cover bg-center h-[544px] w-[788px]">
             <div className="flex justify-between items-center pt-[250px]">
@@ -156,7 +156,7 @@ const [isOpen, setIsOpen] = useState(false);
             </div>
 
             {isOpen && (
-              <div  data-aos="fade-left" className="top-0 right-0 fixed w-[50%]">
+              <div  data-aos="fade-left" className="top-0 right-0 fixed lg:w-[70%] xl:w-[50%] md:w-[100%">
                 <div className="bg-[url('/src/Component/Assets/Apart_Asset/Rect.png')] bg-no-repeat bg-cover bg-center px-[50px] h-[50vh]">
                   <div className="py-[30px]" onClick={toggleMenu}>
                     <svg
@@ -387,7 +387,7 @@ const [isOpen, setIsOpen] = useState(false);
             </div>
 
             {isOpen && (
-              <div data-aos="fade-left" className="top-0 right-0 fixed w-[50%]">
+              <div data-aos="fade-left" className="top-0 right-0 fixed lg:w-[70%] md:w-[100%] xl:w-[50%]">
                 <div className="bg-[url('/src/Component/Assets/Apart_Asset/Rect.png')] bg-no-repeat bg-cover bg-center px-[50px] h-[50vh]">
                   <div
                     className="py-[30px] cursor-pointer"
