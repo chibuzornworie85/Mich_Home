@@ -163,7 +163,7 @@ export const Box2: FC = () => {
               </div>
             </div>
           </div>
-          <div className="bg-[url('/src/Component/Assets/Landing_page_Asset/Rectangle.png')] bg-cover bg-no-repeat bg-center w-[500px] h-[408px] md:hidden">
+          <div className="bg-[url('/src/Component/Assets/Landing_page_Asset/Rectangle.png')] bg-cover bg-no-repeat bg-center w-[500px] h-[408px] md:hidden xl:block">
             <div className="flex lg:pl-[10px] xl:pl-[20px] lg:pt-[240px] xl:pt-[250px] gap-[10px] flex-col">
               <p
                 style={{ fontFamily: "Poppins" }}
@@ -265,7 +265,7 @@ export const Box2: FC = () => {
               </div>
             </div>
           </div>
-          <div className="bg-[url('/src/Component/Assets/Landing_page_Asset/Rectangle.png')] bg-cover bg-no-repeat bg-center w-[500px] h-[408px] md:hidden">
+          <div className="bg-[url('/src/Component/Assets/Landing_page_Asset/Rectangle.png')] bg-cover bg-no-repeat bg-center w-[500px] h-[408px] md:hidden xl:block">
             <div className="flex pl-[10px] xl:pl-[20px] lg:pt-[240px] xl:pt-[250px] gap-[10px] flex-col">
               <p
                 style={{ fontFamily: "Poppins" }}

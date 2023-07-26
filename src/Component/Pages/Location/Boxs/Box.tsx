@@ -8,17 +8,17 @@ export const Box: FC = () => {
     <>
       {/* BOX */}
 
-      <div className="bg-[#FFF] flex flex-col xl:flex-row items-center xl:gap-[40px] gap-[20px] px-[25px] xl:px-[50px] py-[20px] xl:py-0 xl:pb-[100px] justify-between">
+      <div className="bg-[#FFF] flex flex-col md:flex-row xl:flex-row items-center xl:gap-[40px] md:px-[30px] lg:px-[25px] gap-[20px] px-[25px] xl:px-[50px] py-[20px] xl:py-0 md:pb-[50px] xl:pb-[100px] justify-between md:py-0">
         <div className="flex flex-col xl:gap-[50px] gap-[20px]">
           <h1
             style={{ fontFamily: "Millik" }}
-            className="xl:text-[70px] text-[30px] w-[250px] xl:w-[500px] font-[400] leading-[100%]"
+            className="xl:text-[70px] text-[30px] md:text-[35px] w-[250px] md:w-[250px] xl:w-[500px] font-[400] leading-[100%]"
           >
             <span className="text-[#004643]">Find the right apartment</span>
           </h1>
           <p
             style={{ fontFamily: "Poppins" }}
-            className="text-[#414647] xl:text-[20px] font-[500] leading-[170%] xl:w-[550px]"
+            className="text-[#414647] xl:text-[20px] font-[500] leading-[170%] md:w-[400px] xl:w-[550px]"
           >
             In Awka, there are over 190,000 housing units. With no cost to you,
             we help you find your one.
@@ -49,8 +49,8 @@ export const Box: FC = () => {
           </div>
         </div>
         <div>
-          <img src={box} alt="gallery" className="hidden xl:block" />
-          <img src={box1} alt="gallery" className="block xl:hidden" />
+          <img src={box} alt="gallery" className="hidden xl:block md:block" />
+          <img src={box1} alt="gallery" className="block xl:hidden md:hidden" />
         </div>
       </div>
     </>

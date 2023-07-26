@@ -10,15 +10,15 @@ export const Box4: FC = () => {
   return (
     <>
       {/* Customer */}
-      <div className="flex flex-col px-[15px] xl:px-[50px] items-center">
+      <div className="flex flex-col px-[15px] xl:px-[50px] lg:px-[25px] md:px-[30px] items-center">
         <p
           style={{ fontFamily: "Satoshi" }}
           className="flex justify-center text-[20px] text-center xl:w-[100%] w-[70%] xl:text-[30px] font-[900] leading-[150%] xl:leading-[130%]"
         >
           What our customers are saying
         </p>
-        <div className="flex items-center py-[25px] xl:py-[50px] gap-[50px] flex-col xl:flex-row">
-          <div className="hidden xl:block">
+        <div className="flex items-center py-[25px] xl:py-[50px] md:gap-[25px] gap-[50px] flex-col md:flex-row xl:flex-row">
+          <div className="hidden md:block xl:block">
             <svg
               width="64"
               height="64"
@@ -32,16 +32,16 @@ export const Box4: FC = () => {
               />
             </svg>
           </div>
-          <div className="bg-[#FFF] shadow xl:pt-[62px] px-[10px] pt-[4px] pb-[4px] xl:px-[50px] xl:pb-[58px] flex flex-col gap-[15px] xl:gap-[50px] rounded-[4px]">
+          <div className="bg-[#FFF] shadow md:pt-[62px] xl:pt-[62px] px-[10px] pt-[4px] pb-[4px] md:px-[50px] xl:px-[50px] md:pb-[58px] xl:pb-[58px] flex flex-col gap-[15px] xl:gap-[50px] md:gap-[50px] rounded-[4px]">
             <div className="flex flex-col items-center xl:gap-[50px] gap-[10px]">
               <img
                 src={img}
                 alt="gallery"
-                className="xl:h-[128px] h-[88px] w-[88px] xl:w-[128px]"
+                className="xl:h-[128px] h-[88px] w-[88px] xl:w-[128px] md:w-[128px] md:h-[128px]"
               />
               <p
                 style={{ fontFamily: "Poppins" }}
-                className="xl:w-[600px] xl:text-[#004643] text-[#414647] font-[400] leading-[170%] xl:text-[20px] flex text-center"
+                className="xl:w-[600px] md:w-[450px] xl:text-[#004643] text-[#414647] font-[400] leading-[170%] xl:text-[20px] flex text-center"
               >
                 “Lorem ipsum dolor sit amet, consectetur adipiscing elit. Semper
                 tristique suspendisse semper vestibulum pharetra ut nec. Amet
@@ -64,10 +64,10 @@ export const Box4: FC = () => {
               </p>
             </div>
           </div>
-          <div className="xl:hidden block">
-            <img src={img1} alt="" />
+          <div className="xl:hidden block md:hidden">
+            <img src={img1} alt="gallery" />
           </div>
-          <div className="hidden xl:block">
+          <div className="hidden md:block xl:block">
             <svg
               width="64"
               height="64"
@@ -85,24 +85,24 @@ export const Box4: FC = () => {
       </div>
 
       {/* Skill */}
-      <div className="flex justify-center flex-col xl:flex-row xl:px-[50px] xl:pb-[100px] items-center xl:mt-0 mt-[20px]">
-        <div className="bg-[#004643] xl:rounded-t-[4px] w-[100%] xl:w-[600px] h-[292px] xl:h-[450px] flex flex-col gap-[10px] pt-[50px] px-[20px] xl:gap-[20px] xl:p-[50px]">
+      <div className="flex justify-center flex-col md:flex-row xl:flex-row xl:px-[50px] md:pb-[50px] xl:pb-[100px] items-center xl:mt-0 mt-[20px]">
+        <div className="bg-[#004643] xl:rounded-t-[4px] w-[100%] xl:w-[600px] md:w-[600px] h-[292px] md:h-[450px] xl:h-[450px] flex flex-col gap-[10px] pt-[50px] px-[20px] xl:gap-[20px] xl:p-[50px]">
           <p
             style={{ fontFamily: "Satoshi" }}
-            className="font-[900] xl:w-[200px] w-[250px] leading-[130%] text-[20px] xl:text-[30px] text-[#FFF]"
+            className="font-[900] xl:w-[200px] md:w-[200px] w-[250px] leading-[130%] text-[20px] md:text-[25px] xl:text-[30px] text-[#FFF]"
           >
             Improve your tenancy skills
           </p>
           <p
             style={{ fontFamily: "Poppins" }}
-            className="xl:w-[400px] text-[#FFF] text-[15px] xl:text-[25px] font-[400] leading-[170%]"
+            className="xl:w-[400px] md:w-[400px] text-[#FFF] text-[15px] md:text-[20px] xl:text-[25px] font-[400] leading-[170%]"
           >
             Let Mich Homes assist you in finding your next rental.
           </p>
-          <button className="mt-[30px] xl:block hidden text-[#FFF] text-[20px] font-[500] leading-[150%] w-[200px] rounded-[8px] h-[72px] py-[16px] px-[32px] bg-[#0C1618]">
+          <button className="mt-[30px] xl:block md:block hidden text-[#FFF] text-[20px] font-[500] leading-[150%] w-[200px] rounded-[8px] h-[72px] py-[16px] px-[32px] bg-[#0C1618]">
             <Link to="/form">Get Started</Link>
           </button>
-          <button className="mt-[10px] xl:hidden flex items-center text-[#FFF] font-[500] leading-[150%] w-[150px] rounded-[8px] px-[20px] py-[10px] justify-center bg-[#D1AC00]">
+          <button className="mt-[10px] xl:hidden md:hidden flex items-center text-[#FFF] font-[500] leading-[150%] w-[150px] rounded-[8px] px-[20px] py-[10px] justify-center bg-[#D1AC00]">
             <Link to="/form">Get Started</Link>
             <svg
               width="16"
@@ -132,9 +132,13 @@ export const Box4: FC = () => {
           <img
             src={frame}
             alt="gallery"
-            className="h-[450px] w-[600px] xl:block hidden"
+            className="h-[450px] w-[600px] xl:block hidden md:block"
           />
-          <img src={frame1} alt="gallery" className="xl:hidden block" />
+          <img
+            src={frame1}
+            alt="gallery"
+            className="xl:hidden block md:hidden"
+          />
         </div>
       </div>
     </>

@@ -3,14 +3,14 @@ import { FC } from "react";
 export const Box2: FC = () => {
   return (
     <>
-      <div className="bg-[#FAFAFC] w-[100%] px-[15px] xl:px-[50px] py-[20px] xl:py-0 xl:pb-[50px] flex flex-col">
+      <div className="bg-[#FAFAFC] w-[100%] px-[15px] md:px-[30px] lg:px-[25px] md:pb-[50px] xl:px-[50px] py-[20px] xl:py-0 xl:pb-[50px] flex flex-col">
         <p
           style={{ fontFamily: "Satoshi" }}
-          className="text-[30px] xl:text-[40px] font-[900] leading-[130%] flex justify-center xl:py-[50px]"
+          className="text-[30px] xl:text-[40px] font-[900] leading-[130%] flex justify-center xl:py-[50px] md:py-[25px]"
         >
           How it works
         </p>
-        <div className="flex justify-between flex-col gap-[20px] xl:gap-0 xl:flex-row py-[25px] xl:py-[50px]">
+        <div className="flex justify-between flex-col gap-[20px] xl:gap-0 md:flex-row xl:flex-row py-[25px] xl:py-[50px]">
           <div className="flex flex-col gap-[10px]">
             <svg
               className="hidden xl:block"
