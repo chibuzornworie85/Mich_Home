@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 export const Thankf: FC = () => {
   return (
     <>
-      <div className="flex flex-col gap-[20px] xl:gap-[30px] px-[15px] py-[50px] items-center text-center xl:px-[50px]">
+      <div className="flex flex-col gap-[20px] md:px-[30px] lg:px-[25px] xl:gap-[30px] px-[15px] py-[50px] items-center text-center xl:px-[50px]">
         <p
           style={{ fontFamily: "Satoshi" }}
           className="xl:text-[30px] text-[25px] font-[900] leading-[130%]"
@@ -13,7 +13,7 @@ export const Thankf: FC = () => {
         </p>
         <div
           style={{ fontFamily: "Poppins" }}
-          className="xl:w-[800px] text-[#414647] xl:text-[20px] font-[400] leading-[170%] gap-[15px] xl:gap-[25px] flex flex-col"
+          className="lg:w-[800px] md:w-[600px] text-[#414647] xl:text-[20px] font-[400] leading-[170%] gap-[15px] xl:gap-[25px] flex flex-col"
         >
           <p> An agent will be in touch with you within one business day.</p>
           <p>
