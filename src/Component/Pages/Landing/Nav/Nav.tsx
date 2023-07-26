@@ -20,19 +20,19 @@ export const Nav: FC = () => {
   return (
     <>
       {/* Nav */}
-      <header className="custom-shadow hidden xl:flex justify-between px-[50px] py-[20px] text-center rounded-[8px] bg-[#FFF] items-center sticky top-0">
+      <header className="custom-shadow hidden md:hidden lg:flex xl:flex justify-between lg:px-[25px] xl:px-[50px] py-[20px] text-center rounded-[8px] bg-[#FFF] items-center sticky top-0">
         <div className="flex items-center">
           <img src={logo} alt="logo" />
         </div>
         <nav style={{ fontFamily: "Poppins" }}>
-          <ul className="flex gap-[40px] items-center text-[#0C1618] text-center text-[16px] font-[500] leading-[170%]">
+          <ul className="flex lg:gap-[20px] xl:gap-[40px] items-center text-[#0C1618] text-center text-[16px] font-[500] leading-[170%]">
             <li>About us</li>
             <li>Careers</li>
             <li>Blog</li>
           </ul>
         </nav>
         <div style={{ fontFamily: "Poppins" }}>
-          <button className="flex bg-[#EBEBF0] text-[#0C1618] font-[500] leading-[150%] text-[16px] rounded-[8px] h-[60px] px-[24px] py-[16px] items-center gap-[8px]">
+          <button className="flex bg-[#EBEBF0] text-[#0C1618] font-[500] leading-[150%] text-[16px] rounded-[8px] lg:h-[50px] xl:h-[60px] px-[10px] xl:px-[24px] py-[16px] items-center gap-[8px]">
             <Link to="/location">Choose Location</Link>
             <svg
               width="34"
@@ -50,10 +50,10 @@ export const Nav: FC = () => {
         </div>
       </header>
 
-      <div className="custom-shadow xl:hidden flex sticky top-0 justify-between items-center px-[15px] bg-[#FFF] h-[80px] rounded-[8px]">
-        <div className="flex items-center gap-[10px]">
+      <div className="custom-shadow md:flex lg:hidden xl:hidden flex sticky top-0 justify-between items-center md:px-[30px] px-[15px] bg-[#FFF] h-[80px] rounded-[8px]">
+        <div className="flex items-center gap-[10px] md:gap-[20px]">
           <div
-            className="h-8 w-8 flex items-center justify-center focus:outline-none"
+            className="h-8 w-8 md:w-10 md:h-10 flex items-center justify-center focus:outline-none"
             onClick={toggleMenu}
           >
             <svg
@@ -71,14 +71,14 @@ export const Nav: FC = () => {
           </div>
           <div
             style={{ fontFamily: "Millik" }}
-            className="text-[#0C1618] text-[20px] font-[400]"
+            className="text-[#0C1618] text-[20px] md:text-[30px] font-[400]"
           >
             <h1>Mich Homes</h1>
           </div>
         </div>
         <div
           style={{ fontFamily: "Poppins" }}
-          className="text-[10px] font-[500] rounded-[8px] leading-[150%] text-[#FFF] bg-[#0C1618] h-[30px py-[10px] px-[8px] flex justify-center items-center"
+          className="text-[10px] md:text-[15px] font-[500] rounded-[8px] leading-[150%] text-[#FFF] bg-[#0C1618] py-[10px] px-[8px] flex justify-center items-center"
         >
           <button className="flex items-center gap-[5px]">
             <Link to="/location">Choose Location</Link>
@@ -99,7 +99,7 @@ export const Nav: FC = () => {
         {isOpen && (
           <div
             data-aos="fade-right"
-            className="h-[100vh] absolute top-0 left-0 py-[10px] px-[15px] bg-[#FFF] w-[100%]"
+            className="h-[100vh] absolute top-0 left-0 py-[10px] px-[15px] md:px-[30px] md:py-[20px] bg-[#FFF] w-[100%]"
           >
             <div className="flex items-center justify-between">
               <div onClick={toggleMenu}>
@@ -119,13 +119,13 @@ export const Nav: FC = () => {
               </div>
               <div
                 style={{ fontFamily: "Millik" }}
-                className="text-[#0C1618] text-[15px] font-[400]"
+                className="text-[#0C1618] text-[15px] md:text-[20px] font-[400]"
               >
                 <h1>Mich Homes</h1>
               </div>
               <div
                 style={{ fontFamily: "Poppins" }}
-                className="text-[10px] font-[500] rounded-[4px] border-[1px] border-[#0C1618] leading-[150%] text-[#000] h-[30px py-[10px] px-[8px] flex justify-center items-center"
+                className="text-[10px] md:text-[15px] font-[500] rounded-[4px] border-[1px] border-[#0C1618] leading-[150%] text-[#000] h-[30px py-[10px] px-[8px] flex justify-center items-center"
               >
                 <button className="flex items-center gap-[5px]">
                   <Link to="/location">Choose Location</Link>
@@ -146,7 +146,7 @@ export const Nav: FC = () => {
             </div>
             <div
               style={{ fontFamily: "Poppins" }}
-              className="flex flex-col text-[#000] text-[15px] font-[600] leading-[170%] gap-[15px] pt-[30px]"
+              className="flex flex-col text-[#000] text-[15px] md:text-[20px] font-[600] leading-[170%] gap-[15px] pt-[30px]"
             >
               <p>Our Process</p>
               <Link to="/apartment">

@@ -8,18 +8,18 @@ export const Box1: FC = () => {
     <>
       {/* BOX */}
 
-      <div className="bg-[#FFF] flex flex-col px-[15px] pt-[30px] xl:pt-0 gap-[20px] xl:flex-row xl:flex xl:items-center xl:gap-[40px] xl:px-[50px] xl:pb-[50px] xl:justify-between">
+      <div className="bg-[#FFF] flex flex-col md:px-[30px] px-[15px] pt-[30px] md:pt-0 lg:pt-0 xl:pt-0 gap-[20px] md:flex-row lg:flex-row xl:flex-row xl:flex lg:items-center md:items-center xl:items-center xl:gap-[40px] lg:px-[25px] xl:px-[50px] xl:pb-[50px] md:pb-[25px] lg:pb-[25px] xl:justify-between">
         <div className="flex flex-col gap-[20px] xl:gap-[30px]">
           <h1
             style={{ fontFamily: "Millik" }}
-            className="xl:text-[70px] text-[40px] w-[200px] xl:w-[600px] font-[400] leading-[100%]"
+            className="xl:text-[70px] text-[40px] md:w-[300px] w-[200px] lg:w-[300px] xl:w-[600px] font-[400] leading-[100%]"
           >
             <span className="text-[#004643]">The best place to</span>{" "}
             <span className="text-[#D1AC00]">find an Apartment in Awka.</span>
           </h1>
           <p
             style={{ fontFamily: "Poppins" }}
-            className="text-[#414647] xl:text-[20px] xl:font-[500] xl:leading-[170%] xl:w-[600px]"
+            className="text-[#414647] xl:text-[20px] md:text-[20px] xl:font-[500] xl:leading-[170%] xl:w-[600px] lg:w-[500px] md:w-[400px]"
           >
             In a number of Awka Capital City locations, Mich Homes offers the
             greatest local apartment locators ready to find you a rad place to
@@ -50,8 +50,16 @@ export const Box1: FC = () => {
           </div>
         </div>
         <div>
-          <img src={box} alt="gallery" className="h-[50%] w-[100%] xl:block hidden" />
-          <img src={box1} alt="gallery" className="xl:hidden block" />
+          <img
+            src={box}
+            alt="gallery"
+            className="xl:h-[50%] xl:w-[100%] xl:block lg:block hidden md:block"
+          />
+          <img
+            src={box1}
+            alt="gallery"
+            className="xl:hidden block lg:hidden md:hidden"
+          />
         </div>
       </div>
     </>

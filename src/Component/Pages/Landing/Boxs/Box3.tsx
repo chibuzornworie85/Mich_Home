@@ -6,19 +6,19 @@ export const Box3: FC = () => {
   return (
     <>
       {/* BOX3 */}
-      <div className="xl:px-[50px] px-[15px] xl:pb-[100px] flex-col xl:flex-row flex justify-between items-center py-[50px] xl:py-0 gap-[20px] xl:gap-[100px]">
-        <img src={img} alt="gallery" className="xl:hidden block" />
-        <div className="flex flex-col gap-[10px] xl:gap-[20px]">
+      <div className="xl:px-[50px] lg:px-[25px] md:px-[30px] px-[15px] lg:pb-[50px] md:pb-[50px] xl:pb-[100px] md:flex-row flex-col lg:flex-row xl:flex-row flex justify-between items-center py-[50px] md:py-0 xl:py-0 gap-[20px] md:gap-[30px] xl:gap-[100px] lg:gap-[50px]">
+        <img src={img} alt="gallery" className="xl:hidden lg:hidden md:hidden block" />
+        <div className="flex flex-col gap-[10px] md:gap-[20px] xl:gap-[20px] lg:gap-[20px]">
           <p
             style={{ fontFamily: "Satoshi" }}
-            className="xl:text-[30px] text-[20px] w-[250px] font-[900] leading-[130%] xl:w-[550px]"
+            className="xl:text-[30px] text-[20px] w-[250px] md:w-[450px] font-[900] leading-[130%] lg:w-[450px] xl:w-[550px]"
           >
             Join the Mich Homes team! Put up a lot of effort. Give a damn. Enjoy
             yourself.
           </p>
           <p
             style={{ fontFamily: "Poppins" }}
-            className="xl:w-[550px] xl:text-[20px] font-[400] leading-[170%]"
+            className="xl:w-[550px] lg:w-[450px] md:w-[450px] xl:text-[20px] font-[400] leading-[170%]"
           >
             Want a job that's not awful? Heck, we can even raise the standard a
             little. How about a job that will make you eagerly anticipate Monday
@@ -49,7 +49,7 @@ export const Box3: FC = () => {
           </button>
         </div>
         <div>
-          <img src={img1} alt="gallery" className="hidden xl:block" />
+          <img src={img1} alt="gallery" className="hidden xl:block lg:block md:block" />
         </div>
       </div>
     </>

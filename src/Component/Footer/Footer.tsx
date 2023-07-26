@@ -4,20 +4,24 @@ import logo from "../Assets/Footer/BrandLogoLarge.png";
 export const Footer: FC = () => {
   return (
     <>
-      <footer className="hidden xl:flex bg-[#0C1618] px-[50px] py-[60px] w-[100%] flex-col gap-[50px]">
+      <footer className="hidden md:hidden xl:flex lg:flex bg-[#0C1618] xl:px-[50px] lg:px-[25px] lg:py-[40px] xl:py-[60px] w-[100%] flex-col lg:gap-[30px] xl:gap-[50px]">
         <div className="justify-between flex">
-          <div className="flex flex-col items-start gap-[20px]">
-            <img src={logo} alt="img" className="flex items-center w-[200px]" />
+          <div className="flex flex-col items-start lg:gap-[10px] xl:gap-[20px]">
+            <img
+              src={logo}
+              alt="img"
+              className="flex items-center lg:w-[100px] xl:w-[200px]"
+            />
             <p
               style={{ fontFamily: "Poppins" }}
-              className="w-[300px] text-[#FFF] text-[15px] font-[400] leading-[170%]"
+              className="xl:w-[300px] lg:w-[250px] text-[#FFF] text-[15px] font-[400] leading-[170%]"
             >
               Mich Homes is a website for listing homes for rent that features
               houses, apartments, and lodges that are available within Awka
               city, Nigeria.
             </p>
           </div>
-          <div className="flex flex-col gap-[20px]">
+          <div className="flex flex-col lg:gap-[10px] xl:gap-[20px]">
             <p
               style={{ fontFamily: "Satoshi" }}
               className="text-[20px] font-[900] leading-[130%] text-[#FFF]"
@@ -34,7 +38,7 @@ export const Footer: FC = () => {
               <li>FAQs</li>
             </ul>
           </div>
-          <div className="flex flex-col gap-[20px]">
+          <div className="flex flex-col gap-[10px] xl:gap-[20px]">
             <p
               style={{ fontFamily: "Satoshi" }}
               className="text-[20px] font-[900] leading-[130%] text-[#FFF]"
@@ -50,7 +54,7 @@ export const Footer: FC = () => {
               <li>Careers</li>
             </ul>
           </div>
-          <div className="flex flex-col gap-[20px]">
+          <div className="flex flex-col gap-[10px] xl:gap-[20px]">
             <p
               style={{ fontFamily: "Satoshi" }}
               className="text-[20px] font-[900] leading-[130%] text-[#FFF]"
@@ -69,14 +73,14 @@ export const Footer: FC = () => {
               <p>(+234) 801 2345 678</p>
             </div>
           </div>
-          <div className="flex flex-col gap-[20px]">
+          <div className="flex flex-col gap-[10px] xl:gap-[20px]">
             <p
               style={{ fontFamily: "Satoshi" }}
               className="text-[20px] font-[900] leading-[130%] text-[#FFF]"
             >
               SOCIAL
             </p>
-            <div className="flex items-center gap-[20px]">
+            <div className="flex items-center lg:gap-[10px] xl:gap-[20px]">
               <svg
                 width="50"
                 height="50"
@@ -154,15 +158,15 @@ export const Footer: FC = () => {
 
       {/* Moblie */}
 
-      <footer className="flex flex-col xl:hidden px-[15px] py-[20px] gap-[30px] bg-[#0C1618]">
-        <div className="flex flex-col gap-[10px]">
+      <footer className="flex flex-col lg:hidden xl:hidden px-[15px] py-[20px] gap-[30px] bg-[#0C1618] md:px-[30px]">
+        <div className="flex flex-col gap-[10px] md:gap-[15px]">
           <p
             style={{ fontFamily: "Satoshi" }}
-            className="text-[15px] font-[700] text-[#fff] leading-[130%]"
+            className="text-[15px] font-[700] text-[#fff] leading-[130%] md:text-[20px]"
           >
             SOCIAL
           </p>
-          <div className="flex gap-[10px]">
+          <div className="flex gap-[10px] md:gap-[15px]">
             <svg
               width="35"
               height="35"
@@ -219,10 +223,10 @@ export const Footer: FC = () => {
           </div>
         </div>
 
-        <div className="flex flex-col gap-[10px]">
+        <div className="flex flex-col gap-[10px] md:gap-[15px]">
           <p
             style={{ fontFamily: "Satoshi" }}
-            className="text-[15px] font-[700] text-[#fff] leading-[130%]"
+            className="text-[15px] font-[700] text-[#fff] leading-[130%] md:text-[20px]"
           >
             CONTACT US
           </p>
@@ -246,10 +250,10 @@ export const Footer: FC = () => {
           </p>
         </div>
 
-        <div className="flex flex-col gap-[10px]">
+        <div className="flex flex-col gap-[10px] md:gap-[15px]">
           <p
             style={{ fontFamily: "Satoshi" }}
-            className="text-[15px] font-[700] text-[#fff] leading-[130%]"
+            className="text-[15px] font-[700] text-[#fff] leading-[130%] md:text-[20px]"
           >
             GET STARTED
           </p>
@@ -279,10 +283,10 @@ export const Footer: FC = () => {
           </p>
         </div>
 
-        <div className="flex flex-col gap-[10px]">
+        <div className="flex flex-col gap-[10px] md:gap-[15px]">
           <p
             style={{ fontFamily: "Satoshi" }}
-            className="text-[15px] font-[700] text-[#fff] leading-[130%]"
+            className="text-[15px] font-[700] text-[#fff] leading-[130%] md:gap-[20px]"
           >
             LEARN MORE
           </p>
@@ -306,11 +310,11 @@ export const Footer: FC = () => {
           </p>
         </div>
         <hr />
-        <div className="flex flex-col items-center gap-[8px]">
+        <div className="flex flex-col items-center gap-[8px] md:gap-[10px]">
           <img src={logo} alt="img" className="flex items-center h-[50px]" />
           <div
             style={{ fontFamily: "Poppins" }}
-            className="text-[#fff] font-[400] text-[15px] leading-[140%] flex gap-[10px]"
+            className="text-[#fff] font-[400] text-[15px] leading-[140%] flex gap-[10px] md:gap-[15px] md:text-[20px]"
           >
             <p>Privacy Policy</p>
             <p>Terms</p>
@@ -318,7 +322,7 @@ export const Footer: FC = () => {
           </div>
           <div
             style={{ fontFamily: "Poppins" }}
-            className="text-[#fff] font-[400] leading-[140%] text-[10px]"
+            className="text-[#fff] font-[400] leading-[140%] text-[10px] md:text-[15px]"
           >
             <p>Copyright 2022, All rights reserved!</p>
           </div>
