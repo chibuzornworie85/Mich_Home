@@ -6,7 +6,7 @@ import "./Form.css";
 export const Formf: FC = () => {
   const [InputClicked, setInputClicked] = useState(false);
   const [input, setInput] = useState("");
-  const [inputError, setInputError] = useState("");
+  // const [inputError, setInputError] = useState("");
   const navigate = useNavigate();
 
   const handdleInputChange = () => {
@@ -16,27 +16,27 @@ export const Formf: FC = () => {
   const validateForm = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
-    if (input.trim() === "") {
-      setInputError("Please add your input.");
-      return;
-    }
+    // if (input.trim() === "") {
+    //   setInputError("Please add your input.");
+    //   return;
+    // }
     navigate("/form1f");
   };
   return (
     <>
-      <div className="px-[50px] hidden xl:flex justify-between py-[50px] gap-[40px">
+      <div className="xl:px-[50px] lg:px-[25px] md:px-[30px] hidden md:flex xl:flex justify-between py-[50px] lg:gap-0 md:gap-[40px]">
         <div className="flex flex-col gap-[50px]">
           <p
             style={{ fontFamily: "Satoshi" }}
-            className="w-[350px] text-[30px] font-[900] leading-[130%]"
+            className="lg:w-[350px] md:text-[20px] xl:text-[30px] lg:text-[30px] font-[900] leading-[130%]"
           >
             When are you looking to move to Awka?
           </p>
-          <div className="flex items-center h-[72px] bg-[#DCDFE0] rounded-[8px] pr-[20px]">
+          <div className="flex items-center h-[72px] bg-[#DCDFE0] rounded-[8px] pr-[20px] md:w-[300px] lg:w-[400px]">
             <input
               type="text"
               placeholder="Find out the ‘why’?"
-              className="py-[21px] w-[400px] px-[24px] bg-[#DCDFE0] border-none"
+              className="py-[21px] lg:w-[400px] px-[24px] bg-[#DCDFE0] border-none"
             />
             <svg
               width="24"
@@ -50,7 +50,7 @@ export const Formf: FC = () => {
           </div>
         </div>
         <form action="" onSubmit={validateForm}>
-          <div className="h-[500px] flex flex-col w-[600px] gap-[25px] px-[50px] pt-[50px] rounded-[8px] bg-[#004643]">
+          <div className="lg:h-[500px] md:h-[450px] flex flex-col md:w-[380px] lg:w-[500px] xl:w-[600px] gap-[25px] px-[50px] pt-[50px] rounded-[8px] bg-[#004643]">
             <p
               style={{ fontFamily: "Poppins" }}
               className="text-[#FFF] text-[18px] font-[500] leading-[150%]"
@@ -65,15 +65,8 @@ export const Formf: FC = () => {
                 type="text"
                 className="w-[100%] h-[60px] pl-[10px] bg-[#fff] rounded-l-[8px]"
                 placeholder="Input date"
+                required
               />
-              {inputError && (
-                <p
-                  style={{ fontFamily: "Poppins" }}
-                  className="text-red-500 absolute -mt-[100px]"
-                >
-                  {inputError}
-                </p>
-              )}
               <div className="hello bg-[#0C1618] py-[11px] rounded-[8px] px-[16px] h-[60px] flex items-center w-[80px]">
                 <svg
                   width="48"
@@ -122,10 +115,10 @@ export const Formf: FC = () => {
         </form>
       </div>
 
-      <div className="px-[15px] xl:hidden flex flex-col py-[30px] gap-[20px]">
+      <div className="px-[15px] xl:hidden md:hidden flex flex-col py-[30px] gap-[20px]">
         <div
           style={{ fontFamily: "Satoshi" }}
-          className="text-[20px] font-[900] leading-[130%] w-[290px]"
+          className="text-[20px] font-[900] leading-[130%] w-[250px]"
         >
           <p>When are you looking to move to Awka?</p>
         </div>
@@ -152,15 +145,8 @@ export const Formf: FC = () => {
                 type="text"
                 placeholder="Input date"
                 className="w-[80%] pl-[10px] rounded-l-[4px] text-[#000]"
+                required
               />
-              {inputError && (
-                <p
-                  style={{ fontFamily: "Poppins" }}
-                  className="text-red-500 absolute -mt-[20px]"
-                >
-                  {inputError}
-                </p>
-              )}
               <svg
                 className="bg-[#004643] w-[20%] py-[8px] px-[16px] rounded-[4px]"
                 width="48"
@@ -186,6 +172,7 @@ export const Formf: FC = () => {
               type="text"
               placeholder="Find out the ‘why’?"
               className="bg-[#DCDFE0] border-[none] text-[#000]"
+              required
             />
             <svg
               width="24"

@@ -9,9 +9,9 @@ export const Formf: FC = () => {
   const [bed, setBed] = useState("");
   const [room, setRoom] = useState("");
   const [budget, setBudget] = useState("");
-  const [bedError, setBedError] = useState("");
-  const [roomError, setRoomError] = useState("");
-  const [budgetError, setBudgetError] = useState("");
+  // const [bedError, setBedError] = useState("");
+  // const [roomError, setRoomError] = useState("");
+  // const [budgetError, setBudgetError] = useState("");
   const navigate = useNavigate();
 
   const handdleInputChange = () => {
@@ -21,38 +21,38 @@ export const Formf: FC = () => {
   const validateForm = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
-    if (bed.trim() === "") {
-      setBedError("Please add your input.");
-      return;
-    }
+    // if (bed.trim() === "") {
+    //   setBedError("Please add your input.");
+    //   return;
+    // }
 
-    if (room.trim() === "") {
-      setRoomError("Please add your input.");
-      return;
-    }
-    if (budget.trim() === "") {
-      setBudgetError("Please add your input.");
-      return;
-    }
+    // if (room.trim() === "") {
+    //   setRoomError("Please add your input.");
+    //   return;
+    // }
+    // if (budget.trim() === "") {
+    //   setBudgetError("Please add your input.");
+    //   return;
+    // }
     navigate("/form2");
   };
 
   
   return (
     <>
-      <div className="px-[50px] hidden xl:flex justify-between py-[50px]">
+      <div className="md:px-[30px] lg:px-[25px] xl::px-[50px]  hidden md:flex xl:flex justify-between py-[50px] lg:gap-0">
         <div className="flex flex-col gap-[50px]">
           <p
             style={{ fontFamily: "Satoshi" }}
-            className="w-[350px] text-[30px] font-[900] leading-[130%]"
+            className="lg:w-[350px] md:w-[250px] lg:text-[30px] md:text-[20px] font-[900] leading-[130%]"
           >
             Which apartment size and what is your budget?
           </p>
-          <div className="flex items-center h-[72px] bg-[#DCDFE0] rounded-[8px] pr-[10px]">
+          <div className="flex items-center h-[72px] bg-[#DCDFE0] rounded-[8px] pr-[10px] md:w-[270px] lg:w-[350px] ">
             <input
               type="text"
               placeholder="Find out the ‘why’?"
-              className="py-[21px] w-[350px] px-[24px] bg-[#DCDFE0] border-none"
+              className="py-[21px] lg:w-[350px] px-[24px] bg-[#DCDFE0] border-none"
             />
             <svg
               width="24"
@@ -65,7 +65,7 @@ export const Formf: FC = () => {
             </svg>
           </div>
         </div>
-        <div className="w-[700px] h-[550px] px-[100px pt-[60px] rounded-[8px] px-[50px] bg-[#004643]">
+        <div className="xl::w-[700px] md:w-[400px] lg:w-[550px] md:h-[450px] lg:h-[550px] px-[100px pt-[60px] rounded-[8px] px-[50px] bg-[#004643]">
           <form
             action=""
             onSubmit={validateForm}
@@ -86,15 +86,8 @@ export const Formf: FC = () => {
                       type="number"
                       className="pl-[10px] bg-[#fff] rounded-l-[8px] h-[60px] w-[70%]"
                       placeholder="-"
+                      required
                     />
-                    {bedError && (
-                      <p
-                        style={{ fontFamily: "Poppins" }}
-                        className="text-red-500 absolute -mt-[80px]"
-                      >
-                        {bedError}
-                      </p>
-                    )}
                     <div className="hello w-[80px] h-[60px] bg-[black] flex justify-center items-center">
                       <svg
                         width="24"
@@ -123,15 +116,8 @@ export const Formf: FC = () => {
                       type="number"
                       className="pl-[10px] bg-[#fff] rounded-l-[8px] h-[60px] w-[70%]"
                       placeholder="-"
+                      required
                     />
-                    {roomError && (
-                      <p
-                        style={{ fontFamily: "Poppins" }}
-                        className="text-red-500 absolute -mt-[80px]"
-                      >
-                        {roomError}
-                      </p>
-                    )}
                     <div className="hello w-[80px] h-[60px] bg-[black] flex justify-center items-center">
                       <svg
                         width="24"
@@ -166,15 +152,8 @@ export const Formf: FC = () => {
                     onClick={handdleInputChange}
                     placeholder="-"
                     className="w-[100%] text-[#000] text-[18px] font-[500] leading-[150%] rounded-l-[8px] pl-[10px] h-[60px]"
+                    required
                   />
-                  {budgetError && (
-                    <p
-                      style={{ fontFamily: "Poppins" }}
-                      className="text-red-500 absolute -mt-[80px]"
-                    >
-                      {budgetError}
-                    </p>
-                  )}
                   <div className="hello w-[80px] h-[60px] flex items-center bg-[#000] justify-center">
                     <svg
                       width="24"
@@ -241,7 +220,7 @@ export const Formf: FC = () => {
         </div>
       </div>
 
-      <div className="px-[15px] xl:hidden flex flex-col py-[30px] gap-[20px]">
+      <div className="px-[15px] md:hidden xl:hidden flex flex-col py-[30px] gap-[20px]">
         <div
           style={{ fontFamily: "Satoshi" }}
           className="font-[500] leading-[130%] w-[260px] text-[20px]"
@@ -265,15 +244,8 @@ export const Formf: FC = () => {
                   type="number"
                   placeholder="-"
                   className="text-[#000] pl-[10px] w-[100%] h-[50px]"
+                  required
                 />
-                {bedError && (
-                  <p
-                    style={{ fontFamily: "Poppins" }}
-                    className="text-red-500 absolute -mt-[60px]"
-                  >
-                    {bedError}
-                  </p>
-                )}
                 <svg
                   className="bg-[#004643] h-[50px] w-[40%] rounded-[4px] px-[5px]"
                   width="10"
@@ -299,15 +271,8 @@ export const Formf: FC = () => {
                   type="number"
                   placeholder="-"
                   className="text-[#000] pl-[10px] w-[100%] h-[50px]"
+                  required
                 />
-                {roomError && (
-                  <p
-                    style={{ fontFamily: "Poppins" }}
-                    className="text-red-500 absolute -mt-[60px]"
-                  >
-                    {roomError}
-                  </p>
-                )}
                 <svg
                   className="bg-[#004643] h-[50px] w-[40%] rounded-[4px] px-[5px]"
                   width="10"
@@ -334,15 +299,8 @@ export const Formf: FC = () => {
                 type="number"
                 placeholder="-"
                 className="text-[#000] pl-[10px] w-[100%] h-[50px]"
+                required
               />
-              {budgetError && (
-                <p
-                  style={{ fontFamily: "Poppins" }}
-                  className="text-red-500 absolute -mt-[60px]"
-                >
-                  {budgetError}
-                </p>
-              )}
               <svg
                 className="bg-[#004643] h-[50px] w-[15%] rounded-[4px] px-[5px]"
                 width="10"
@@ -368,6 +326,7 @@ export const Formf: FC = () => {
               type="text"
               placeholder="Find out the ‘why’?"
               className="bg-[#DCDFE0] border-[none] text-[#000]"
+              required
             />
             <svg
               width="24"

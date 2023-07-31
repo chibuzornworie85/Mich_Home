@@ -12,12 +12,12 @@ export const Formf: FC = () => {
   const [email, setEmail] = useState("");
   const [hear, setHear] = useState("");
   const [request, setRequest] = useState("");
-  const [firstError, setFirstError] = useState("");
-  const [lastError, setLastError] = useState("");
-  const [numberError, setNumberError] = useState("");
-  const [emailError, setEmailError] = useState("");
-  const [hearError, setHearError] = useState("");
-  const [requestError, setRequestError] = useState("");
+  // const [firstError, setFirstError] = useState("");
+  // const [lastError, setLastError] = useState("");
+  // const [numberError, setNumberError] = useState("");
+  // const [emailError, setEmailError] = useState("");
+  // const [hearError, setHearError] = useState("");
+  // const [requestError, setRequestError] = useState("");
   const navigate = useNavigate();
 
   const handdleInputChange = () => {
@@ -27,44 +27,44 @@ export const Formf: FC = () => {
   const validateForm = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
-    if (first.trim() === "") {
-      setFirstError("Please add your firstName.");
-      return;
-    }
+    // if (first.trim() === "") {
+    //   setFirstError("Please add your firstName.");
+    //   return;
+    // }
 
-    if (last.trim() === "") {
-      setLastError("Please add your lastName.");
-      return;
-    }
-    if (number.trim() === "") {
-      setNumberError("Please add your number.");
-      return;
-    }
+    // if (last.trim() === "") {
+    //   setLastError("Please add your lastName.");
+    //   return;
+    // }
+    // if (number.trim() === "") {
+    //   setNumberError("Please add your number.");
+    //   return;
+    // }
 
-    if (email.trim() === "") {
-      setEmailError("Please enter a valid email address.");
-      return;
-    }
+    // if (email.trim() === "") {
+    //   setEmailError("Please enter a valid email address.");
+    //   return;
+    // }
 
-    if (hear.trim() === "") {
-      setHearError("Please add your input.");
-      return;
-    }
+    // if (hear.trim() === "") {
+    //   setHearError("Please add your input.");
+    //   return;
+    // }
 
-    if (request.trim() === "") {
-      setRequestError("Please add your input.");
-      return;
-    }
+    // if (request.trim() === "") {
+    //   setRequestError("Please add your input.");
+    //   return;
+    // }
 
     navigate("/thanks");
   };
   return (
     <>
-      <div className="px-[50px] xl:flex justify-between py-[50px] hidden">
+      <div className="xl:px-[50px] lg:px-[25px] md:px-[30px] lg:flex xl:flex justify-between py-[50px] hidden">
         <div className="flex flex-col gap-[50px]">
           <p
             style={{ fontFamily: "Satoshi" }}
-            className="w-[500px] text-[30px] font-[900] leading-[130%]"
+            className="xl:w-[500px] lg:w-[300px] lg:text-[30px] font-[900] leading-[130%]"
           >
             Start your search!
           </p>
@@ -85,7 +85,7 @@ export const Formf: FC = () => {
             </svg>
           </div>
         </div>
-        <div className="w-[600px] h-[1150px] px-[50px] pt-[50px] rounded-[8px] bg-[#004643]">
+        <div className="lg:w-[600px] h-[1150px] px-[50px] pt-[50px] rounded-[8px] bg-[#004643]">
           <form
             action=""
             onSubmit={validateForm}
@@ -106,15 +106,8 @@ export const Formf: FC = () => {
                   type="text"
                   className="w-[500px] h-[70px] pl-[10px] bg-[#fff] rounded-[8px]"
                   placeholder="First Name"
+                  required
                 />
-                {firstError && (
-                  <p
-                    style={{ fontFamily: "Poppins" }}
-                    className="text-red-500 absolute -mt-[15px]"
-                  >
-                    {firstError}
-                  </p>
-                )}
               </div>
             </div>
             <div className="flex h-[70px] items-center w-[100%]">
@@ -132,15 +125,8 @@ export const Formf: FC = () => {
                   type="text"
                   className="w-[500px] h-[70px] pl-[10px] bg-[#fff] rounded-[8px]"
                   placeholder="Last Name"
+                  required
                 />
-                {lastError && (
-                  <p
-                    style={{ fontFamily: "Poppins" }}
-                    className="text-red-500 absolute -mt-[15px]"
-                  >
-                    {lastError}
-                  </p>
-                )}
               </div>
             </div>
             <div className="flex h-[70px] items-center w-[100%]">
@@ -158,15 +144,8 @@ export const Formf: FC = () => {
                   type="number"
                   className="w-[500px] h-[70px] pl-[10px] bg-[#fff] rounded-[8px]"
                   placeholder="(123) 456 7890"
+                  required
                 />
-                {numberError && (
-                  <p
-                    style={{ fontFamily: "Poppins" }}
-                    className="text-red-500 absolute -mt-[15px]"
-                  >
-                    {numberError}
-                  </p>
-                )}
               </div>
             </div>
             <div className="flex h-[70px] items-center w-[100%]">
@@ -184,15 +163,8 @@ export const Formf: FC = () => {
                   type="email"
                   className="w-[500px] h-[70px] pl-[10px] bg-[#fff] rounded-[8px]"
                   placeholder="Hello@email.com"
+                  required
                 />
-                {emailError && (
-                  <p
-                    style={{ fontFamily: "Poppins" }}
-                    className="text-red-500 absolute -mt-[15px]"
-                  >
-                    {emailError}
-                  </p>
-                )}
               </div>
             </div>
             <div className="flex h-[70px] items-center w-[100%]">
@@ -211,15 +183,8 @@ export const Formf: FC = () => {
                     type="text"
                     className="w-[430px] h-[68.67px] pl-[10px] bg-[#fff] rounded-l-[8px]"
                     placeholder="-"
+                    required
                   />
-                  {hearError && (
-                    <p
-                      style={{ fontFamily: "Poppins" }}
-                      className="text-red-500 absolute -mt-[40px]"
-                    >
-                      {hearError}
-                    </p>
-                  )}
                   <div className="hello flex justify-center items-center h-[68.67px] w-[70px] bg-[#0C1618]">
                     <svg
                       width="24"
@@ -251,15 +216,8 @@ export const Formf: FC = () => {
                   className="w-[500px] p-[10px] bg-[#fff] rounded-[8px] h-[179.261px]"
                   placeholder="Type something"
                   onClick={handdleInputChange}
+                  required
                 ></textarea>
-                {requestError && (
-                  <p
-                    style={{ fontFamily: "Poppins" }}
-                    className="text-red-500 absolute -mt-[15px]"
-                  >
-                    {requestError}
-                  </p>
-                )}
               </div>
             </div>
             <div className="flex items-center gap-[20px]">
@@ -310,10 +268,10 @@ export const Formf: FC = () => {
         </div>
       </div>
 
-      <div className="px-[15px] xl:hidden flex flex-col pt-[30px] pb-[70px] gap-[20px]">
+      <div className="px-[15px] lg:hidden xl:hidden flex flex-col pt-[30px] pb-[70px] gap-[20px] md:px-[30px]">
         <div
           style={{ fontFamily: "Satoshi" }}
-          className="font-[900] leading-[130%] text-[20px]"
+          className="font-[900] leading-[130%] text-[20px] md:text-[25px]"
         >
           <p>Start your search!</p>
         </div>
@@ -337,15 +295,8 @@ export const Formf: FC = () => {
               type="text"
               placeholder="Type something"
               className="text-[#000] rounded-[4px] h-[64px] border-[1px] border-[#DCDFE0] pl-[10px]"
+              required
             />
-            {firstError && (
-              <p
-                style={{ fontFamily: "Poppins" }}
-                className="text-red-500 absolute -mt-[-14px]"
-              >
-                {firstError}
-              </p>
-            )}
           </div>
           <div
             style={{ fontFamily: "Poppins" }}
@@ -361,15 +312,8 @@ export const Formf: FC = () => {
               type="text"
               placeholder="Type something"
               className="text-[#000] rounded-[4px] h-[64px] border-[1px] border-[#DCDFE0] pl-[10px]"
+              required
             />
-            {lastError && (
-              <p
-                style={{ fontFamily: "Poppins" }}
-                className="text-red-500 absolute -mt-[-14px]"
-              >
-                {lastError}
-              </p>
-            )}
           </div>
           <div
             style={{ fontFamily: "Poppins" }}
@@ -385,15 +329,8 @@ export const Formf: FC = () => {
               type="number"
               placeholder="Type something"
               className="text-[#000] rounded-[4px] h-[64px] border-[1px] border-[#DCDFE0] pl-[10px]"
+              required
             />
-            {numberError && (
-              <p
-                style={{ fontFamily: "Poppins" }}
-                className="text-red-500 absolute -mt-[-14px]"
-              >
-                {numberError}
-              </p>
-            )}
           </div>
           <div
             style={{ fontFamily: "Poppins" }}
@@ -409,15 +346,8 @@ export const Formf: FC = () => {
               type="email"
               placeholder="Type something"
               className="text-[#000] rounded-[4px] h-[64px] border-[1px] border-[#DCDFE0] pl-[10px]"
+              required
             />
-            {emailError && (
-              <p
-                style={{ fontFamily: "Poppins" }}
-                className="text-red-500 absolute -mt-[-14px]"
-              >
-                {emailError}
-              </p>
-            )}
           </div>
           <div
             style={{ fontFamily: "Poppins" }}
@@ -434,15 +364,8 @@ export const Formf: FC = () => {
                 type="text"
                 placeholder="-"
                 className="text-[#000] pl-[10px] w-[100%] h-[64px]"
+                required
               />
-              {hearError && (
-                <p
-                  style={{ fontFamily: "Poppins" }}
-                  className="text-red-500 absolute -mt-[80px]"
-                >
-                  {hearError}
-                </p>
-              )}
               <svg
                 className="bg-[#004643] h-[64px] w-[15%] rounded-[4px] px-[5px]"
                 width="10"
@@ -471,15 +394,8 @@ export const Formf: FC = () => {
               onClick={handdleInputChange}
               placeholder="Type something"
               className="h-[152px] rounded-[4px] border-[1px] text-[#000] border-[#DCDFE0] pl-[10px] py-[10px]"
+              required
             ></textarea>
-            {requestError && (
-              <p
-                style={{ fontFamily: "Poppins" }}
-                className="text-red-500 absolute -mt-[-14px]"
-              >
-                {requestError}
-              </p>
-            )}
           </div>
 
           <div
@@ -491,6 +407,7 @@ export const Formf: FC = () => {
               type="text"
               placeholder="Find out the ‘why’?"
               className="bg-[#DCDFE0] border-[none] text-[#000]"
+              required
             />
             <svg
               width="24"

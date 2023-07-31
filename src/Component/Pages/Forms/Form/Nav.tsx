@@ -19,10 +19,10 @@ export const Nav: FC = () => {
 
   return (
     <>
-      <header className="custom-shadow hidden xl:flex justify-between px-[50px] py-[20px] text-center rounded-[8px] bg-[#FFF] items-center sticky top-0 z-10">
+      <header className="custom-shadow hidden lg:flex xl:flex justify-between lg:px-[25px] xl:px-[50px] py-[20px] text-center rounded-[8px] bg-[#FFF] items-center sticky top-0 z-10">
         <div className="flex items-center gap-[20px]">
           <Link to="/">
-            <img src={logo} alt="logo" />
+            <img src={logo} alt="logo" className="lg:h-[30px] xl:h-[100%]" />
           </Link>
         </div>
 
@@ -90,7 +90,7 @@ export const Nav: FC = () => {
         </div>
       </header>
 
-      <div className="custom-shadow xl:hidden flex sticky top-0 justify-between items-center px-[15px] bg-[#FFF] h-[80px] rounded-[8px]">
+      <div className="custom-shadow lg:hidden xl:hidden flex sticky top-0 justify-between items-center md:px-[30px] px-[15px] bg-[#FFF] h-[80px] rounded-[8px]">
         <div className="flex items-center gap-[10px]">
           <div
             className="h-8 w-8 flex items-center justify-center focus:outline-none"
@@ -111,7 +111,7 @@ export const Nav: FC = () => {
           </div>
           <div
             style={{ fontFamily: "Millik" }}
-            className="text-[#0C1618] text-[20px] font-[400]"
+            className="text-[#0C1618] text-[20px] font-[400] md:text-[30px]"
           >
             <h1>Mich Homes</h1>
           </div>
@@ -119,7 +119,7 @@ export const Nav: FC = () => {
         {isOpen && (
           <div
             data-aos="fade-right"
-            className="h-[100vh] absolute top-0 left-0 py-[10px] px-[15px] bg-[#FFF] w-[100%]"
+            className="h-[100vh] absolute top-0 left-0 py-[10px] px-[15px] md:px-[30px] md:py-[20px] bg-[#FFF] w-[100%]"
           >
             <div className="flex items-center justify-between">
               <div onClick={toggleMenu}>
@@ -139,13 +139,13 @@ export const Nav: FC = () => {
               </div>
               <div
                 style={{ fontFamily: "Millik" }}
-                className="text-[#0C1618] text-[15px] font-[400]"
+                className="text-[#0C1618] text-[15px] md:text-[30px] font-[400]"
               >
                 <h1>Mich Homes</h1>
               </div>
               <div
                 style={{ fontFamily: "Poppins" }}
-                className="text-[10px] font-[500] rounded-[4px] border-[1px] border-[#0C1618] leading-[150%] text-[#000] h-[30px py-[10px] px-[8px] flex justify-center items-center"
+                className="text-[10px] md:text-[15px] font-[500] rounded-[4px] border-[1px] border-[#0C1618] leading-[150%] text-[#000] h-[30px py-[10px] px-[8px] flex justify-center items-center"
               >
                 <button className="flex items-center gap-[5px]">
                   <Link to="/location">Choose Location</Link>
@@ -166,7 +166,7 @@ export const Nav: FC = () => {
             </div>
             <div
               style={{ fontFamily: "Poppins" }}
-              className="flex flex-col text-[#000] text-[15px] font-[600] leading-[170%] gap-[15px] pt-[30px]"
+              className="flex flex-col text-[#000] text-[15px] font-[600] leading-[170%] gap-[15px] pt-[30px] md:text-[20px]"
             >
               <p>Our Process</p>
               <Link to="/apartment">
