@@ -8,18 +8,18 @@ export const Box1: FC = () => {
     <>
       {/* BOX */}
 
-      <div className="bg-[#FFF] flex flex-col md:px-[30px] px-[15px] pt-[30px] md:pt-0 lg:pt-0 xl:pt-0 gap-[20px] md:flex-row lg:flex-row xl:flex-row xl:flex lg:items-center md:items-center xl:items-center xl:gap-[40px] lg:px-[25px] xl:px-[50px] xl:pb-[50px] md:pb-[25px] lg:pb-[25px] xl:justify-between">
-        <div className="flex flex-col gap-[20px] xl:gap-[30px]">
+      <div className="bg-[#FFF] flex flex-col md:px-[30px] px-[15px] pt-[30px] md:pt-[25px] lg:pt-[25px] gap-[20px] md:flex-row lg:flex-row xl:flex-row xl:flex lg:items-center md:items-center xl:items-center xl:gap-[40px] lg:px-[25px] xl:px-[50px] xl:pb-[50px] md:pb-[25px] lg:pb-[25px] xl:justify-between">
+        <div className="flex flex-col gap-[20px] md:gap-[10px] xl:gap-[10px]">
           <h1
             style={{ fontFamily: "Millik" }}
-            className="xl:text-[70px] text-[40px] md:w-[300px] w-[200px] lg:w-[300px] xl:w-[600px] font-[400] leading-[100%]"
+            className="xl:text-[70px] text-[40px] md:w-[300px] w-[200px] lg:w-[300px] xl:w-[550px] font-[400] leading-[100%]"
           >
             <span className="text-[#004643]">The best place to</span>{" "}
             <span className="text-[#D1AC00]">find an Apartment in Awka.</span>
           </h1>
           <p
             style={{ fontFamily: "Poppins" }}
-            className="text-[#414647] xl:text-[20px] md:text-[20px] xl:font-[500] xl:leading-[170%] xl:w-[600px] lg:w-[500px] md:w-[400px]"
+            className="text-[#414647] font-[medium] xl:text-[20px] md:text-[20px] font-[600] xl:leading-[170%] xl:w-[550px] lg:w-[500px] md:w-[350px]"
           >
             In a number of Awka Capital City locations, Mich Homes offers the
             greatest local apartment locators ready to find you a rad place to
@@ -31,9 +31,9 @@ export const Box1: FC = () => {
               style={{ fontFamily: "Poppins" }}
               type="text"
               placeholder="Search by Location or Type"
-              className="shadow xl:text-[20px] text-[10px] w-[100%] pl-[10px] xl:pl-[20px] h-[30px] xl:h-[60px] text-[#818181] py-[15px] font-[500] rounded-l-[8px] border-2 border-[#0C1618] leading-[150%]"
+              className="shadow xl:text-[20px] text-[10px] w-[100%] lg:w-[80%] md:w-[80%] pl-[10px] xl:pl-[20px] h-[30px] xl:h-[60px] text-[#818181] py-[15px] font-[500] rounded-l-[8px] border-2 border-[#0C1618] leading-[150%]"
             />
-            <div className="bg-[#000] flex rounded-r-[8px] justify-center items-center py-[17px] xl:py-[30px] h-[25px] xl:h-[60px] w-[60px] xl:w-[111px]">
+            <div className="bg-[#000] flex rounded-r-[8px] justify-center items-center py-[17px] xl:py-[30px] h-[25px] xl:h-[60px] w-[60px] xl:w-[70px]">
               <svg
                 width="30"
                 height="30"
@@ -53,7 +53,7 @@ export const Box1: FC = () => {
           <img
             src={box}
             alt="gallery"
-            className="xl:h-[50%] xl:w-[100%] xl:block lg:block hidden md:block"
+            className="xl:block lg:block hidden md:block xl:h-[600px]"
           />
           <img
             src={box1}
